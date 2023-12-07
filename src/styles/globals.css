@@ -1,9 +1,9 @@
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -86,13 +86,13 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 a {
@@ -104,4 +104,79 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.heading {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 51px;
+  color: rgb(58, 58, 58);
+}
+
+.btn {
+  color: #fff;
+  text-align: center;
+  /* font-family: Strawford; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13.497px; /* 74.986% */
+}
+
+.custom-style {
+  display: flex;
+  max-width: 1208px;
+  justify-content: center;
+  align-items: center;
+  gap: 85px;
+  flex: 1 0 0;
+}
+.content1 {
+  width: 352px;
+  height: auto;
+  text-overflow: clip;
+  color: #3a3a3a;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  align-items: start;
+}
+.content2 {
+  align-self: stretch;
+  color: #3a3a3a;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+.top-creator {
+  color: #3a3a3a;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.image-name {
+  color: #fff;
+  text-align: center;
+  font-family: Strawford;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16.39px;
+}
+
+.arrow {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 6px 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  opacity: 0.5;
+  background: #fff;
+  /* margin-top: -6px; */
+  gap: 15px;
 }
