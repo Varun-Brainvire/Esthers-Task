@@ -1,10 +1,19 @@
 import styled from "styled-components";
 
 export const LoginMainDiv = styled.div`
-    background-color: aqua;
-    height: 50px;
+    background-color: white;
+    height: auto;
     width: 100px;
+    margin-top: -36px;
+    text-align: center;
+    border: 1px solid rgb(238, 238, 238);
+    padding:36px 42px;
+    min-width: 34%;
+`
+
+export const LoginDivContainer = styled.div`
     display: flex;
     align-items: center;
-    margin-top: -36px;
+    justify-content: center;
+    padding-bottom: 120px;
 `
