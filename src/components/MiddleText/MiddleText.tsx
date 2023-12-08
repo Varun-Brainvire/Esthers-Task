@@ -8,10 +8,6 @@ interface Props {
 }
 
 const MiddleText = (buttonClick: Props) => {
-  console.log(
-    buttonClick.buttonClick.hasOwnProperty("Join as a member"),
-    "buttonClick.buttonClick.valueOf()"
-  );
   return (
     <>
       <ElementBox forText={true}>

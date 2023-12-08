@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
-interface Props {
+export interface Props {
     googleButton?:boolean
-    isActive:boolean
-    forText:boolean
+    isActive?:boolean
+    forText?:boolean
+    forStep2?:boolean
 }
 
 export const ButtonsDiv = styled.div`
     display: flex;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     justify-content: space-around;
 `
 
 export const BothButtonDiv = styled.div<Props>`
-    min-width: 254px;
+    min-width: ${({ forStep2 }) => (forStep2 ? "237px" : "254px")};
     padding: 10px;
     position: relative;
     text-align: center;
@@ -35,10 +36,12 @@ export const MainButtonDiv = styled.div`
 `
 
 export const ElementBox = styled.div<Props>`
-    margin-bottom: 10px;
+    margin-bottom: ${({ forStep2 }) => (forStep2 ? "" : "10px")};
     display: ${({ forText }) => (forText ? "flex" : "")};
     justify-content: ${({ forText }) => (forText ? "center" : "")};
     text-align: ${({ forText }) => (forText ? "left" : "")};
+    min-height: ${({ forStep2 }) => (forStep2 ? "100vh" : "")};
+    padding-bottom: ${({ forStep2 }) => (forStep2 ? "120px" : "")};
 `
 
 export const Container = styled.div`

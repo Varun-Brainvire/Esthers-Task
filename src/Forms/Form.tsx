@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AggrementText,
   AggrementTextDiv,
@@ -7,6 +7,7 @@ import {
   CreateAccountButton,
   ErrorDiv,
   InnerPasswordDiv,
+  InputDiv,
   InputField,
   LineDiv,
   OuterPasswordDiv,
@@ -14,8 +15,14 @@ import {
 } from "./Form.styles";
 import { Formik, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
+import Router , {useRouter}  from 'next/router';
 
 const Form = () => {
+
+  const [submitting,setSubmitting] = useState(false)
+
+  const router = useRouter()
+
   const validationSchema = Yup.object().shape({
     userName: Yup.string()
       .min(
@@ -24,8 +31,14 @@ const Form = () => {
       )
       .required("Please enter valid username"),
     email: Yup.string()
-      .email()
+      .email("Please enter email in valid format")
       .required("Please enter your email"),
+    password: Yup.string()
+      .required("Password is required")
+      .min(5, "Your password is too short."),
+    confirmpassword: Yup
+      .string()
+      .oneOf([Yup.ref("password")], "Passwords must match"),
   });
 
   return (
@@ -33,11 +46,16 @@ const Form = () => {
       initialValues={{
         userName: "",
         email: "",
+        password:"",
+        confirmpassword:"",
       }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        debugger;
+        alert("formSubmitted")
         console.log(values);
+      }}
+      handleSubmit = {(values:any) => {
+        console.log(values)
       }}
     >
       {({
@@ -52,29 +70,28 @@ const Form = () => {
         setFieldValue,
       }) => {
         return (
-          <form>
+          <form onSubmit={handleSubmit}>
             <fieldset style={{ marginTop: "35px", border: "none" }}>
-              <div style={{ marginBottom: "10px" }}>
+              <InputDiv>
                 <InputField
                   type="text"
-                  placeholder="Username"
+                  placeholder="Username *"
                   name="userName"
                   onChange={handleChange}
                 />
 
                 {/* <div style={{backgroundColor:"red"}}></div> */}
-                
+
                 <ErrorDiv>{errors.userName}</ErrorDiv>
                 {/* {errors.userName && touched.userName && (
                     <ErrorDiv className="errorUser" name="userName">{errors.userName}</ErrorDiv>
                 )} */}
-                
-              </div>
-              <div style={{ marginBottom: "10px" }}>
-                <InputField type="text" placeholder="Email" name="email" />
+              </InputDiv>
+              <InputDiv>
+                <InputField type="text" placeholder="Email *" name="email" onChange={handleChange} />
                 <ErrorDiv>{errors.email}</ErrorDiv>
-              </div>
-              <div style={{ marginBottom: "10px" }}>
+              </InputDiv>
+              <InputDiv>
                 <OuterPasswordDiv style={{ position: "relative" }}>
                   <InnerPasswordDiv
                     style={{
@@ -139,10 +156,11 @@ const Form = () => {
                       ></path>
                     </svg>
                   </InnerPasswordDiv>
-                  <InputField type="text" placeholder="Password" />
+                  <InputField type="password" placeholder="Password *" name="password" onChange={handleChange}/>
+                  <ErrorDiv>{errors.password}</ErrorDiv>
                 </OuterPasswordDiv>
-              </div>
-              <div style={{ marginBottom: "10px" }}>
+              </InputDiv>
+              <InputDiv>
                 <OuterPasswordDiv>
                   <InnerPasswordDiv>
                     <svg
@@ -198,12 +216,19 @@ const Form = () => {
                       ></path>
                     </svg>
                   </InnerPasswordDiv>
-                  <InputField type="text" placeholder="Confirm Password" />
+                  <InputField type="password" placeholder="Confirm Password *" name="confirmpassword" onChange={handleChange}/>
+                  <ErrorDiv>{errors.confirmpassword}</ErrorDiv>
                 </OuterPasswordDiv>
-              </div>
+              </InputDiv>
             </fieldset>
 
-            <CreateAccountButton type="submit">
+            <CreateAccountButton type="submit" onClick={() => {
+              handleSubmit
+              setSubmitting(!submitting)
+              if(submitting == true) {
+                router.push('/step2')
+              }
+            }}>
               Create Account
             </CreateAccountButton>
 

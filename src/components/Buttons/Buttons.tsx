@@ -17,7 +17,7 @@ interface Props {
 }
 
 const Buttons = ({ buttonClick, setButtonClick, active, setActive }: Props) => {
-  const handleChange = (e: React.ClickEvent<HTMLInputElement>) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     // console.log(value)
     setButtonClick({
@@ -29,7 +29,7 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive }: Props) => {
 //   const [active, setActive] = useState(false);
 //   console.log(active, "active");
   return (
-    <ElementBox className="element box">
+    <ElementBox forText={false}>
       <Container className="">
         <ButtonsDiv>
           <MainButtonDiv>
@@ -38,7 +38,7 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive }: Props) => {
                 type="radio"
                 id="Join as a member"
                 value="register"
-                onClick={(e:React.ClickEvent<HTMLInputElement>) => {
+                onClick={(e:any) => {
                   handleChange(e);
                   setActive(!active);
                 }}
@@ -53,7 +53,7 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive }: Props) => {
                 type="radio"
                 id="Join as a creator"
                 value="creator"
-                onClick={(e:React.ClickEvent<HTMLInputElement>) => {
+                onClick={(e:any) => {
                   handleChange(e);
                   setActive(!active);
                 }}

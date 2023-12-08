@@ -1,9 +1,17 @@
 import Link from "next/link";
 import styled from "styled-components";
 import { Formik, ErrorMessage, Field } from "formik";
+import { Props } from "@/components/Buttons/Buttons.styles";
 
-export const InputField = styled.input`
-  background-color: rgb(255, 255, 255);
+export const InputDiv = styled.div<Props>`
+  margin-bottom: 10px;
+  width: ${({forStep2}) => forStep2 ? "34%" :""};
+  margin-left: ${({forStep2}) => forStep2 ? "auto" :""};
+  margin-right: ${({forStep2}) => forStep2 ? "auto" :""};
+`
+
+export const InputField = styled.input<Props>`
+  background-color: ${({forStep2}) => forStep2 ? "#eeeeee" :"white"};
   padding: 10px 16px;
   width: 100%;
   border: 1px solid rgb(238, 238, 238);
@@ -47,7 +55,7 @@ export const CreateAccountButton = styled.button`
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  background-color: rgb(52, 85, 74);
+  background-color: #34554a;
   color: white;
   border: 1px solid transparent;
   padding: 12px 18px;
@@ -62,6 +70,14 @@ export const CreateAccountButton = styled.button`
   letter-spacing: 0.3px;
   border-radius: 99px;
   cursor: pointer;
+  &:hover{
+    cursor: pointer;
+    background-color: #34554a;
+    color: white;
+    border-color: transparent;
+    box-shadow: rgba(52, 85, 74, 0.25) 0px 0px 0px 3px;
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s;
+  }
 `;
 
 export const AggrementTextDiv = styled.div`
