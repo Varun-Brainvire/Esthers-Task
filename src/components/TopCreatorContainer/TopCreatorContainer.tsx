@@ -56,6 +56,7 @@ const TopCreatorContainer = (props: PropsData) => {
                   <>
                     <MultiImage>
                       <Image src={item.image} height={150} width={150} alt="" />
+                      <p>{item.name}</p>
                     </MultiImage>
                   </>
                 );

@@ -1,27 +1,42 @@
 [
   {
     "id": 1,
-    "name": "Nioxin Thickening Gel 140ml",
+    "name": "villa_wahlgren",
     "image": "../Images/Image.svg"
   },
   {
     "id": 2,
-    "name": "Nioxin Thickening Gel 140ml",
-    "image": "../Images/Image.svg"
+    "name": "josefiinshem",
+    "image": "../Images/Image5.svg"
   },
   {
     "id": 3,
-    "name": "Nioxin Thickening Gel 140ml",
-    "image": "../Images/Image.svg"
+    "name": "hairtalkbyemelie",
+    "image": "../Images/Image2.svg"
   },
   {
     "id": 4,
-    "name": "Nioxin Thickening Gel 140ml",
-    "image": "../Images/Image.svg"
+    "name": "elinskoglund",
+    "image": "../Images/Image3.svg"
   },
   {
     "id": 5,
-    "name": "Nioxin Thickening Gel 140ml",
-    "image": "../Images/Image.svg"
+    "name": "victoriasvenssonn",
+    "image": "../Images/Image7.svg"
+  },
+  {
+    "id": 6,
+    "name": "josefiinshem",
+    "image": "../Images/Image5.svg"
+  },
+  {
+    "id": 7,
+    "name": "hedda",
+    "image": "../Images/Image6.svg"
+  },
+  {
+    "id": 8,
+    "name": "homeaffairs",
+    "image": "../Images/Image7.svg"
   }
 ]
