@@ -1,0 +1,14 @@
+[
+  {
+    "name":"youtube",
+    "icons": "../../../public/yt.svg"
+  },
+  {
+    "name":"instagram",
+    "icons": "../../../public/instagram.svg"
+  },
+  {
+    "name":"tiktok",
+    "icons": "../../../public/tiktok.svg"
+  }
+]
