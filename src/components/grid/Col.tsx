@@ -17,6 +17,11 @@ export const Col = styled(sbgCol)`
 
   ${media.md`
   padding-left: 10px !important;
-  padding-right: 0px !important;
+  padding-right: 10px !important;
+  `}
+
+   ${media.sm`
+  padding-left: 10px !important;
+  padding-right: 10px !important;
   `}
 `;

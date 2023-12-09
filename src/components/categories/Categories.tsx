@@ -21,7 +21,7 @@ const Categories = () => {
 
         <Container>
           <Row>
-            <Col lg={4}>
+            <Col lg={4} sm={12}>
               <ImageOverlayContainer>
                 <StyledImage
                   src={beauty}
@@ -33,14 +33,14 @@ const Categories = () => {
                 <OverlayText>Beauty</OverlayText>
               </ImageOverlayContainer>
             </Col>
-            <Col lg={4}>
+            <Col lg={4} sm={12}>
               <ImageOverlayContainer>
                 <StyledImage src={home} alt="home" width={300} height={189} />
                 <OverlayBackground />
                 <OverlayText>Home</OverlayText>
               </ImageOverlayContainer>
             </Col>
-            <Col lg={4}>
+            <Col lg={4} sm={12}>
               <ImageOverlayContainer>
                 <StyledImage
                   src={fashion}

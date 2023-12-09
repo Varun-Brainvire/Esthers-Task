@@ -18,6 +18,7 @@ import logo from "../../public/Frame.svg";
 import { FaBars } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import Button from "./button/Button";
+import Link from "next/link";
 
 const Layout = ({ children }: any) => {
   return (
@@ -25,7 +26,9 @@ const Layout = ({ children }: any) => {
       <HeaderDiv>
         <RootHeaderWrapper>
           <ImageWrapperDiv>
-            <Image src={logo} alt="logo" />
+            <Link href="/">
+              <Image src={logo} alt="logo" />
+            </Link>
           </ImageWrapperDiv>
           <NavWrapperContainer>
             <UlWrapper>
@@ -50,7 +53,9 @@ const Layout = ({ children }: any) => {
                 <FaBars />
               </BarButtonWrapper>
               <SignInButtonWrapper>
-                <Button content={"Sign in"} />
+                <Link href="/signIn">
+                  <Button content={"Sign in"} />
+                </Link>
               </SignInButtonWrapper>
             </ButtonContainer>
           </NavButtonWrapper>
