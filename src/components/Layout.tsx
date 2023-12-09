@@ -12,7 +12,7 @@ import {
   SearchButtonWrapper,
   SignInButtonWrapper,
   UlWrapper,
-} from "./dashboard/header.styles";
+} from "./dashboard/navbar.styles";
 import Image from "next/image";
 import logo from "../../public/Frame.svg";
 import { FaBars } from "react-icons/fa";
