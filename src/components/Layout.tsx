@@ -21,8 +21,12 @@ import { BiSearch } from "react-icons/bi";
 import Button from "./button/Button";
 import Link from "next/link";
 import Footer from "./footer/Footer";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }: any) => {
+  const route = useRouter();
+
+  console.log(route.route, "route");
   return (
     <>
       <HeaderDiv>
@@ -64,7 +68,7 @@ const Layout = ({ children }: any) => {
         </RootHeaderWrapper>
       </HeaderDiv>
       <main>{children}</main>
-      <Footer />
+      {route.route === "/create-post" ? " " : <Footer />}
     </>
   );
 };
