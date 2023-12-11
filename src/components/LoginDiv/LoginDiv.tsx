@@ -2,7 +2,7 @@ import {useState} from "react";
 import { LoginDivContainer, LoginMainDiv } from "./LoginDiv.styles";
 import Buttons from "../Buttons/Buttons";
 import MiddleText from "../MiddleText/MiddleText";
-import Form from "@/Forms/Form";
+import Form from "@/components/Forms/Form";
 
 const LoginDiv = () => {
   const [buttonClick,setButtonClick] =  useState("")

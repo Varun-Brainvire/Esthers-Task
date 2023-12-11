@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, ElementBox } from "../Buttons/Buttons.styles";
-import { Li, Ul } from "./MiddleText.styles";
+import { Circle, CircleContainer, CircleWrapper, Li, MainCircleDiv, Ul } from "./MiddleText.styles";
 import fb from "../../../public/fb.svg";
 
 interface Props {
@@ -32,6 +32,21 @@ const MiddleText = (buttonClick: Props) => {
             </>
           )}
         </Ul>
+      </ElementBox>
+
+      <ElementBox>
+        <MainCircleDiv>
+          <CircleContainer>
+            <CircleWrapper>
+            <Circle>1</Circle>
+            </CircleWrapper>
+          </CircleContainer>
+          <CircleContainer>
+            <CircleWrapper>
+            <Circle background={true} color={true}>2</Circle>
+            </CircleWrapper>
+          </CircleContainer>
+        </MainCircleDiv>
       </ElementBox>
 
       <ElementBox>

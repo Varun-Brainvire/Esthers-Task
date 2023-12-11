@@ -21,9 +21,10 @@ import {
   SocialMediaDiv,
   WelcomeDiv,
 } from "./step2.styles";
-import { InputDiv, InputField } from "@/Forms/Form.styles";
+import { InputDiv, InputField } from "@/components/Forms/Form.styles";
 import { Country, State, City } from "country-state-city";
 import data from "../../../icons.json"
+import Router , {useRouter}  from 'next/router';
 
 interface types {
     label:string;
@@ -36,6 +37,8 @@ interface icons{
 }
 const Step2 = () => {
   const [toggleClick, setToggleClick] = useState({});
+  const router = useRouter();
+  console.log(router.query);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -116,11 +119,11 @@ console.log(data,"data")
         <form action="">
           <FormDiv>
             <InputDiv forStep2={true}>
-              <InputField forStep2={true} disabled />
+              <InputField forStep2={true} disabled value={router.query.email}/>
             </InputDiv>
 
             <InputDiv forStep2={true}>
-              <InputField forStep2={true} disabled />
+              <InputField forStep2={true} disabled value={router.query.name} border={true}/>
             </InputDiv>
 
             <ElementBox forText={true}>

@@ -14,7 +14,7 @@ export const InputField = styled.input<Props>`
   background-color: ${({forStep2}) => forStep2 ? "#eeeeee" :"white"};
   padding: 10px 16px;
   width: 100%;
-  border: 1px solid rgb(238, 238, 238);
+  border:${({border}) => border ? "1px solid #34554a" :"1px solid rgb(238, 238, 238)"} ;
   border-radius: 3px;
   font-style: inherit;
   font-variant: inherit;

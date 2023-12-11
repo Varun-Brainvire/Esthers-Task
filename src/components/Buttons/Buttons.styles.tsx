@@ -5,6 +5,9 @@ export interface Props {
     isActive?:boolean
     forText?:boolean
     forStep2?:boolean
+    background?:boolean
+    color?:boolean
+    border?:boolean
 }
 
 export const ButtonsDiv = styled.div`
