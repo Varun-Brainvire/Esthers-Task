@@ -10,6 +10,10 @@ export const FooterWrapper = styled.div`
   width: 100%;
   bottom: 0px;
   z-index: 102;
+
+  @media (max-width: 768px) {
+    /* display: none; */
+  }
 `;
 
 export const MainUlWrapper = styled.div`
@@ -88,7 +92,6 @@ export const SocialMediaLogoWrapperDiv = styled.div`
 
 export const SocialMediaIndividualDivWrapper = styled.div`
   margin: 5px;
-  /* height: 16px; */
 `;
 
 export const FooterPara = styled.div`
@@ -108,4 +111,8 @@ export const FooterLink = styled(Link)`
 
 export const FlexDiv = styled.div`
   display: flex;
+`;
+
+export const PaddingWrapper = styled.div`
+  padding: 0 4%;
 `;

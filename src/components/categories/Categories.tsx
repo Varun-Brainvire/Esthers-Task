@@ -1,8 +1,8 @@
-import React from "react"
-import HeadingText from "../headingComponent/HeadingText"
-import beauty from "../../../public/beauty.png"
-import home from "../../../public/home.png"
-import fashion from "../../../public/fashion.png"
+import React from "react";
+import HeadingText from "../headingComponent/HeadingText";
+import beauty from "../../../public/beauty.png";
+import home from "../../../public/home.png";
+import fashion from "../../../public/fashion.png";
 import {
   CategoriesContainer,
   ImageOverlayContainer,
@@ -10,18 +10,18 @@ import {
   OverlayBackground,
   OverlayText,
   StyledImage,
-} from "./categories.styles"
-import { Container, Row, Col } from "../index"
+} from "./categories.styles";
+import { Container, Row, Col } from "../index";
 
 const Categories = () => {
   return (
-    <CategoriesContainer>
+    <CategoriesContainer screen={true}>
       <InnerCategoryContainer>
         <HeadingText text={"Categories"} marginBottom={true} />
 
         <Container>
           <Row>
-            <Col lg={4} sm={12}>
+            <Col lg={4}>
               <ImageOverlayContainer>
                 <StyledImage
                   src={beauty}
@@ -33,14 +33,14 @@ const Categories = () => {
                 <OverlayText>Beauty</OverlayText>
               </ImageOverlayContainer>
             </Col>
-            <Col lg={4} sm={12}>
+            <Col lg={4}>
               <ImageOverlayContainer>
                 <StyledImage src={home} alt="home" width={300} height={189} />
                 <OverlayBackground />
                 <OverlayText>Home</OverlayText>
               </ImageOverlayContainer>
             </Col>
-            <Col lg={4} sm={12}>
+            <Col lg={4}>
               <ImageOverlayContainer>
                 <StyledImage
                   src={fashion}
@@ -56,7 +56,7 @@ const Categories = () => {
         </Container>
       </InnerCategoryContainer>
     </CategoriesContainer>
-  )
-}
+  );
+};
 
-export default Categories
+export default Categories;

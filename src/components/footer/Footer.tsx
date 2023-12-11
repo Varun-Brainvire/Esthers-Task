@@ -11,6 +11,7 @@ import {
   LeftSectionDiv,
   LiOfLeftSection,
   MainUlWrapper,
+  PaddingWrapper,
   SocialMediaIndividualDivWrapper,
   SocialMediaLogoWrapperDiv,
   UlOfLeftSection,
@@ -24,12 +25,11 @@ import youtube from "../../../public/youtube.svg.svg";
 import facebook from "../../../public/fb.svg.svg";
 import instagram from "../../../public/instagram.svg.svg";
 import linkedin from "../../../public/linkedin.svg.svg";
-import Link from "next/link";
 
 const Footer = () => {
   return (
     <FooterWrapper>
-      <Container>
+      <PaddingWrapper>
         <MainUlWrapper>
           <FooterLeftSection>
             <FooterLogoSpanWrapper>
@@ -43,7 +43,9 @@ const Footer = () => {
                   <UlWrapperForLestSection>
                     <UlOfLeftSection>
                       <LiOfLeftSection>
-                        <Link href={"/inspiration"}>Inspiration</Link>
+                        <FooterLink href={"/inspiration"}>
+                          Inspiration
+                        </FooterLink>
                       </LiOfLeftSection>
                       <LiOfLeftSection>Contact Us</LiOfLeftSection>
                     </UlOfLeftSection>
@@ -106,7 +108,7 @@ const Footer = () => {
             </div>
           </FooterRightSection>
         </MainUlWrapper>
-      </Container>
+      </PaddingWrapper>
     </FooterWrapper>
   );
 };

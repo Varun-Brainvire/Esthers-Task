@@ -24,6 +24,7 @@ import {
   WrapperDiv,
 } from "./topCreators.styles";
 import HeadingText from "../headingComponent/HeadingText";
+import { device, deviceSize } from "@/device";
 
 interface CarouselProps {
   images: any[];
@@ -52,7 +53,7 @@ const TopCreators: React.FC<CarouselProps> = ({ images }) => {
   };
 
   return (
-    <CarouselContainer>
+    <CarouselContainer screen={true}>
       <InnerContainer>
         <HeadingWrapper>
           <HeadingText text={"Top Creators"} />
@@ -62,7 +63,11 @@ const TopCreators: React.FC<CarouselProps> = ({ images }) => {
               <SearchIcon isVisible={!isOpen}>
                 <BiSearch />
               </SearchIcon>
-              <SearchInputField isOpen={isOpen} placeholder="Search..." />
+              <SearchInputField
+                isOpen={isOpen}
+                placeholder="Search..."
+                screen={true}
+              />
               <CloseButton onClick={closeSearch}>
                 <FaTimes />
               </CloseButton>
@@ -87,8 +92,10 @@ const TopCreators: React.FC<CarouselProps> = ({ images }) => {
                 alt={`Image ${index + 1}`}
                 width={135}
                 height={135}
+                // width={device.tablet ? 80 : 135}
+                // height={device.tablet ? 80 : 135}
               />
-              <ImageText>
+              <ImageText screen={true}>
                 <p>{image.text}</p>
               </ImageText>
             </CarouselImageDiv>

@@ -30,7 +30,7 @@ const Layout = ({ children }: any) => {
   return (
     <>
       <HeaderDiv>
-        <RootHeaderWrapper>
+        <RootHeaderWrapper screen={true}>
           <ImageWrapperDiv>
             <Link href="/">
               <Image src={darkLogo} alt="logo" />
