@@ -1,6 +1,7 @@
 import React from "react";
 import {
   BarSeparator,
+  FlexDiv,
   FooterLeftSection,
   FooterLink,
   FooterLogoSpanWrapper,
@@ -41,7 +42,9 @@ const Footer = () => {
                   <BarSeparator></BarSeparator>
                   <UlWrapperForLestSection>
                     <UlOfLeftSection>
-                      <LiOfLeftSection>About Us</LiOfLeftSection>
+                      <LiOfLeftSection>
+                        <Link href={"/inspiration"}>Inspiration</Link>
+                      </LiOfLeftSection>
                       <LiOfLeftSection>Contact Us</LiOfLeftSection>
                     </UlOfLeftSection>
 
@@ -57,22 +60,24 @@ const Footer = () => {
 
                     <BarSeparator></BarSeparator>
                   </UlWrapperForLestSection>
+                  <FlexDiv>
+                    <UlOfLeftSection>
+                      <LiOfLeftSection>Cookie policy</LiOfLeftSection>
+                      <LiOfLeftSection>Privacy policy</LiOfLeftSection>
+                    </UlOfLeftSection>
 
-                  <UlOfLeftSection>
-                    <LiOfLeftSection>Cookie policy</LiOfLeftSection>
-                    <LiOfLeftSection>Privacy policy</LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <UlOfLeftSection marginLeft={true}>
+                      <LiOfLeftSection>Terms of service</LiOfLeftSection>
+                      <LiOfLeftSection marginTop={true}></LiOfLeftSection>
+                    </UlOfLeftSection>
 
-                  <UlOfLeftSection marginLeft={true}>
-                    <LiOfLeftSection>Terms of service</LiOfLeftSection>
-                    <LiOfLeftSection marginTop={true}></LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <BarSeparator></BarSeparator>
 
-                  <BarSeparator></BarSeparator>
-
-                  <UlOfLeftSection>
-                    <LiOfLeftSection>Blog</LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <UlOfLeftSection>
+                      <LiOfLeftSection>Blog</LiOfLeftSection>
+                      <LiOfLeftSection marginTop={true}></LiOfLeftSection>
+                    </UlOfLeftSection>
+                  </FlexDiv>
                 </LeftSectionDiv>
               </WrapperDivForLeftSection>
             </div>

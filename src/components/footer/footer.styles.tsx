@@ -83,12 +83,12 @@ export const FooterRightSection = styled.div`
 
 export const SocialMediaLogoWrapperDiv = styled.div`
   display: flex;
-  padding-right: 30px;
+  padding-right: 40px;
 `;
 
 export const SocialMediaIndividualDivWrapper = styled.div`
   margin: 5px;
-  height: 16px;
+  /* height: 16px; */
 `;
 
 export const FooterPara = styled.div`
@@ -104,4 +104,8 @@ export const FooterLink = styled(Link)`
   color: ${colors.color.beige};
   margin-top: 0px;
   text-decoration: none;
+`;
+
+export const FlexDiv = styled.div`
+  display: flex;
 `;
