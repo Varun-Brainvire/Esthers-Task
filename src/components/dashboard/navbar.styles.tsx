@@ -1,3 +1,4 @@
+import colors from "@/theme";
 import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
@@ -15,7 +16,8 @@ export const RootHeaderWrapper = styled.div`
   max-width: 1600px;
   z-index: 10;
   position: fixed;
-  background-color: white;
+  background-color: ${colors.color.white};
+  border-bottom: 1px solid rgb(243, 244, 246);
 `;
 
 export const ImageWrapperDiv = styled.div`
@@ -47,6 +49,7 @@ export const LiWrapper = styled.li`
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
 `;
 
 export const AnchorTag = styled.a`

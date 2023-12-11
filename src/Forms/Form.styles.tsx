@@ -2,16 +2,17 @@ import Link from "next/link";
 import styled from "styled-components";
 import { Formik, ErrorMessage, Field } from "formik";
 import { Props } from "@/components/Buttons/Buttons.styles";
+import colors from "@/theme";
 
 export const InputDiv = styled.div<Props>`
   margin-bottom: 10px;
-  width: ${({forStep2}) => forStep2 ? "38%" :""};
-  margin-left: ${({forStep2}) => forStep2 ? "auto" :""};
-  margin-right: ${({forStep2}) => forStep2 ? "auto" :""};
-`
+  width: ${({ forStep2 }) => (forStep2 ? "38%" : "")};
+  margin-left: ${({ forStep2 }) => (forStep2 ? "auto" : "")};
+  margin-right: ${({ forStep2 }) => (forStep2 ? "auto" : "")};
+`;
 
 export const InputField = styled.input<Props>`
-  background-color: ${({forStep2}) => forStep2 ? "#eeeeee" :"white"};
+  background-color: ${({ forStep2 }) => (forStep2 ? "#eeeeee" : "white")};
   padding: 10px 16px;
   width: 100%;
   border: 1px solid rgb(238, 238, 238);
@@ -55,8 +56,8 @@ export const CreateAccountButton = styled.button`
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  background-color: #34554a;
-  color: white;
+  background-color: ${colors.color.green};
+  color: ${colors.color.white};
   border: 1px solid transparent;
   padding: 12px 18px;
   max-height: 45px;
@@ -70,10 +71,10 @@ export const CreateAccountButton = styled.button`
   letter-spacing: 0.3px;
   border-radius: 99px;
   cursor: pointer;
-  &:hover{
+  &:hover {
     cursor: pointer;
-    background-color: #34554a;
-    color: white;
+    background-color: ${colors.color.green};
+    color: ${colors.color.white};
     border-color: transparent;
     box-shadow: rgba(52, 85, 74, 0.25) 0px 0px 0px 3px;
     transition: background-color 0.2s ease 0s, color 0.2s ease 0s;
@@ -133,8 +134,8 @@ export const StyledLink = styled(Link)`
 `;
 
 export const ErrorDiv = styled.div`
-    margin-top: 3px;
-    color: #e36b4f;
-    font-size: 12px;
-    text-align: left;
-`
+  margin-top: 3px;
+  color: #e36b4f;
+  font-size: 12px;
+  text-align: left;
+`;
