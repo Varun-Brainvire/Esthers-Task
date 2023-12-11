@@ -20,6 +20,7 @@ import { FaBars } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import Button from "./button/Button";
 import Link from "next/link";
+import Footer from "./footer/Footer";
 
 const Layout = ({ children }: any) => {
   return (
@@ -63,6 +64,7 @@ const Layout = ({ children }: any) => {
         </RootHeaderWrapper>
       </HeaderDiv>
       <main>{children}</main>
+      <Footer />
     </>
   );
 };

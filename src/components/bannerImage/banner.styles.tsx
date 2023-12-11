@@ -34,6 +34,7 @@ export const Text = styled.div`
   padding: 0 4%;
   line-height: 78px;
   text-align: center;
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
 `;
 
 export const BannerButtonDiv = styled.div`

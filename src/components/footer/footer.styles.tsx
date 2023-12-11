@@ -1,8 +1,10 @@
+import colors from "@/theme";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
   background-color: rgb(52, 85, 74);
-  color: rgb(239, 225, 208);
+  color: ${colors.color.beige};
   padding: 15px 0px 20px;
   position: fixed;
   width: 100%;
@@ -61,8 +63,8 @@ export const UlOfLeftSection = styled.ul<Props>`
 export const LiOfLeftSection = styled.li<Props>`
   font-size: 16px;
   font-weight: 500;
-  font-family: Strawford;
-  color: rgb(239, 225, 208);
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
+  color: ${colors.color.beige};
   margin-top: ${({ marginTop }) => (marginTop ? "19%" : "0px")};
 `;
 
@@ -93,6 +95,14 @@ export const SocialMediaIndividualDivWrapper = styled.div`
 export const FooterPara = styled.div`
   font-size: 16px;
   font-weight: 500;
-  font-family: Strawford;
-  color: rgb(239, 225, 208);
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
+  color: ${colors.color.beige};
+`;
+
+export const FooterLink = styled(Link)`
+  font-size: 16px;
+  font-weight: 500;
+  color: ${colors.color.beige};
+  margin-top: 0px;
+  text-decoration: none;
 `;
