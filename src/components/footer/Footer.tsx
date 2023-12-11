@@ -22,6 +22,7 @@ import youtube from "../../../public/youtube.svg.svg";
 import facebook from "../../../public/fb.svg.svg";
 import instagram from "../../../public/instagram.svg.svg";
 import linkedin from "../../../public/linkedin.svg.svg";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -44,7 +45,10 @@ const Footer = () => {
                     </UlOfLeftSection>
 
                     <UlOfLeftSection marginLeft={true}>
-                      <LiOfLeftSection>How it works</LiOfLeftSection>
+                      <LiOfLeftSection>
+                        <Link href={"/howitworks"}>How it works</Link>
+                      </LiOfLeftSection>
+
                       <LiOfLeftSection marginTop={true}></LiOfLeftSection>
                     </UlOfLeftSection>
 

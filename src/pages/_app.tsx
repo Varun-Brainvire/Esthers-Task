@@ -1,5 +1,6 @@
 import Layout from "../components/Layout";
 import "../styles/globals.css";
+import "../styles/custom.css";
 import localFont from "next/font/local";
 
 const myFont = localFont({
