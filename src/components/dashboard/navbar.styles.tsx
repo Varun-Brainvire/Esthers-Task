@@ -1,4 +1,5 @@
 import colors from "@/theme";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
@@ -52,7 +53,7 @@ export const LiWrapper = styled.li`
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
 `;
 
-export const AnchorTag = styled.a`
+export const AnchorTag = styled(Link)`
   text-decoration: none;
   display: block;
   height: 100%;
