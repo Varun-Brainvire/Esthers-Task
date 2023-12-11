@@ -17,15 +17,23 @@ import {
   DropDownAndInputDiv,
   FormDiv,
   HeroDiv,
+  RadioInput,
+  RadioLabel,
+  RadioP,
+  RadioQuestions,
+  RadioWrapper,
+  SelectAndInputDiv,
   SelectDiv,
   SelectWrapper,
+  SingleRadio,
   SocailMediaText,
+  SocialMediaDiv,
   WelcomeDiv,
 } from "./step2.styles";
 import { InputDiv, InputField } from "@/components/Forms/Form.styles";
 import { Country, State, City } from "country-state-city";
-import data from "../../../icons.json"
-import Router , {useRouter}  from 'next/router';
+import data from "../../../icons.json";
+import Router, { useRouter } from "next/router";
 
 interface types {
   label: string;
@@ -40,7 +48,7 @@ interface icons {
 const Step2 = () => {
   const [toggleClick, setToggleClick] = useState({});
   const router = useRouter();
-  console.log(router.query);
+  // console.log(router.query);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -99,109 +107,155 @@ const Step2 = () => {
     }
   }, []);
 
+  const [selecteOption,setSelectedOption] =  useState("")
+
+  const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    
+    setSelectedOption(e.target.value)
+  } 
+console.log(selecteOption)
   return (
     <>
       <ElementBox forText={false} forStep2={true}>
         <HeroDiv>
           <CreateAccountDiv>
-            <CreateAccountH1>Create Account</CreateAccountH1>
+            <CreateAccountH1>Create account</CreateAccountH1>
           </CreateAccountDiv>
           <WelcomeDiv>
             Welcome! Let's create your Esther's account and get you approved as
             a creator
           </WelcomeDiv>
         </HeroDiv>
-        <form action="">
-          <FormDiv>
-            <InputDiv forStep2={true}>
-              <InputField forStep2={true} disabled value={router.query.email}/>
-            </InputDiv>
 
-            <InputDiv forStep2={true}>
-              <InputField forStep2={true} disabled value={router.query.name} border={true}/>
-            </InputDiv>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <form action="">
+            <FormDiv>
+              <InputDiv forStep2={true}>
+                <InputField
+                  forStep2={true}
+                  disabled
+                  value={router.query.email}
+                />
+              </InputDiv>
 
-            <ElementBox forText={true}>
-              <Container>
-                <ButtonsDiv>
-                  <MainButtonDiv>
-                    <BothButtonDiv forStep2={true} isActive={active}>
-                      <Inputs
-                        name="creator"
-                        type="radio"
-                        id="creator"
-                        value="creator"
-                        onClick={() => {
-                          handleChange;
-                          setActive(!active);
-                        }}
-                      />
-                      <Label isActive={active}>Creator</Label>
-                    </BothButtonDiv>
-                  </MainButtonDiv>
-                </ButtonsDiv>
-              </Container>
-              <Container>
-                <ButtonsDiv>
-                  <MainButtonDiv>
-                    <BothButtonDiv forStep2={true} isActive={!active}>
-                      <Inputs
-                        name="brand"
-                        type="radio"
-                        id="brand"
-                        value="brand"
-                        onClick={() => {
-                          handleChange;
-                          setActive(!active);
-                        }}
-                      />
-                      <Label isActive={!active}>Brand</Label>
-                    </BothButtonDiv>
-                  </MainButtonDiv>
-                </ButtonsDiv>
-              </Container>
+              <InputDiv forStep2={true}>
+                <InputField
+                  forStep2={true}
+                  disabled
+                  value={router.query.name}
+                  border={true}
+                />
+              </InputDiv>
+
+              <ElementBox forText={true}>
+                <Container>
+                  <ButtonsDiv>
+                    <MainButtonDiv>
+                      <BothButtonDiv forStep2={true} isActive={active}>
+                        <Inputs
+                          name="creator"
+                          type="radio"
+                          id="creator"
+                          value="creator"
+                          onClick={() => {
+                            handleChange;
+                            setActive(!active);
+                          }}
+                        />
+                        <Label isActive={active}>Creator</Label>
+                      </BothButtonDiv>
+                    </MainButtonDiv>
+                  </ButtonsDiv>
+                </Container>
+                <Container>
+                  <ButtonsDiv>
+                    <MainButtonDiv>
+                      <BothButtonDiv forStep2={true} isActive={!active}>
+                        <Inputs
+                          name="brand"
+                          type="radio"
+                          id="brand"
+                          value="brand"
+                          onClick={() => {
+                            handleChange;
+                            setActive(!active);
+                          }}
+                        />
+                        <Label isActive={!active}>Brand</Label>
+                      </BothButtonDiv>
+                    </MainButtonDiv>
+                  </ButtonsDiv>
+                </Container>
+              </ElementBox>
+
+              <InputDiv forStep2={true}>
+                <InputField
+                  forStep2={false}
+                  placeholder="First name *"
+                  type="text"
+                />
+              </InputDiv>
+
+              <InputDiv forStep2={true}>
+                <InputField
+                  forStep2={false}
+                  placeholder="Last name *"
+                  type="text"
+                />
+              </InputDiv>
+
+              <InputDiv>
+                <SelectDiv className="iconDiv">
+                  <SelectWrapper className="selectWrapper">
+                    <CustomSelect
+                      styles={customStyles}
+                      className="customSelect"
+                      name="country"
+                      id="country"
+                      placeholder="Select Country *"
+                      options={countryOptions}
+                      value={countrySelected}
+                      onChange={(item: any) => {
+                        let event = {
+                          target: { name: "country", value: item },
+                        };
+                        console.log(item, "item.label");
+                        setCountrySelected(item);
+                      }}
+                    />
+                  </SelectWrapper>
+                </SelectDiv>
+              </InputDiv>
+
+              <SocialMediaDiv>
+                <SocailMediaText>Main social media channel</SocailMediaText>
+                <SelectAndInputDiv>
+                  <CustomSelect flex={true} styles={customStyles} />
+                  <InputField placeholder="Social media username *" />
+                </SelectAndInputDiv>
+              </SocialMediaDiv>
+            </FormDiv>
+
+            <RadioQuestions>
+              I am interested in retail collaborations
+            </RadioQuestions>
+
+            <ElementBox>
+              <RadioWrapper>
+                <SingleRadio>
+                  <RadioInput  type="radio" onChange={onValueChange} value="yes" />
+                  {/* <RadioLabel></RadioLabel> */}
+                  <RadioP>Yes</RadioP>
+                </SingleRadio>
+                <SingleRadio>
+                  <RadioInput  type="radio" onChange={onValueChange} value="no" />
+                  {/* <RadioLabel></RadioLabel> */}
+                  <RadioP>No</RadioP>
+                </SingleRadio>
+              </RadioWrapper>
             </ElementBox>
-
-            <InputDiv forStep2={true}>
-              <InputField
-                forStep2={false}
-                placeholder="First name *"
-                type="text"
-              />
-            </InputDiv>
-
-            <InputDiv forStep2={true}>
-              <InputField
-                forStep2={false}
-                placeholder="Last name *"
-                type="text"
-              />
-            </InputDiv>
-
-            <InputDiv>
-              <SelectDiv className="iconDiv">
-                <SelectWrapper className="selectWrapper">
-                  <CustomSelect
-                    styles={customStyles}
-                    className="customSelect"
-                    name="country"
-                    id="country"
-                    placeholder="Select Country *"
-                    options={countryOptions}
-                    value={countrySelected}
-                    onChange={(item: any) => {
-                      let event = {
-                        target: { name: "country", value: item },
-                      };
-                      console.log(item, "item.label");
-                      setCountrySelected(item);
-                    }}
-                  />
-                </SelectWrapper>
-              </SelectDiv>
-            </InputDiv>
-          </FormDiv>
-        </form>
+          </form>
+        </div>
       </ElementBox>
     </>
   );

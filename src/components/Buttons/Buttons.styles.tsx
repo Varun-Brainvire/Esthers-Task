@@ -8,6 +8,7 @@ export interface Props {
     background?:boolean
     color?:boolean
     border?:boolean
+    flex?:boolean
 }
 
 export const ButtonsDiv = styled.div`

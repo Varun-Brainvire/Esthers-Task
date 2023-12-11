@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
   background-color: #34554a;
-  padding-top: 81px;
+  padding-top: 155px;
   padding-bottom: 81px;
   text-align: center;
   line-height: 1.25;
