@@ -15,6 +15,7 @@ import PostWrapper, {
 } from "../create-post-component.tsx/PostContext"
 import Image from "next/image"
 import { useState } from "react"
+import Box2Container from "@/create-post-component.tsx/Box2Container"
 
 // import { Container, Row, Col } from "styled-bootstrap-grid"
 
@@ -112,7 +113,9 @@ export default function Home() {
                 <FlotingMenu label="Choose from Instagram"></FlotingMenu>
               </Box1>
             </ImageUploadCol>
-            <Col></Col>
+            <Col>
+              <Box2Container />
+            </Col>
           </CreatePostRow>
         </CreatePostContainer>
       </Frame>

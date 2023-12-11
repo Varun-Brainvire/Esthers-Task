@@ -7,7 +7,7 @@ import {
   ImageWrapper,
   Label,
   Text,
-} from "./FlotingMenu.styles"
+} from "../create-post-component.tsx/FlotingMenu.styles"
 import Image_square from "../../public/Images/image-square (1).png"
 
 const FlotingMenu = ({
