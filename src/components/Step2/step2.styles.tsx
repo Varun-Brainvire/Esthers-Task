@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import Select from "react-select";
+import colors from "@/theme";
 
 export const HeroDiv = styled.div`
   padding: 30px;
-  background-color: white;
+  background-color: ${colors.color.white};
 `;
 export const CreateAccountDiv = styled.div`
   margin: 0px auto;
@@ -30,7 +31,7 @@ export const FormDiv = styled.div`
   margin-right: auto;
   height: auto;
   width: 100%;
-  background-color: white;
+  background-color: ${colors.color.white};
   align-items: center;
   justify-content: center;
 `;

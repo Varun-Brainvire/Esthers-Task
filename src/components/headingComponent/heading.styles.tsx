@@ -11,4 +11,5 @@ export const Heading = styled.div<HeadingProps>`
   font-weight: 600;
   line-height: 24px;
   margin-bottom: ${(props) => (props.marginBottom ? "15px" : "")};
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
 `;

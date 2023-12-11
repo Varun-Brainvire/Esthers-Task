@@ -1,7 +1,8 @@
+import colors from "@/theme";
 import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
-  background-color: #34554a;
+  background-color: ${colors.color.green};
   padding-top: 81px;
   padding-bottom: 81px;
   text-align: center;

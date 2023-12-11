@@ -8,6 +8,7 @@ import {
 } from "../categories/categories.styles";
 import Button from "../button/Button";
 import { Container, Row, Col } from "../../components/index";
+import colors from "@/theme";
 
 interface CenterComponentProps {
   mainText?: string;
@@ -30,18 +31,21 @@ export const OverlayTextContent = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: ${colors.color.white};
   text-align: center;
   width: 100%;
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
 
   p {
     font-size: 28px;
     font-weight: bold;
     padding-bottom: 10px;
+    font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   }
 
   span {
     margin: 5px 0px 20px;
+    font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   }
 `;
 

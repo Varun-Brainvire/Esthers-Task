@@ -2,6 +2,7 @@ import React from "react";
 import {
   BarSeparator,
   FooterLeftSection,
+  FooterLink,
   FooterLogoSpanWrapper,
   FooterPara,
   FooterRightSection,
@@ -46,7 +47,9 @@ const Footer = () => {
 
                     <UlOfLeftSection marginLeft={true}>
                       <LiOfLeftSection>
-                        <Link href={"/howitworks"}>How it works</Link>
+                        <FooterLink href={"/howitworks"}>
+                          How it works
+                        </FooterLink>
                       </LiOfLeftSection>
 
                       <LiOfLeftSection marginTop={true}></LiOfLeftSection>
@@ -78,19 +81,19 @@ const Footer = () => {
           <FooterRightSection>
             <SocialMediaLogoWrapperDiv>
               <SocialMediaIndividualDivWrapper>
-                <Image src={youtube} alt="yt" width={20} height={20} />
+                <Image src={youtube} alt="yt" width={25} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={facebook} alt="yt" />
+                <Image src={facebook} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={linkedin} alt="yt" />
+                <Image src={linkedin} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={instagram} alt="yt" />
+                <Image src={instagram} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
             </SocialMediaLogoWrapperDiv>
             <div>

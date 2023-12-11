@@ -1,3 +1,4 @@
+import colors from "@/theme";
 import styled from "styled-components";
 
 export const MidMainContainer = styled.div`
@@ -45,5 +46,5 @@ export const JoinButton = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 96.41px;
-  background: #34554a;
+  background: ${colors.color.green};
 `;
