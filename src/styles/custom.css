@@ -1,0 +1,145 @@
+.heading {
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 51px;
+  color: rgb(58, 58, 58);
+}
+
+.btn {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13.497px;
+}
+
+.custom-style {
+  display: flex;
+  max-width: 1208px;
+  justify-content: center;
+  align-items: center;
+  gap: 85px;
+  flex: 1 0 0;
+}
+
+.content1 {
+  width: 352px;
+  height: auto;
+  text-overflow: clip;
+  color: #3a3a3a;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  align-items: start;
+}
+.content2 {
+  align-self: stretch;
+  color: #3a3a3a;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+}
+.top-creator {
+  color: #3a3a3a;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.image-name {
+  color: #fff;
+  text-align: center;
+  font-family: Strawford;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16.39px;
+}
+
+.arrow {
+  display: flex;
+  width: 32px;
+  height: 32px;
+  padding: 6px 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  opacity: 0.5;
+  background: #fff;
+  gap: 15px;
+}
+
+.carausel-head-div {
+  display: flex;
+  width: 174px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.howitwork {
+  color: #3a3a3a;
+
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.carausel-image {
+  display: flex;
+  padding: 13px 0px 20px 0px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.carausel-head {
+  color: #3a3a3a;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-overflow: clip;
+  width: 333px;
+}
+
+.carausel-text {
+  color: #3a3a3a;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-overflow: clip;
+  width: 252px;
+}
+
+.client-text {
+  color: #3a3a3a;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.client-main-text {
+  color: #3a3a3a;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.client-name {
+  color: #3a3a3a;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

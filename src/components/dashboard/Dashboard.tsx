@@ -11,6 +11,7 @@ import Categories from "../categories/Categories";
 import CenterTabComponent from "../centerTabComponent/CenterTabComponent";
 import beauty from "../../../public/beauty.png";
 import home from "../../../public/home.png";
+import Footer from "../footer/Footer";
 
 const Dashboard = () => {
   const images = [
@@ -37,6 +38,7 @@ const Dashboard = () => {
         innerText={"Share your design inspiration & make your home shoppable"}
         image={home}
       />
+      <Footer />
     </div>
   );
 };
