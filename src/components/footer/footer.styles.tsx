@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const FooterWrapper = styled.div`
   background-color: rgb(52, 85, 74);
   color: ${colors.color.beige};
-  padding: 15px 0px 20px;
+  padding: 20px 0px 20px;
   position: fixed;
   width: 100%;
   bottom: 0px;
@@ -88,7 +88,6 @@ export const SocialMediaLogoWrapperDiv = styled.div`
 
 export const SocialMediaIndividualDivWrapper = styled.div`
   margin: 5px;
-  width: 20px;
   height: 16px;
 `;
 
