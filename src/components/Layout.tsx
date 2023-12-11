@@ -15,6 +15,7 @@ import {
 } from "./dashboard/navbar.styles";
 import Image from "next/image";
 import logo from "../../public/Frame.svg";
+import darkLogo from "../../public/darkLogo.png";
 import { FaBars } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import Button from "./button/Button";
@@ -27,7 +28,7 @@ const Layout = ({ children }: any) => {
         <RootHeaderWrapper>
           <ImageWrapperDiv>
             <Link href="/">
-              <Image src={logo} alt="logo" />
+              <Image src={darkLogo} alt="logo" />
             </Link>
           </ImageWrapperDiv>
           <NavWrapperContainer>

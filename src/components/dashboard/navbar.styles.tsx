@@ -14,6 +14,8 @@ export const RootHeaderWrapper = styled.div`
   width: 100%;
   max-width: 1600px;
   z-index: 10;
+  position: fixed;
+  background-color: white;
 `;
 
 export const ImageWrapperDiv = styled.div`
