@@ -5,7 +5,7 @@ import { Props } from "@/components/Buttons/Buttons.styles";
 
 export const InputDiv = styled.div<Props>`
   margin-bottom: 10px;
-  width: ${({forStep2}) => forStep2 ? "34%" :""};
+  width: ${({forStep2}) => forStep2 ? "38%" :""};
   margin-left: ${({forStep2}) => forStep2 ? "auto" :""};
   margin-right: ${({forStep2}) => forStep2 ? "auto" :""};
 `

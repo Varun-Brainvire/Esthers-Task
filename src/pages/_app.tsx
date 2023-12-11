@@ -1,16 +1,21 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-// import { Inter } from 'next/font/google'
-import localFont from 'next/font/local'
-// import fonts from "../../public/fonts/strawford-regular-webfont.woff"
+import Layout from "../components/Layout";
+import "../styles/globals.css";
+import "../styles/custom.css";
+import localFont from "next/font/local";
 
-const myFont = localFont({ src: '../../public/fonts/strawford-regular-webfont.woff' })
+const myFont = localFont({
+  src: "../../public/fonts/strawford-regular-webfont.woff",
+});
 
+function MyApp({ Component, pageProps }: any) {
+  const getLayout =
+    Component.getLayout || ((page: any) => <Layout>{page}</Layout>);
 
-export default function App({ Component, pageProps }: AppProps) {
-  return(
+  return getLayout(
     <main className={myFont.className}>
       <Component {...pageProps} />
     </main>
-    ) 
+  );
 }
+
+export default MyApp;

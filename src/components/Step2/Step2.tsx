@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import {
   BothButtonDiv,
@@ -18,7 +20,6 @@ import {
   SelectDiv,
   SelectWrapper,
   SocailMediaText,
-  SocialMediaDiv,
   WelcomeDiv,
 } from "./step2.styles";
 import { InputDiv, InputField } from "@/components/Forms/Form.styles";
@@ -27,14 +28,15 @@ import data from "../../../icons.json"
 import Router , {useRouter}  from 'next/router';
 
 interface types {
-    label:string;
-    value:number
+  label: string;
+  value: number;
 }
 
-interface icons{
-    name:string;
-    icons:string
+interface icons {
+  name: string;
+  icons: string;
 }
+
 const Step2 = () => {
   const [toggleClick, setToggleClick] = useState({});
   const router = useRouter();
@@ -61,8 +63,8 @@ const Step2 = () => {
       ...provided,
       backgroundColor: state.isSelected ? "#e0e0e0" : "white",
       color: state.isSelected ? "white" : "black",
-      overflow:"hidden",
-      display:"inline-block",
+      overflow: "hidden",
+      display: "inline-block",
       "&:hover": {
         backgroundColor: "#e0e0e0;",
         color: "black",
@@ -73,37 +75,30 @@ const Step2 = () => {
   const [active, setActive] = useState(false);
   const [countryOptions, setCountryOptions] = useState<types[]>([]);
   const [countrySelected, setCountrySelected] = useState<string>();
-  const [icons,setIcons] = useState<icons[]>()
-  const [iconsSelected,setIconsSelected] = useState<string>()
-//   console.log(active);
+  const [icons, setIcons] = useState<icons[]>();
+  const [iconsSelected, setIconsSelected] = useState<string>();
 
   useEffect(() => {
     if (Country.getAllCountries()) {
       let country = Country.getAllCountries();
-    //   console.log(country);
       let arr: types[] = [];
-      country?.map((items:any) => {
-        // console.log( items.name)
+      country?.map((items: any) => {
         return arr.push({ label: items?.name, value: items?.isoCode });
       });
-    //   console.log(arr)
       setCountryOptions(arr);
     }
   }, [Country]);
 
-
   useEffect(() => {
-    if(data){
-        let dataArray:icons[] = []
-        data.map((icons) => {
-            return dataArray.push({name:icons.name,icons:icons.icons})
-        })
-        setIcons(dataArray)
+    if (data) {
+      let dataArray: icons[] = [];
+      data.map((icons) => {
+        return dataArray.push({ name: icons.name, icons: icons.icons });
+      });
+      setIcons(dataArray);
     }
-  },[])
-//   console.log(countryOptions,"CountryOptions")
+  }, []);
 
-console.log(data,"data")
   return (
     <>
       <ElementBox forText={false} forStep2={true}>
@@ -187,7 +182,7 @@ console.log(data,"data")
               <SelectDiv className="iconDiv">
                 <SelectWrapper className="selectWrapper">
                   <CustomSelect
-                  styles={customStyles}
+                    styles={customStyles}
                     className="customSelect"
                     name="country"
                     id="country"
@@ -195,42 +190,16 @@ console.log(data,"data")
                     options={countryOptions}
                     value={countrySelected}
                     onChange={(item: any) => {
-                        let event = {
-                          target: { name: "country", value: item },
-                        };
-                        console.log(item, "item.label");
-                        setCountrySelected(item)
+                      let event = {
+                        target: { name: "country", value: item },
+                      };
+                      console.log(item, "item.label");
+                      setCountrySelected(item);
                     }}
                   />
                 </SelectWrapper>
               </SelectDiv>
             </InputDiv>
-
-            {/* <InputDiv>
-              <SelectDiv className="iconDiv">
-                <SelectWrapper className="selectWrapper">
-                  <CustomSelect
-                  styles={customStyles}
-                    className="customSelect"
-                    name="icons"
-                    id="icons"
-                    placeholder=""
-                    options={icons}
-                    value={iconsSelected}
-                    onChange={(item: any) => {
-                        let event = {
-                          target: { name: "icons", value: item },
-                        };
-                        console.log(item, "item.label");
-                        setIconsSelected(item)
-                    }}
-                  />
-                </SelectWrapper>
-              </SelectDiv>
-            </InputDiv> */}
-            {/* <InputDiv>
-                <SocailMediaText>Main social media channel</SocailMediaText>
-            </InputDiv> */}
           </FormDiv>
         </form>
       </ElementBox>

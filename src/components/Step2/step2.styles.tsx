@@ -31,7 +31,6 @@ export const FormDiv = styled.div`
   height: auto;
   width: 100%;
   background-color: white;
-  /* display: flex; */
   align-items: center;
   justify-content: center;
 `;
@@ -43,12 +42,10 @@ export const CustomSelect = styled(Select)`
   border-radius: 4px;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   font-size: 14px;
-  /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); */
 `;
 
 export const SelectWrapper = styled.div`
-  width: 34%;
-  /* border: 1px solid black; */
+  width: 38%;
 `;
 
 export const SelectDiv = styled.div`
@@ -56,17 +53,14 @@ export const SelectDiv = styled.div`
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  /* padding: 5px; */
 `;
 
-export const SocialMediaDiv = styled.div`
-`
 export const SocailMediaText = styled.p`
-    font-size: 14px;
-    margin: 5px 0px;
-`
+  font-size: 14px;
+  margin: 5px 0px;
+`;
 export const DropDownAndInputDiv = styled.div`
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-`
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+`;

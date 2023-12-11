@@ -8,7 +8,7 @@ export const LoginMainDiv = styled.div`
     text-align: center;
     border: 1px solid rgb(238, 238, 238);
     padding:36px 42px;
-    min-width: 34%;
+    min-width: 47%;
 `
 
 export const LoginDivContainer = styled.div`

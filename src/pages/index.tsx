@@ -1,17 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Header from '@/components/Header'
-import LoginDiv from '@/components/LoginDiv/LoginDiv'
+import Dashboard from "@/components/dashboard/Dashboard";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return (
-    <>
-      <Header />
-      <LoginDiv />
-    </>
-  )
+  return <Dashboard />;
 }
