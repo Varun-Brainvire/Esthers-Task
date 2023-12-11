@@ -21,6 +21,7 @@ export const TextDivStyle = styled.div`
   margin-left: auto;
   padding-left: 56px;
   margin-right: auto;
+  margin-top: 140px;
 
   @media only screen and(max-width: 950px) {
     /* display: flex; */
