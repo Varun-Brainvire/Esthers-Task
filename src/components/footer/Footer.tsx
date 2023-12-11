@@ -40,7 +40,9 @@ const Footer = () => {
                   <BarSeparator></BarSeparator>
                   <UlWrapperForLestSection>
                     <UlOfLeftSection>
-                      <LiOfLeftSection>About Us</LiOfLeftSection>
+                      <LiOfLeftSection>
+                        <Link href={"/inspiration"}>Inspiration</Link>
+                      </LiOfLeftSection>
                       <LiOfLeftSection>Contact Us</LiOfLeftSection>
                     </UlOfLeftSection>
 

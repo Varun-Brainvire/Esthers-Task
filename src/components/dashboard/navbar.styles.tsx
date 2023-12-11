@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 
 export const HeaderDiv = styled.div`
@@ -49,7 +50,7 @@ export const LiWrapper = styled.li`
   text-transform: capitalize;
 `;
 
-export const AnchorTag = styled.a`
+export const AnchorTag = styled(Link)`
   text-decoration: none;
   display: block;
   height: 100%;

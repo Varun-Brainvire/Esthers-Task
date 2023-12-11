@@ -12,6 +12,7 @@ import {
   StyledImage,
 } from "./categories.styles";
 import { Container, Row, Col } from "../index";
+import Link from "next/link";
 
 const Categories = () => {
   return (

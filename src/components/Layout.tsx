@@ -34,13 +34,13 @@ const Layout = ({ children }: any) => {
           <NavWrapperContainer>
             <UlWrapper>
               <LiWrapper>
-                <a>Beauty</a>
+                <AnchorTag href="/home">Home</AnchorTag>
               </LiWrapper>
               <LiWrapper>
-                <AnchorTag>Home</AnchorTag>
+                <AnchorTag href="/beauty">Beauty</AnchorTag>
               </LiWrapper>
               <LiWrapper>
-                <AnchorTag>Fashion</AnchorTag>
+                <AnchorTag href="/fashion">Fashion</AnchorTag>
               </LiWrapper>
             </UlWrapper>
           </NavWrapperContainer>
