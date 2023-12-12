@@ -5,6 +5,7 @@ export const Col = styled(sbgCol)`
   padding-left: 12px;
   padding-right: 12px;
   background-color: white;
+
   /* border: 1px solid black; */
   ${media.xs`
     padding-right: 8px;
@@ -34,6 +35,7 @@ export const ImageUploadCol = styled(sbgCol)`
   align-items: center;
   overflow: scroll;
   gap: 20px;
+
   border-radius: 8px 0px 0px 8px;
   background: var(--Form-big-toggle, #f8f8f8);
   ::-webkit-scrollbar {

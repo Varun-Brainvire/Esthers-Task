@@ -4,9 +4,5 @@ import { Container, Row, Col } from "../components/index"
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
-  return (
-    <>
-      <Dashboard />
-    </>
-  )
+  return <Dashboard />
 }
