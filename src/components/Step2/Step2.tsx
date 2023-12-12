@@ -11,6 +11,9 @@ import {
   MainButtonDiv,
 } from "../Buttons/Buttons.styles";
 import {
+  CheckBoxP,
+  Checkbox,
+  CheckboxDiv,
   CreateAccountDiv,
   CreateAccountH1,
   CustomSelect,
@@ -30,10 +33,16 @@ import {
   SocialMediaDiv,
   WelcomeDiv,
 } from "./step2.styles";
-import { InputDiv, InputField } from "@/components/Forms/Form.styles";
+import {
+  CreateAccountButton,
+  InputDiv,
+  InputField,
+  LineDiv,
+} from "@/components/Forms/Form.styles";
 import { Country, State, City } from "country-state-city";
 import data from "../../../icons.json";
 import Router, { useRouter } from "next/router";
+import Select , { components } from "react-select";
 
 interface types {
   label: string;
@@ -48,7 +57,21 @@ interface icons {
 const Step2 = () => {
   const [toggleClick, setToggleClick] = useState({});
   const router = useRouter();
-  // console.log(router.query);
+
+  const { Option } = components;
+
+  const IconOption = (props:any) => (
+    <Option {...props}>
+    {console.log(props)}
+      <img
+        src={props.data.icons}
+        style={{ width: 20 }}
+        alt={props.data.label}
+      />
+      {/* {props.data.label} */}
+    </Option>
+  );
+  
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -60,6 +83,7 @@ const Step2 = () => {
   const customStyles = {
     control: (provided: any, state: any) => ({
       ...provided,
+      outline: "#eeeeee solid 1px",
       "&:hover": {
         border: "1px solid #313131",
       },
@@ -73,6 +97,8 @@ const Step2 = () => {
       color: state.isSelected ? "white" : "black",
       overflow: "hidden",
       display: "inline-block",
+      family: "Strawford,Lexend Deca, Inter, sans-serif",
+      FontFace: "14px",
       "&:hover": {
         backgroundColor: "#e0e0e0;",
         color: "black",
@@ -83,8 +109,8 @@ const Step2 = () => {
   const [active, setActive] = useState(false);
   const [countryOptions, setCountryOptions] = useState<types[]>([]);
   const [countrySelected, setCountrySelected] = useState<string>();
-  const [icons, setIcons] = useState<icons[]>();
-  const [iconsSelected, setIconsSelected] = useState<string>();
+  const [icons, setIcons] = useState<icons[]>([]);
+  const [iconsSelected, setIconsSelected] = useState<any>();
 
   useEffect(() => {
     if (Country.getAllCountries()) {
@@ -101,19 +127,19 @@ const Step2 = () => {
     if (data) {
       let dataArray: icons[] = [];
       data.map((icons) => {
-        return dataArray.push({ name: icons.name, icons: icons.icons });
+        return dataArray.push({ name: icons.value, icons: icons.icons });
       });
       setIcons(dataArray);
     }
   }, []);
-
-  const [selecteOption,setSelectedOption] =  useState("")
+// console.log(icons,"icons")
+// console.log(iconsSelected,"iconsSelected")
+  const [selecteOption, setSelectedOption] = useState("");
 
   const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    
-    setSelectedOption(e.target.value)
-  } 
-console.log(selecteOption)
+    setSelectedOption(e.target.value);
+  };
+  // console.log(selecteOption);
   return (
     <>
       <ElementBox forText={false} forStep2={true}>
@@ -219,7 +245,7 @@ console.log(selecteOption)
                         let event = {
                           target: { name: "country", value: item },
                         };
-                        console.log(item, "item.label");
+                        // console.log(item, "item.label");
                         setCountrySelected(item);
                       }}
                     />
@@ -230,7 +256,23 @@ console.log(selecteOption)
               <SocialMediaDiv>
                 <SocailMediaText>Main social media channel</SocailMediaText>
                 <SelectAndInputDiv>
-                  <CustomSelect flex={true} styles={customStyles} />
+                  <CustomSelect
+                    name="icons"
+                    id="icons"
+                    options={data}
+                    defaultValue={data[0]}
+                    value={iconsSelected}
+                    flex={true}
+                    styles={customStyles}
+                    components={{ Option: IconOption }}
+                    onChange={(item:any) => {
+                      let event= {
+                        target:{name:"icons",value:item.icons}
+                      }
+                      console.log(item, "item.label");
+                      setIconsSelected(item.name)
+                    }}
+                  />
                   <InputField placeholder="Social media username *" />
                 </SelectAndInputDiv>
               </SocialMediaDiv>
@@ -243,17 +285,66 @@ console.log(selecteOption)
             <ElementBox>
               <RadioWrapper>
                 <SingleRadio>
-                  <RadioInput  type="radio" onChange={onValueChange} value="yes" />
+                  <RadioInput
+                    type="radio"
+                    onChange={onValueChange}
+                    value="yes"
+                  />
                   {/* <RadioLabel></RadioLabel> */}
                   <RadioP>Yes</RadioP>
                 </SingleRadio>
                 <SingleRadio>
-                  <RadioInput  type="radio" onChange={onValueChange} value="no" />
+                  <RadioInput
+                    type="radio"
+                    onChange={onValueChange}
+                    value="no"
+                  />
                   {/* <RadioLabel></RadioLabel> */}
                   <RadioP>No</RadioP>
                 </SingleRadio>
               </RadioWrapper>
             </ElementBox>
+
+            <RadioQuestions>
+              I approve sharing my content on social media
+            </RadioQuestions>
+
+            <ElementBox>
+              <RadioWrapper>
+                <SingleRadio>
+                  <RadioInput
+                    type="radio"
+                    onChange={onValueChange}
+                    value="yes"
+                  />
+                  {/* <RadioLabel></RadioLabel> */}
+                  <RadioP>Yes</RadioP>
+                </SingleRadio>
+                <SingleRadio>
+                  <RadioInput
+                    type="radio"
+                    onChange={onValueChange}
+                    value="no"
+                  />
+                  {/* <RadioLabel></RadioLabel> */}
+                  <RadioP>No</RadioP>
+                </SingleRadio>
+              </RadioWrapper>
+            </ElementBox>
+
+            <LineDiv></LineDiv>
+
+            <CheckboxDiv>
+              <Checkbox type="checkbox" />
+              <CheckBoxP>
+                I agree to Esther's scandinavia AB's terms of service
+              </CheckBoxP>
+            </CheckboxDiv>
+
+            <CreateAccountButton forStep2={true}>Apply</CreateAccountButton>
+            {/* <div>
+                        <button><span>Apply</span></button>
+                      </div> */}
           </form>
         </div>
       </ElementBox>

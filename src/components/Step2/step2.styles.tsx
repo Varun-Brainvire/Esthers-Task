@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Select from "react-select";
 import { Props } from "../Buttons/Buttons.styles";
+import colors from "@/theme";
 
 export const HeroDiv = styled.div`
   padding: 30px;
-  background-color: white;
+  background-color: ${colors.color.white};
 `;
 export const CreateAccountDiv = styled.div`
   padding-top: 60px;
@@ -32,7 +33,7 @@ export const FormDiv = styled.div`
   margin-right: auto;
   height: auto;
   width: 100%;
-  background-color: white;
+  background-color: ${colors.color.white};
   align-items: center;
   justify-content: center;
 `;
@@ -94,8 +95,8 @@ export const SingleRadio = styled.div`
   width: calc(50%); 
 `
 export const RadioInput = styled.input`
-  opacity: 1;
-  z-index: 1;
+  /* opacity: 1;
+  z-index: 1; */
   border-radius: 99%;
   width: 20px;
   height: 20px;
@@ -126,4 +127,20 @@ export const RadioP = styled.p`
   font-size: 16px;
   overflow-wrap: break-word;
   margin-left: 10px;
+`
+
+export const CheckboxDiv = styled.div`  
+  display: flex;
+`
+
+export const Checkbox = styled.input`
+  height: 17px;
+  width: 17px;
+`
+
+export const CheckBoxP = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  overflow-wrap: break-word;
+  margin-left: 15px;
 `

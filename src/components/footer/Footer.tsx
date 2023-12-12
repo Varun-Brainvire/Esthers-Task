@@ -1,7 +1,9 @@
 import React from "react";
 import {
   BarSeparator,
+  FlexDiv,
   FooterLeftSection,
+  FooterLink,
   FooterLogoSpanWrapper,
   FooterPara,
   FooterRightSection,
@@ -40,13 +42,17 @@ const Footer = () => {
                   <BarSeparator></BarSeparator>
                   <UlWrapperForLestSection>
                     <UlOfLeftSection>
-                      <LiOfLeftSection>About Us</LiOfLeftSection>
+                      <LiOfLeftSection>
+                        <Link href={"/inspiration"}>Inspiration</Link>
+                      </LiOfLeftSection>
                       <LiOfLeftSection>Contact Us</LiOfLeftSection>
                     </UlOfLeftSection>
 
                     <UlOfLeftSection marginLeft={true}>
                       <LiOfLeftSection>
-                        <Link href={"/howitworks"}>How it works</Link>
+                        <FooterLink href={"/howitworks"}>
+                          How it works
+                        </FooterLink>
                       </LiOfLeftSection>
 
                       <LiOfLeftSection marginTop={true}></LiOfLeftSection>
@@ -54,22 +60,24 @@ const Footer = () => {
 
                     <BarSeparator></BarSeparator>
                   </UlWrapperForLestSection>
+                  <FlexDiv>
+                    <UlOfLeftSection>
+                      <LiOfLeftSection>Cookie policy</LiOfLeftSection>
+                      <LiOfLeftSection>Privacy policy</LiOfLeftSection>
+                    </UlOfLeftSection>
 
-                  <UlOfLeftSection>
-                    <LiOfLeftSection>Cookie policy</LiOfLeftSection>
-                    <LiOfLeftSection>Privacy policy</LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <UlOfLeftSection marginLeft={true}>
+                      <LiOfLeftSection>Terms of service</LiOfLeftSection>
+                      <LiOfLeftSection marginTop={true}></LiOfLeftSection>
+                    </UlOfLeftSection>
 
-                  <UlOfLeftSection marginLeft={true}>
-                    <LiOfLeftSection>Terms of service</LiOfLeftSection>
-                    <LiOfLeftSection marginTop={true}></LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <BarSeparator></BarSeparator>
 
-                  <BarSeparator></BarSeparator>
-
-                  <UlOfLeftSection>
-                    <LiOfLeftSection>Blog</LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <UlOfLeftSection>
+                      <LiOfLeftSection>Blog</LiOfLeftSection>
+                      <LiOfLeftSection marginTop={true}></LiOfLeftSection>
+                    </UlOfLeftSection>
+                  </FlexDiv>
                 </LeftSectionDiv>
               </WrapperDivForLeftSection>
             </div>
@@ -78,19 +86,19 @@ const Footer = () => {
           <FooterRightSection>
             <SocialMediaLogoWrapperDiv>
               <SocialMediaIndividualDivWrapper>
-                <Image src={youtube} alt="yt" width={20} height={20} />
+                <Image src={youtube} alt="yt" width={25} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={facebook} alt="yt" />
+                <Image src={facebook} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={linkedin} alt="yt" />
+                <Image src={linkedin} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={instagram} alt="yt" />
+                <Image src={instagram} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
             </SocialMediaLogoWrapperDiv>
             <div>

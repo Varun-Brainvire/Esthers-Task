@@ -8,6 +8,9 @@ interface Props {
 }
 
 const MiddleText = (buttonClick: Props) => {
+
+  console.log(buttonClick.buttonClick,"buttonClick.buttonClick")
+
   return (
     <>
       <ElementBox forText={true}>
@@ -33,8 +36,8 @@ const MiddleText = (buttonClick: Props) => {
           )}
         </Ul>
       </ElementBox>
-
-      <ElementBox>
+{buttonClick.buttonClick.hasOwnProperty("Join as a creator") ?(
+  <ElementBox>
         <MainCircleDiv>
           <CircleContainer>
             <CircleWrapper>
@@ -48,6 +51,8 @@ const MiddleText = (buttonClick: Props) => {
           </CircleContainer>
         </MainCircleDiv>
       </ElementBox>
+) : ("")}
+      
 
       <ElementBox>
         <Button onClick={() => alert("clicked")}>

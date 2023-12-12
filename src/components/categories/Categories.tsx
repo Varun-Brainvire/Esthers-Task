@@ -1,8 +1,8 @@
-import React from "react";
-import HeadingText from "../headingComponent/HeadingText";
-import beauty from "../../../public/beauty.png";
-import home from "../../../public/home.png";
-import fashion from "../../../public/fashion.png";
+import React from "react"
+import HeadingText from "../headingComponent/HeadingText"
+import beauty from "../../../public/beauty.png"
+import home from "../../../public/home.png"
+import fashion from "../../../public/fashion.png"
 import {
   CategoriesContainer,
   ImageOverlayContainer,
@@ -10,8 +10,8 @@ import {
   OverlayBackground,
   OverlayText,
   StyledImage,
-} from "./categories.styles";
-import { Container, Row, Col } from "../index";
+} from "./categories.styles"
+import { Container, Row, Col } from "../index"
 
 const Categories = () => {
   return (
@@ -56,7 +56,7 @@ const Categories = () => {
         </Container>
       </InnerCategoryContainer>
     </CategoriesContainer>
-  );
-};
+  )
+}
 
-export default Categories;
+export default Categories

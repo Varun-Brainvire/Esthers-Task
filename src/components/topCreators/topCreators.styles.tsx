@@ -30,6 +30,7 @@ export const CarouselImageDiv = styled.div`
 export const ImageText = styled.div`
   p {
     text-align: center;
+    font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   }
 `;
 

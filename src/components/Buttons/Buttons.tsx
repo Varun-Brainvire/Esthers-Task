@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   BothButtonDiv,
   ButtonsDiv,
@@ -8,15 +8,23 @@ import {
   Label,
   MainButtonDiv,
 } from "./Buttons.styles";
+import { useRouter } from "next/router";
 
 interface Props {
   buttonClick: string;
   setButtonClick: React.Dispatch<React.SetStateAction<any>>;
   active: boolean;
   setActive: React.Dispatch<React.SetStateAction<boolean>>;
+  type:string
 }
 
-const Buttons = ({ buttonClick, setButtonClick, active, setActive }: Props) => {
+const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props) => {
+  console.log(active)
+
+  useEffect(() => {
+    window. scrollTo(0, 0)
+  })
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     // console.log(value)
@@ -24,15 +32,16 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive }: Props) => {
       [name]: value,
     });
   };
-//   console.log(buttonClick, "buttonClick");
 
-//   const [active, setActive] = useState(false);
-//   console.log(active, "active");
+  const router = useRouter();
+// console.log(router.query.type,"in Buttons")
+// console.log(type)
   return (
     <ElementBox forText={false}>
       <Container className="">
         <ButtonsDiv>
           <MainButtonDiv>
+            {router.query.type === 'creator' ?"":""}
             <BothButtonDiv isActive={active}>
               <Inputs
                 type="radio"

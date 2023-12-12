@@ -6,8 +6,8 @@ export const Col = styled(sbgCol)`
   padding-right: 10px;
 
   ${media.lg`
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left:10px;
+  padding-right:10px;
   `}
 
   ${media.xl`
@@ -16,12 +16,12 @@ export const Col = styled(sbgCol)`
   `}
 
   ${media.md`
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
   `}
 
    ${media.sm`
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  padding-left: 5px;
+  padding-right: 5px;
   `}
 `;

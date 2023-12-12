@@ -1,3 +1,4 @@
+import colors from "@/theme";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -22,7 +23,6 @@ export const ImageOverlayContainer = styled.div`
 `;
 
 export const StyledImage = styled(Image)`
-
   width: 100%;
   border-radius: 10px;
 `;
@@ -42,9 +42,10 @@ export const OverlayText = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: ${colors.color.white};
   font-size: 28px;
   font-weight: bold;
   text-align: center;
   width: 100%;
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
 `;

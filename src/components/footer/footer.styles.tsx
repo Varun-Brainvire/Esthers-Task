@@ -1,9 +1,11 @@
+import colors from "@/theme";
+import Link from "next/link";
 import styled from "styled-components";
 
 export const FooterWrapper = styled.div`
   background-color: rgb(52, 85, 74);
-  color: rgb(239, 225, 208);
-  padding: 15px 0px 20px;
+  color: ${colors.color.beige};
+  padding: 20px 0px 20px;
   position: fixed;
   width: 100%;
   bottom: 0px;
@@ -61,8 +63,8 @@ export const UlOfLeftSection = styled.ul<Props>`
 export const LiOfLeftSection = styled.li<Props>`
   font-size: 16px;
   font-weight: 500;
-  font-family: Strawford;
-  color: rgb(239, 225, 208);
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
+  color: ${colors.color.beige};
   margin-top: ${({ marginTop }) => (marginTop ? "19%" : "0px")};
 `;
 
@@ -81,18 +83,29 @@ export const FooterRightSection = styled.div`
 
 export const SocialMediaLogoWrapperDiv = styled.div`
   display: flex;
-  padding-right: 30px;
+  padding-right: 40px;
 `;
 
 export const SocialMediaIndividualDivWrapper = styled.div`
   margin: 5px;
-  width: 20px;
-  height: 16px;
+  /* height: 16px; */
 `;
 
 export const FooterPara = styled.div`
   font-size: 16px;
   font-weight: 500;
-  font-family: Strawford;
-  color: rgb(239, 225, 208);
+  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
+  color: ${colors.color.beige};
+`;
+
+export const FooterLink = styled(Link)`
+  font-size: 16px;
+  font-weight: 500;
+  color: ${colors.color.beige};
+  margin-top: 0px;
+  text-decoration: none;
+`;
+
+export const FlexDiv = styled.div`
+  display: flex;
 `;
