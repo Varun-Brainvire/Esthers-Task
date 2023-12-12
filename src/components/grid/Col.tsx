@@ -11,17 +11,22 @@ export const Col = styled(sbgCol)`
   `}
 
   ${media.xl`
-  padding-left: 10px;
+  padding-left: 10px; 
   padding-right: 10px;
   `}
 
   ${media.md`
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
   `}
 
    ${media.sm`
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+  padding-left: 5px;
+  padding-right: 5px;
   `}
+
+  @media (max-width: 768px) {
+    padding-left: ${({ screen }) => (screen ? "0" : "10px")};
+    padding-right: ${({ screen }) => (screen ? "0" : "10px")};
+  }
 `;

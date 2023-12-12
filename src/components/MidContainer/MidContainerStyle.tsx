@@ -11,6 +11,9 @@ export const MidMainContainer = styled.div`
   /* height: calc(100vh - 180px); */
   width: 100%;
   z-index: 100;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const TextDivStyle = styled.div`
@@ -23,9 +26,14 @@ export const TextDivStyle = styled.div`
   margin-right: auto;
   margin-top: 140px;
 
-  @media only screen and(max-width: 950px) {
+  @media (max-width: 768px) {
     /* display: flex; */
+    /* padding: 0px 16px; */
     flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* gap: 32px; */
+    /* align-self: stretch; */
   }
 `;
 
@@ -35,9 +43,18 @@ export const TextContainer = styled.div`
   flex-direction: column;
   -webkit-box-pack: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    /* height: 50%; */
+    /* width: 100%; */
+  }
 `;
 
-export const ImageDiv = styled.div``;
+export const ImageDiv = styled.div`
+  @media (max-width: 368px) {
+    /* height: 10%; */
+    /* background-color: red; */
+  }
+`;
 
 export const JoinButton = styled.button`
   display: flex;

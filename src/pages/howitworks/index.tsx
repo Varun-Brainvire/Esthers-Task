@@ -18,8 +18,10 @@ import image4 from "../../../public/josefiin.png";
 import image5 from "../../../public/m27yhspfsiuqrhg2sdsu.jpg.png";
 import CenterTabComponent from "@/components/centerTabComponent/CenterTabComponent";
 import beauty from "../../../public/beauty.png";
+import beauty2 from "../../../public/Images/beauty2.svg";
 import ContainerDownload from "@/components/ContainerDownload/ContainerDownload";
 import YoutubeContainer from "@/components/YoutubeContainer/YoutubeContainer";
+import Footer from "@/components/footer/Footer";
 
 type Props = {};
 const index = (props: Props) => {
@@ -53,6 +55,12 @@ const index = (props: Props) => {
         </MainContainer>
         <ContainerDownload />
         <YoutubeContainer />
+        <CenterTabComponent
+          mainText={"Style guru??"}
+          innerText={"Share your outfits & make your looks shoppable"}
+          image={beauty2}
+        />
+        <Footer />
       </div>
     </>
   );
