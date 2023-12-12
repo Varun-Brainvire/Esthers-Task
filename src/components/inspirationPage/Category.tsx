@@ -67,7 +67,7 @@ const Category: React.FC<CategoryProps> = ({
           <Row>
             <CategoryContainer>
               {filters.map((filter) => (
-                <Col lg={3} sm={3} md={3}>
+                <Col lg={3}>
                   <SingleCategoryCard
                     key={filter.label}
                     onClick={() => {
@@ -75,13 +75,15 @@ const Category: React.FC<CategoryProps> = ({
                       if (filter.label === "All") {
                         router.push("/inspiration");
                       } else {
-                        router.push(`/${filter.label.toLowerCase()}`);
+                        router.push(
+                          `/inspiration/${filter.label.toLowerCase()}`
+                        );
                       }
                     }}
                     style={{
                       backgroundColor:
-                        selectedCategory === "All"
-                          ? "rgba(52, 85, 74, 1)"
+                        selectedCategory !== "All"
+                          ? "rgba(244, 240, 236, 1)"
                           : "rgba(244, 240, 236, 1)",
                     }}
                   >
@@ -89,7 +91,7 @@ const Category: React.FC<CategoryProps> = ({
                       <CategoryImage
                         src={filter.imageSrc}
                         alt={`${filter.label} pic`}
-                        width={230}
+                        width={252}
                         height={180}
                         style={{
                           opacity:
@@ -100,8 +102,10 @@ const Category: React.FC<CategoryProps> = ({
                     <OverlayDiv
                       style={{
                         backgroundColor:
-                          selectedCategory === "All"
-                            ? "rgba(52, 85, 74, 0.5)"
+                          filter.label === "All"
+                            ? "rgba(52, 85, 74 ,1)"
+                            : selectedCategory === "All"
+                            ? "rgba(244, 240, 236, 0.4)"
                             : "rgba(0, 0, 0, 0.0)",
                       }}
                     >

@@ -34,7 +34,7 @@ export const CategoryContainer = styled.div`
 `;
 
 export const SingleCategoryCard = styled.div`
-  width: 230px;
+  width: 252px;
   height: 180px;
   object-fit: cover;
   object-position: center;
@@ -62,7 +62,7 @@ export const SingleCategoryCard = styled.div`
 
 export const OverlayDiv = styled.div`
   position: absolute;
-  width: 230px;
+  width: 252px;
   height: 180px;
   left: 0px;
   top: 0px;
@@ -80,7 +80,7 @@ export const OverlayDiv = styled.div`
     color: white;
     margin: 0;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   @media screen and (max-width: 576px) {
@@ -101,7 +101,7 @@ export const OverlayText = styled.span`
   color: white;
   margin: 0px;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 500;
   line-height: "17px";
 `;
 
