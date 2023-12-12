@@ -25,10 +25,11 @@ const Banner: React.FC<BannerProps> = (props) => {
         width={1250}
         height={500}
         alt="Picture of the author"
+        screen={true}
       />
 
       <Overlay>
-        <Text>{props.text}</Text>
+        <Text screen={true}>{props.text}</Text>
         <BannerButtonDiv>
           <SingleBannerButton marginRight={true}>
             <Button content={"Start exploring"} margin={true} type="register"/>

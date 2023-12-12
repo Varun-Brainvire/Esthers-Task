@@ -16,8 +16,6 @@ import PostWrapper, {
 import Image from "next/image"
 import { useState } from "react"
 
-// import { Container, Row, Col } from "styled-bootstrap-grid"
-
 const Section = styled.div`
   background-color: #f4f0ec;
   flex-grow: 1;
@@ -68,8 +66,6 @@ const ImageWrapper = styled.div`
 `
 
 export default function Home() {
-  // const { images, handleFileUpload } = useGetPost()
-
   const [images, setImages] = useState<any>([])
   const handelChange = (e: any) => {
     for (const file of e.target.files) {

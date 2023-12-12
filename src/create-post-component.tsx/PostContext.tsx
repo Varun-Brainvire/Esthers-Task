@@ -29,7 +29,6 @@ export default function PostWrapper({
         setImages((imgs: any) => [...imgs, reader.result])
       }
       reader.onerror = () => {
-        console.log(reader.error)
       }
     }
   }

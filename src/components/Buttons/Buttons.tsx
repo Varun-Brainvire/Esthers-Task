@@ -27,7 +27,6 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props)
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
-    // console.log(value)
     setButtonClick({
       [name]: value,
     });
