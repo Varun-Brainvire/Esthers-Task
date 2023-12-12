@@ -24,7 +24,7 @@ export const RootHeaderWrapper = styled.div<LayoutProps>`
   background-color: ${colors.color.white};
   border-bottom: 1px solid rgb(243, 244, 246);
 
-  @media (max-width: 768px) {
+  @media (max-width: 425px) {
     padding-left: ${({ screen }) => (screen ? "12px" : "48px")};
     padding-right: ${({ screen }) => (screen ? "12px" : "48px")};
   }
@@ -42,7 +42,7 @@ export const NavWrapperContainer = styled.div`
   align-items: center;
   padding-left: 27px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 425px) {
     display: none;
   }
 `;
@@ -64,6 +64,7 @@ export const LiWrapper = styled.li`
   justify-content: center;
   text-transform: capitalize;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
+  border-right: 1px solid rgb(243, 244, 246);
 `;
 
 export const AnchorTag = styled(Link)`

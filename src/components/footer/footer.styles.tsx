@@ -2,17 +2,23 @@ import colors from "@/theme";
 import Link from "next/link";
 import styled from "styled-components";
 
-export const FooterWrapper = styled.div`
+interface Props {
+  marginLeft?: boolean;
+  marginTop?: boolean;
+  screen?: boolean;
+}
+
+export const FooterWrapper = styled.div<Props>`
   background-color: rgb(52, 85, 74);
   color: ${colors.color.beige};
   padding: 20px 0px 20px;
-  position: fixed;
+
   width: 100%;
   bottom: 0px;
   z-index: 102;
 
-  @media (max-width: 768px) {
-    /* display: none; */
+  @media (min-width: 991px) {
+    position: fixed;
   }
 `;
 
@@ -50,11 +56,6 @@ export const UlWrapperForLestSection = styled.div`
   align-items: center;
 `;
 
-interface Props {
-  marginLeft?: boolean;
-  marginTop?: boolean;
-}
-
 export const UlOfLeftSection = styled.ul<Props>`
   display: flex;
   list-style: none;
@@ -72,12 +73,16 @@ export const LiOfLeftSection = styled.li<Props>`
   margin-top: ${({ marginTop }) => (marginTop ? "19%" : "0px")};
 `;
 
-export const BarSeparator = styled.div`
+export const BarSeparator = styled.div<Props>`
   border: 0.2px solid rgba(242, 244, 244, 0.2);
   height: 30px;
   margin-left: 20px;
   margin-right: 20px;
   background-color: rgba(242, 244, 244, 0.2);
+
+  @media (max-width: 425px) {
+    height: ${({ screen }) => (screen ? "100px" : "30px")};
+  }
 `;
 
 export const FooterRightSection = styled.div`
@@ -94,19 +99,32 @@ export const SocialMediaIndividualDivWrapper = styled.div`
   margin: 5px;
 `;
 
-export const FooterPara = styled.div`
+export const FooterPara = styled.div<Props>`
   font-size: 16px;
   font-weight: 500;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   color: ${colors.color.beige};
+
+  @media (max-width: 425px) {
+    font-size: ${({ screen }) => (screen ? "12px" : "16px")};
+  }
 `;
 
-export const FooterLink = styled(Link)`
+interface FooterLinkProps {
+  screen?: boolean;
+}
+
+export const FooterLink = styled(Link)<FooterLinkProps>`
   font-size: 16px;
   font-weight: 500;
   color: ${colors.color.beige};
   margin-top: 0px;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: ${({ screen }) => (screen ? "14px" : "16px")};
+    font-weight: ${(screen) => (screen ? "600" : "")};
+  }
 `;
 
 export const FlexDiv = styled.div`
@@ -115,4 +133,59 @@ export const FlexDiv = styled.div`
 
 export const PaddingWrapper = styled.div`
   padding: 0 4%;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+// Responsive Footer css
+export const ResponsiveFooter = styled.div`
+  @media (min-width: 991px) {
+    display: none;
+  }
+`;
+
+export const SectionMain = styled.div`
+  /* background-color: yellow; */
+`;
+
+export const SectionLeftForMobile = styled.div``;
+
+export const ImageFlexDivForMobile = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+`;
+
+export const UlWrapperForMobile = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-top: 1px solid rgba(242, 244, 244, 0.2);
+  border-bottom: 1px solid rgba(242, 244, 244, 0.2);
+  padding: 0 12px;
+`;
+
+export const ListOfMobile = styled.li<FooterLinkProps>`
+  list-style: none;
+  font-size: 14px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-weight: ${(screen) => (screen ? "600" : "")};
+  }
+`;
+
+export const SocialIconWrapperDivForMobile = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+`;
+
+export const FooterParaForMobile = styled.div`
+  text-align: center;
 `;

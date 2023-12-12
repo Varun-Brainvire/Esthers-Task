@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import {
@@ -26,13 +26,32 @@ import {
 import HeadingText from "../headingComponent/HeadingText";
 import { device, deviceSize } from "@/device";
 
+const isWindowDefined = typeof window !== "undefined";
+
+const isTabletScreen = () => {
+  return isWindowDefined ? window.innerWidth <= 768 : false;
+};
+
 interface CarouselProps {
-  images: any[];
+  data: any[];
 }
 
-const TopCreators: React.FC<CarouselProps> = ({ images }) => {
+const TopCreators: React.FC<CarouselProps> = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+  const [isTablet, setIsTablet] = useState(isTabletScreen());
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsTablet(isTabletScreen());
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const toggleSearch = () => {
     setIsOpen(!isOpen);
@@ -43,13 +62,11 @@ const TopCreators: React.FC<CarouselProps> = ({ images }) => {
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.length);
   };
 
   const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
   };
 
   return (
@@ -84,16 +101,14 @@ const TopCreators: React.FC<CarouselProps> = ({ images }) => {
           </WrapperDiv>
         </HeadingWrapper>
         <ImageWrapper translateX={-currentIndex * 100}>
-          {images.map((image, index) => (
+          {data.map((image, index) => (
             <CarouselImageDiv>
               <Image
                 key={index}
                 src={image.image}
                 alt={`Image ${index + 1}`}
-                width={135}
-                height={135}
-                // width={device.tablet ? 80 : 135}
-                // height={device.tablet ? 80 : 135}
+                width={!isTablet ? 135 : 80}
+                height={! isTablet ? 135 : 80}
               />
               <ImageText screen={true}>
                 <p>{image.text}</p>

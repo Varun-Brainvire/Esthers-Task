@@ -18,7 +18,6 @@ const FlotingMenu = ({
   handelChange?: any
 }) => {
   const { images } = useGetPost()
-  console.log("images", images)
 
   return (
     <FlotingMenuContainer>

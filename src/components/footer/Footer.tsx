@@ -6,16 +6,24 @@ import {
   FooterLink,
   FooterLogoSpanWrapper,
   FooterPara,
+  FooterParaForMobile,
   FooterRightSection,
   FooterWrapper,
+  ImageFlexDivForMobile,
   LeftSectionDiv,
   LiOfLeftSection,
+  ListOfMobile,
   MainUlWrapper,
   PaddingWrapper,
+  ResponsiveFooter,
+  SectionLeftForMobile,
+  SectionMain,
+  SocialIconWrapperDivForMobile,
   SocialMediaIndividualDivWrapper,
   SocialMediaLogoWrapperDiv,
   UlOfLeftSection,
   UlWrapperForLestSection,
+  UlWrapperForMobile,
   WrapperDivForLeftSection,
 } from "./footer.styles";
 import { Container, Row, Col } from "../../components/index";
@@ -28,7 +36,7 @@ import linkedin from "../../../public/linkedin.svg.svg";
 
 const Footer = () => {
   return (
-    <FooterWrapper>
+    <FooterWrapper screen={true}>
       <PaddingWrapper>
         <MainUlWrapper>
           <FooterLeftSection>
@@ -109,6 +117,68 @@ const Footer = () => {
           </FooterRightSection>
         </MainUlWrapper>
       </PaddingWrapper>
+
+      <ResponsiveFooter>
+        <SectionMain>
+          <SectionLeftForMobile>
+            <ImageFlexDivForMobile>
+              <Image src={footerLogo} alt="footerLogo" />
+            </ImageFlexDivForMobile>
+            <div>
+              <UlWrapperForMobile>
+                <ul>
+                  <ListOfMobile>
+                    <FooterLink href={"/inspiration"} screen={true}>
+                      Inspiration
+                    </FooterLink>
+                  </ListOfMobile>
+                  <ListOfMobile screen={true}>Contact Us</ListOfMobile>
+                  <ListOfMobile>
+                    <FooterLink href={"/howitworks"} screen={true}>
+                      How it works
+                    </FooterLink>
+                  </ListOfMobile>
+                </ul>
+                <div>
+                  <BarSeparator screen={true}></BarSeparator>
+                </div>
+                <ul>
+                  <ListOfMobile screen={true}>Cookie policy</ListOfMobile>
+                  <ListOfMobile screen={true}>Privacy policy</ListOfMobile>
+                  <ListOfMobile screen={true}>Terms of service</ListOfMobile>
+                </ul>
+                <div>
+                  <BarSeparator screen={true}></BarSeparator>
+                </div>
+
+                <ul>
+                  <ListOfMobile screen={true}>Blog</ListOfMobile>
+                </ul>
+              </UlWrapperForMobile>
+              <SocialIconWrapperDivForMobile>
+                <SocialMediaIndividualDivWrapper>
+                  <Image src={youtube} alt="yt" width={25} height={30} />
+                </SocialMediaIndividualDivWrapper>
+
+                <SocialMediaIndividualDivWrapper>
+                  <Image src={facebook} alt="yt" width={20} height={30} />
+                </SocialMediaIndividualDivWrapper>
+
+                <SocialMediaIndividualDivWrapper>
+                  <Image src={linkedin} alt="yt" width={20} height={30} />
+                </SocialMediaIndividualDivWrapper>
+
+                <SocialMediaIndividualDivWrapper>
+                  <Image src={instagram} alt="yt" width={20} height={30} />
+                </SocialMediaIndividualDivWrapper>
+              </SocialIconWrapperDivForMobile>
+            </div>
+            <FooterParaForMobile>
+              <FooterPara screen={true}>Esther’s Scandinavia AB ©</FooterPara>
+            </FooterParaForMobile>
+          </SectionLeftForMobile>
+        </SectionMain>
+      </ResponsiveFooter>
     </FooterWrapper>
   );
 };

@@ -5,6 +5,7 @@ import styled from "styled-components";
 interface CategoriesProp {
   height?: boolean;
   screen?: boolean;
+  width?: boolean;
 }
 
 export const CategoriesContainer = styled.div<CategoriesProp>`
@@ -24,7 +25,7 @@ interface StyledImageProps {
   screen?: boolean;
 }
 
-export const ImageOverlayContainer = styled.div<StyledImageProps>`
+export const ImageOverlayContainer = styled.div<CategoriesProp>`
   position: relative;
   width: 100%;
   border-radius: 10px;
@@ -32,6 +33,7 @@ export const ImageOverlayContainer = styled.div<StyledImageProps>`
 
   @media (max-width: 768px) {
     border-radius: ${({ screen }) => (screen ? "0" : "10px")};
+    /* width: ${({ width }) => (width ? "130px" : "")}; */
   }
 `;
 

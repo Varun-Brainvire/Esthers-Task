@@ -7,7 +7,6 @@ import Form from "@/Forms/Form";
 const LoginDiv = () => {
   const [buttonClick,setButtonClick] =  useState("")
   const [active, setActive] = useState(false);
-  // console.log(buttonClick,"buttonClick from Login div")
   return (
     <LoginDivContainer>
       <LoginMainDiv>

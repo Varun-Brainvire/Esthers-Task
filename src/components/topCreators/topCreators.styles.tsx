@@ -8,7 +8,7 @@ export const CarouselContainer = styled.div<CarouselContainerProps>`
   padding: 2% 12% 2% 12%;
   background-color: rgb(244, 240, 236);
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
     padding: ${({ screen }) => (screen ? "2% 6% 2% 6%" : "2% 12% 2% 12%")};
   }
 `;
@@ -34,7 +34,7 @@ export const HeadingWrapper = styled.div`
 export const CarouselImageDiv = styled.div`
   margin-right: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
     width: 100px;
     height: 100px;
   }
@@ -45,7 +45,7 @@ export const ImageText = styled.div<CarouselContainerProps>`
     text-align: center;
     font-family: Strawford, "Lexend Deca", Inter, sans-serif;
 
-    @media (max-width: 768px) {
+    @media (max-width: 375px) {
       font-size: ${({ screen }) => (screen ? "10px" : "")};
     }
   }
@@ -66,7 +66,7 @@ export const ArrowDiv = styled.div`
 export const ArrowWrapper = styled.div`
   display: flex;
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
     display: none;
   }
 `;
@@ -117,7 +117,7 @@ export const SearchInputField = styled.input<{
     visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 375px) {
     width: ${(props) =>
       props.isOpen ? (props.screen ? "113px" : "250px") : "72px"};
   }

@@ -190,7 +190,6 @@ const Step2 = () => {
                       let event = {
                         target: { name: "country", value: item },
                       };
-                      console.log(item, "item.label");
                       setCountrySelected(item);
                     }}
                   />

@@ -52,7 +52,6 @@ const Form = () => {
       validationSchema={validationSchema}
       onSubmit={(values) => {
         alert("formSubmitted")
-        console.log(values);
       }}
       handleSubmit = {(values:any) => {
         console.log(values)

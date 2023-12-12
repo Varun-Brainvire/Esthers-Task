@@ -14,6 +14,12 @@ import {
 import { Container, Row, Col } from "../index";
 
 const Categories = () => {
+  const categoryData = [
+    { image: beauty, text: "Beauty" },
+    { image: home, text: "Home" },
+    { image: fashion, text: "Fashion" },
+  ];
+
   return (
     <CategoriesContainer screen={true}>
       <InnerCategoryContainer>
@@ -21,37 +27,22 @@ const Categories = () => {
 
         <Container>
           <Row>
-            <Col lg={4}>
-              <ImageOverlayContainer>
-                <StyledImage
-                  src={beauty}
-                  alt="beauty"
-                  width={300}
-                  height={189}
-                />
-                <OverlayBackground />
-                <OverlayText>Beauty</OverlayText>
-              </ImageOverlayContainer>
-            </Col>
-            <Col lg={4}>
-              <ImageOverlayContainer>
-                <StyledImage src={home} alt="home" width={300} height={189} />
-                <OverlayBackground />
-                <OverlayText>Home</OverlayText>
-              </ImageOverlayContainer>
-            </Col>
-            <Col lg={4}>
-              <ImageOverlayContainer>
-                <StyledImage
-                  src={fashion}
-                  alt="fashion"
-                  width={300}
-                  height={189}
-                />
-                <OverlayBackground />
-                <OverlayText>Fashion</OverlayText>
-              </ImageOverlayContainer>
-            </Col>
+            {categoryData.map((cardCategory) => {
+              return (
+                <Col lg={4} xs={4} md={4}>
+                  <ImageOverlayContainer width={true}>
+                    <StyledImage
+                      src={cardCategory.image}
+                      alt="beauty"
+                      width={300}
+                      height={189}
+                    />
+                    <OverlayBackground />
+                    <OverlayText>{cardCategory.text}</OverlayText>
+                  </ImageOverlayContainer>
+                </Col>
+              );
+            })}
           </Row>
         </Container>
       </InnerCategoryContainer>
