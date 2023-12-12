@@ -43,7 +43,9 @@ const Footer = () => {
                   <UlWrapperForLestSection>
                     <UlOfLeftSection>
                       <LiOfLeftSection>
-                        <Link href={"/inspiration"}>Inspiration</Link>
+                        <FooterLink href={"/inspiration"}>
+                          Inspiration
+                        </FooterLink>
                       </LiOfLeftSection>
                       <LiOfLeftSection>Contact Us</LiOfLeftSection>
                     </UlOfLeftSection>
