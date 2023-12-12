@@ -19,15 +19,10 @@ interface Props {
 const Buttons = ({ buttonClick, setButtonClick, active, setActive }: Props) => {
   const handleChange = (e: any) => {
     const { name, value } = e.target;
-    // console.log(value)
     setButtonClick({
       [name]: value,
     });
   };
-//   console.log(buttonClick, "buttonClick");
-
-//   const [active, setActive] = useState(false);
-//   console.log(active, "active");
   return (
     <ElementBox forText={false}>
       <Container className="">

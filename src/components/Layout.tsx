@@ -25,12 +25,10 @@ import { useRouter } from "next/router";
 
 const Layout = ({ children }: any) => {
   const route = useRouter();
-
-  console.log(route.route, "route");
   return (
     <>
       <HeaderDiv>
-        <RootHeaderWrapper>
+        <RootHeaderWrapper screen={true}>
           <ImageWrapperDiv>
             <Link href="/">
               <Image src={darkLogo} alt="logo" />

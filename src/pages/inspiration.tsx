@@ -10,11 +10,9 @@ export const InspirationPageWrapper = styled.div`
 `;
 
 const InspirationPage: React.FC = () => {
-  // Setting the initial selected category to "All" for default rendering
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const handleCategoryChange = (category: string) => {
-    // Updated selected category when a category tab is clicked
     setSelectedCategory(category);
   };
 
