@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Select from "react-select";
+import { Props } from "../Buttons/Buttons.styles";
 import colors from "@/theme";
 
 export const HeroDiv = styled.div`
@@ -7,6 +8,7 @@ export const HeroDiv = styled.div`
   background-color: ${colors.color.white};
 `;
 export const CreateAccountDiv = styled.div`
+  padding-top: 60px;
   margin: 0px auto;
   max-width: 640px;
   text-align: center;
@@ -36,17 +38,18 @@ export const FormDiv = styled.div`
   justify-content: center;
 `;
 
-export const CustomSelect = styled(Select)`
+export const CustomSelect = styled(Select)<Props>`
   border: none;
   color: black;
   background: #f7d0cb;
   border-radius: 4px;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   font-size: 14px;
+  flex: ${({ flex }) => (flex ? "0 0 30%" : "")};
 `;
 
 export const SelectWrapper = styled.div`
-  width: 38%;
+  width: 100%;
 `;
 
 export const SelectDiv = styled.div`
@@ -65,3 +68,79 @@ export const DropDownAndInputDiv = styled.div`
   gap: 10px;
   flex-direction: row;
 `;
+
+export const SocialMediaDiv = styled.div`
+  margin-bottom: 15px;
+`;
+export const SelectAndInputDiv = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const RadioQuestions = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+`;
+
+export const RadioWrapper = styled.div`
+  display: flex;
+`
+
+export const SingleRadio = styled.div`
+  display: flex;
+  align-items: center;
+  height: 25px;
+  position: relative;
+  width: calc(50%); 
+`
+export const RadioInput = styled.input`
+  /* opacity: 1;
+  z-index: 1; */
+  border-radius: 99%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+`
+export const RadioLabel = styled.label`
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 99px;
+  background: white;
+  border: 1.5px solid #eeeeee;
+  cursor: pointer;
+
+  &::after{
+    content: "";
+    display: block;
+    border-radius: 99px;
+    width: 8px;
+    height: 8px;
+    margin: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 3px 3px 1px;
+    background: white;
+  }
+`
+export const RadioP = styled.p`
+  font-weight: 400;
+  font-size: 16px;
+  overflow-wrap: break-word;
+  margin-left: 10px;
+`
+
+export const CheckboxDiv = styled.div`  
+  display: flex;
+`
+
+export const Checkbox = styled.input`
+  height: 17px;
+  width: 17px;
+`
+
+export const CheckBoxP = styled.p`
+  font-weight: 400;
+  font-size: 14px;
+  overflow-wrap: break-word;
+  margin-left: 15px;
+`

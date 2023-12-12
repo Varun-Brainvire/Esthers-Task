@@ -1,14 +1,17 @@
 [
   {
-    "name":"youtube",
-    "icons": "../../../public/yt.svg"
+    "value":"youtube",
+    "label":"youtube",
+    "icons": "https://dev.esthers.shop/_next/image?url=%2Ficons%2Fyoutube_original.svg&w=1920&q=75"
   },
   {
-    "name":"instagram",
-    "icons": "../../../public/instagram.svg"
+    "value":"instagram",
+    "label":"instagram",
+    "icons": "https://dev.esthers.shop/_next/image?url=%2Ficons%2Finsta_original.svg&w=1920&q=75"
   },
   {
-    "name":"tiktok",
-    "icons": "../../../public/tiktok.svg"
+    "value":"tiktok",
+    "label":"tiktok",
+    "icons": "https://dev.esthers.shop/_next/image?url=%2Ficons%2Ftiktok_original.svg&w=1920&q=75"
   }
 ]

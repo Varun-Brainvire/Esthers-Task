@@ -51,10 +51,10 @@ const Form = () => {
       }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        alert("formSubmitted")
+        // console.log(values);
       }}
       handleSubmit = {(values:any) => {
-        console.log(values)
+        // console.log(values)
       }}
     >
       {({
@@ -225,7 +225,10 @@ const Form = () => {
               handleSubmit
               setSubmitting(!submitting)
               if(submitting == true) {
-                router.push('/step2')
+                router.push({
+                  pathname:"/step2",
+                  query:{name:values.userName,email:values.email}
+                })
               }
             }}>
               Create Account
