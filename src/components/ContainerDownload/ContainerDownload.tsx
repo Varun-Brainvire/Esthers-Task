@@ -4,7 +4,7 @@ import {
   InnerIconChild,
   InnerIconContainer,
   MainContainerDownload,
-} from "./ContainerDownloadStyle";
+} from "./containerdownload.style";
 import Image from "next/image";
 import down1 from "../../../public/Images/down1.svg";
 import down2 from "../../../public/Images/down2.svg";
