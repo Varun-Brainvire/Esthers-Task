@@ -32,6 +32,7 @@ type AppPropsWithLayout = AppProps & {
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
+  
   return getLayout(
     <main style={{ height: "100%" }} className={myFont.className}>
       <Component {...pageProps} />
