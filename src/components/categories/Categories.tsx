@@ -15,8 +15,8 @@ import { Container, Row, Col } from "../index";
 import Link from "next/link";
 const Categories = () => {
   const categoryData = [
-    { image: beauty, text: "Beauty" },
     { image: home, text: "Home" },
+    { image: beauty, text: "Beauty" },
     { image: fashion, text: "Fashion" },
   ];
 
