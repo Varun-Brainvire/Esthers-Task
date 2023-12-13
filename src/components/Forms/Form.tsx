@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  A,
   AggrementText,
   AggrementTextDiv,
   AlreadyAccounText,
@@ -15,13 +16,16 @@ import {
 } from "./Form.styles";
 import { Formik, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
-import Router , {useRouter}  from 'next/router';
+import Router, { useRouter } from "next/router";
+import { FaRegEyeSlash } from "react-icons/fa";
+import { FaRegEye } from "react-icons/fa";
 
 const Form = () => {
+  const [submitting, setSubmitting] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setConfirmPassword] = useState(false);
 
-  const [submitting,setSubmitting] = useState(false)
-
-  const router = useRouter()
+  const router = useRouter();
 
   const validationSchema = Yup.object().shape({
     userName: Yup.string()
@@ -36,9 +40,10 @@ const Form = () => {
     password: Yup.string()
       .required("Password is required")
       .min(5, "Your password is too short."),
-    confirmpassword: Yup
-      .string()
-      .oneOf([Yup.ref("password")], "Passwords must match"),
+    confirmpassword: Yup.string().oneOf(
+      [Yup.ref("password")],
+      "Passwords must match"
+    ),
   });
 
   return (
@@ -46,14 +51,14 @@ const Form = () => {
       initialValues={{
         userName: "",
         email: "",
-        password:"",
-        confirmpassword:"",
+        password: "",
+        confirmpassword: "",
       }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
         // console.log(values);
       }}
-      handleSubmit = {(values:any) => {
+      handleSubmit={(values: any) => {
         // console.log(values)
       }}
     >
@@ -87,158 +92,77 @@ const Form = () => {
                 )} */}
               </InputDiv>
               <InputDiv>
-                <InputField type="text" placeholder="Email *" name="email" onChange={handleChange} />
+                <InputField
+                  type="text"
+                  placeholder="Email *"
+                  name="email"
+                  onChange={handleChange}
+                />
                 <ErrorDiv>{errors.email}</ErrorDiv>
               </InputDiv>
               <InputDiv>
-                <OuterPasswordDiv style={{ position: "relative" }}>
+                <OuterPasswordDiv>
                   <InnerPasswordDiv
-                    style={{
-                      position: "absolute",
-                      right: "10px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      lineHeight: "0",
-                      cursor: "pointer",
-                    }}
+                    onClick={() => setShowPassword(!showPassword)}
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      fill="currentColor"
-                      viewBox="0 0 256 256"
-                    >
-                      <rect width="256" height="256" fill="none"></rect>
-                      <line
-                        x1="48"
-                        y1="40.00122"
-                        x2="208"
-                        y2="216.00122"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></line>
-                      <path
-                        d="M154.9071,157.599a40.00028,40.00028,0,0,1-53.8142-59.19562"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></path>
-                      <path
-                        d="M73.99446,68.59479C33.22519,89.24034,16,128.00122,16,128.00122s32,71.99219,112,71.99219a118.0238,118.0238,0,0,0,53.99756-12.59461"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></path>
-                      <path
-                        d="M208.60953,169.10059C230.41132,149.57342,240,128.00122,240,128.00122S208,55.99341,128,55.99341a125.31923,125.31923,0,0,0-20.68221,1.68414"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></path>
-                      <path
-                        d="M135.52737,88.709a40.02411,40.02411,0,0,1,32.29785,35.52874"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></path>
-                    </svg>
+                    {showPassword ? <FaRegEye /> : <FaRegEyeSlash />}
+                    
                   </InnerPasswordDiv>
-                  <InputField type="password" placeholder="Password *" name="password" onChange={handleChange}/>
+                  <InputField
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Password *"
+                    name="password"
+                    onChange={handleChange}
+                  />
                   <ErrorDiv>{errors.password}</ErrorDiv>
                 </OuterPasswordDiv>
               </InputDiv>
               <InputDiv>
                 <OuterPasswordDiv>
-                  <InnerPasswordDiv>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="1em"
-                      height="1em"
-                      fill="currentColor"
-                      viewBox="0 0 256 256"
-                    >
-                      <rect width="256" height="256" fill="none"></rect>
-                      <line
-                        x1="48"
-                        y1="40.00122"
-                        x2="208"
-                        y2="216.00122"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></line>
-                      <path
-                        d="M154.9071,157.599a40.00028,40.00028,0,0,1-53.8142-59.19562"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></path>
-                      <path
-                        d="M73.99446,68.59479C33.22519,89.24034,16,128.00122,16,128.00122s32,71.99219,112,71.99219a118.0238,118.0238,0,0,0,53.99756-12.59461"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></path>
-                      <path
-                        d="M208.60953,169.10059C230.41132,149.57342,240,128.00122,240,128.00122S208,55.99341,128,55.99341a125.31923,125.31923,0,0,0-20.68221,1.68414"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></path>
-                      <path
-                        d="M135.52737,88.709a40.02411,40.02411,0,0,1,32.29785,35.52874"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="16"
-                      ></path>
-                    </svg>
+                  <InnerPasswordDiv
+                    onClick={() => setConfirmPassword(!showConfirmPassword)}
+                  >
+                    {showConfirmPassword ? <FaRegEye /> : <FaRegEyeSlash />}
                   </InnerPasswordDiv>
-                  <InputField type="password" placeholder="Confirm Password *" name="confirmpassword" onChange={handleChange}/>
+                  <InputField
+                    type={showConfirmPassword ? "text" : "password"}
+                    placeholder="Confirm Password *"
+                    name="confirmpassword"
+                    onChange={handleChange}
+                  />
                   <ErrorDiv>{errors.confirmpassword}</ErrorDiv>
                 </OuterPasswordDiv>
               </InputDiv>
             </fieldset>
 
-            <CreateAccountButton type="submit" onClick={() => {
-              handleSubmit
-              setSubmitting(!submitting)
-              if(submitting == true) {
-                router.push({
-                  pathname:"/step2",
-                  query:{name:values.userName,email:values.email}
-                })
-              }
-            }}>
+            <CreateAccountButton
+              type="submit"
+              onClick={() => {
+                handleSubmit;
+                setSubmitting(!submitting);
+                if (submitting == true) {
+                  router.push({
+                    pathname: "/signup",
+                    query: { name: values.userName, email: values.email },
+                  });
+                }
+              }}
+            >
               Create Account
             </CreateAccountButton>
 
             <AggrementTextDiv>
               <AggrementText>
                 By signing up, you accept our term of use. Read more about how
-                we collect, use and share your data in our privacy policy and
-                how we use cookies and similar technology in our cookie policy.
+                we collect, use and share your data in our{" "}
+                <A href="https://dev.esthers.shop/legal/privacy-policy">
+                  privacy policy
+                </A>{" "}
+                and how we use cookies and similar technology in our{" "}
+                <A href="https://dev.esthers.shop/legal/cookie-policy">
+                  cookie policy
+                </A>{" "}
+                .
               </AggrementText>
             </AggrementTextDiv>
 
