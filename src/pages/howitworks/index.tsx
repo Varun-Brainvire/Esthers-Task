@@ -20,7 +20,6 @@ import beauty from "../../../public/beauty.png";
 import beauty2 from "../../../public/Images/beauty2.svg";
 import ContainerDownload from "@/components/ContainerDownload/ContainerDownload";
 import YoutubeContainer from "@/components/YoutubeContainer/YoutubeContainer";
-import Footer from "@/components/footer/Footer";
 import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
 
 type Props = {};
@@ -60,7 +59,6 @@ const index = (props: Props) => {
           innerText={"Share your outfits & make your looks shoppable"}
           image={beauty2}
         />
-        <Footer />
       </div>
     </>
   );

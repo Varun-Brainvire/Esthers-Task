@@ -37,6 +37,7 @@ interface CarouselProps {
 }
 
 const TopCreators: React.FC<CarouselProps> = ({ data }) => {
+  const [search, setSearch] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const [isTablet, setIsTablet] = useState(isTabletScreen());
@@ -69,6 +70,10 @@ const TopCreators: React.FC<CarouselProps> = ({ data }) => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
   };
 
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
+  console.log(search, "search");
   return (
     <CarouselContainer screen={true}>
       <InnerContainer>
@@ -84,6 +89,7 @@ const TopCreators: React.FC<CarouselProps> = ({ data }) => {
                 isOpen={isOpen}
                 placeholder="Search..."
                 screen={true}
+                onChange={(e) => handleSearch(e)}
               />
               <CloseButton onClick={closeSearch}>
                 <FaTimes />
@@ -108,7 +114,7 @@ const TopCreators: React.FC<CarouselProps> = ({ data }) => {
                 src={image.image}
                 alt={`Image ${index + 1}`}
                 width={!isTablet ? 135 : 80}
-                height={! isTablet ? 135 : 80}
+                height={!isTablet ? 135 : 80}
               />
               <ImageText screen={true}>
                 <p>{image.text}</p>

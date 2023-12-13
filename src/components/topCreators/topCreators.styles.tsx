@@ -97,15 +97,15 @@ export const CloseButton = styled.div`
 `;
 
 export const SearchInputField = styled.input<{
-  isOpen: boolean;
-  screen: boolean;
+  isOpen?: boolean;
+  screen?: boolean;
 }>`
   width: ${(props) => (props.isOpen ? "250px" : "72px")};
   padding: 10px;
   border: none;
   outline: none;
   transition: width 0.3s ease, background-color 0.3s ease,
-    border-radius 0.3s ease;
+  border-radius 0.3s ease;
   background-color: ${(props) => (props.isOpen ? "#fff" : "transparent")};
   border-radius: ${(props) => (props.isOpen ? "50px" : "0")};
   color: #fff;

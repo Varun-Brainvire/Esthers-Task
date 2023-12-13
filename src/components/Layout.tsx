@@ -12,12 +12,6 @@ import Navbar from "./Navbar/Navbar";
 const Layout = ({ children }: any) => {
   const route = useRouter();
 
-  console.log(route.route, "route");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const handleTabClick = (category: string) => {
-    setSelectedCategory(category);
-  };
   return (
     <>
       <Navbar />
