@@ -12,7 +12,7 @@ import {
   StyledImage,
 } from "./categories.styles";
 import { Container, Row, Col } from "../index";
-
+import Link from "next/link";
 const Categories = () => {
   const categoryData = [
     { image: beauty, text: "Beauty" },
@@ -25,21 +25,25 @@ const Categories = () => {
       <InnerCategoryContainer>
         <HeadingText text={"Categories"} marginBottom={true} />
 
-        <Container>
-          <Row>
-            {categoryData.map((cardCategory) => {
+        <Container screen={true}>
+          <Row screen={true}>
+            {categoryData.map((category) => {
               return (
-                <Col lg={4} xs={4} md={4}>
-                  <ImageOverlayContainer width={true}>
-                    <StyledImage
-                      src={cardCategory.image}
-                      alt="beauty"
-                      width={300}
-                      height={189}
-                    />
-                    <OverlayBackground />
-                    <OverlayText>{cardCategory.text}</OverlayText>
-                  </ImageOverlayContainer>
+                <Col xl={4} lg={4} md={4} sm={4} sx={4} padding={true}>
+                  <>
+                    <Link href="/inspiration/beauty">
+                      <ImageOverlayContainer>
+                        <StyledImage
+                          src={category.image}
+                          alt="beauty"
+                          width={300}
+                          height={189}
+                        />
+                        <OverlayBackground />
+                        <OverlayText>{category.text}</OverlayText>
+                      </ImageOverlayContainer>
+                    </Link>
+                  </>
                 </Col>
               );
             })}
