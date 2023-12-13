@@ -6,6 +6,7 @@ interface Props {
   marginLeft?: boolean;
   marginTop?: boolean;
   screen?: boolean;
+  margin?: boolean;
 }
 
 export const FooterWrapper = styled.div<Props>`
@@ -71,6 +72,10 @@ export const LiOfLeftSection = styled.li<Props>`
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   color: ${colors.color.beige};
   margin-top: ${({ marginTop }) => (marginTop ? "19%" : "0px")};
+
+  @media (max-width: 425px) {
+    margin-bottom: ${({ margin }) => (margin ? "30px" : "")};
+  }
 `;
 
 export const BarSeparator = styled.div<Props>`
@@ -82,6 +87,10 @@ export const BarSeparator = styled.div<Props>`
 
   @media (max-width: 425px) {
     height: ${({ screen }) => (screen ? "100px" : "30px")};
+  }
+
+  @media (max-width: 768px) {
+    height: 100px;
   }
 `;
 
@@ -162,11 +171,15 @@ export const ImageFlexDivForMobile = styled.div`
 export const UlWrapperForMobile = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 8px;
   border-top: 1px solid rgba(242, 244, 244, 0.2);
   border-bottom: 1px solid rgba(242, 244, 244, 0.2);
   padding: 0 12px;
+
+  @media (max-width: 768px) {
+    height: 100px;
+  }
 `;
 
 export const ListOfMobile = styled.li<FooterLinkProps>`
