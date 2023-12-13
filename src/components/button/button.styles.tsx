@@ -25,4 +25,5 @@ export const StyledButton = styled.button<StyledButtonProps>`
   letter-spacing: 0.3px;
   border-radius: 99px;
   margin-top: ${(props) => (props.margin ? "15%" : "0")};
+  cursor: pointer;
 `;
