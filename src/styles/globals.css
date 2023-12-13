@@ -3,9 +3,10 @@ body {
 }
 
 #__next {
-  background: blue;
+  /* background: blue;
   position: absolute;
-  inset: 0;
+  inset: 0; */
+  height: 100%;
 }
 
 * {
@@ -14,10 +15,15 @@ body {
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 /* * {
   outline: 1px solid red;
 } */
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}

@@ -1,4 +1,4 @@
-import Layout from "../components/Layout"
+// import Layout from "../components/Layout"
 import "../styles/globals.css"
 import "../styles/custom.css"
 import localFont from "next/font/local"
@@ -31,15 +31,11 @@ type AppPropsWithLayout = AppProps & {
 // }
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page)
-
-  // return getLayout(<Component {...pageProps} />)
-
   return getLayout(
-    // <main style={{ height: "100%" }} className={myFont.className}>
-    <Component {...pageProps} />
-    // </main>
+    <main style={{ height: "100%" }} className={myFont.className}>
+      <Component {...pageProps} />
+    </main>
   )
 }
 export default MyApp

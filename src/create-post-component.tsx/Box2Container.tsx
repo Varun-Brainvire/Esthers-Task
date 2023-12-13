@@ -10,6 +10,7 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   flex: 1 0 0;
+  width: 100%;
   align-self: stretch;
   height: 100%;
 `

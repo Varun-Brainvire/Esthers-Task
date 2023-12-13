@@ -1,13 +1,13 @@
 import styled, { createGlobalStyle } from "styled-components"
-// import {
-//   CreatePostContainer,
-//   Col,
-//   ContainerPost,
-//   Container,
-//   Row,
-//   ImageUploadCol,
-//   CreatePostRow,
-// } from "../Grid/index"
+import {
+  CreatePostContainer,
+  // Col,
+  ContainerPost,
+  // Container,
+  // Row,
+  ImageUploadCol,
+  CreatePostRow,
+} from "../Grid/index"
 
 import NavBar from "../create-post-component.tsx/NavBar"
 import FlotingMenu from "../create-post-component.tsx/FlotingMenu"
@@ -25,7 +25,18 @@ import { Container, Row, Col } from "../components/index"
 import type { ReactElement } from "react"
 import NestedLayout from "../components/NestedLayout"
 import type { NextPageWithLayout } from "./_app"
-
+import { Conatiner } from "@/create-post-component.tsx/BottomButton.styles"
+import {
+  MainConatinerRow,
+  MainContainer,
+  MainContainerCol,
+  MainContainerCol2,
+  Box,
+  Box1_Wrapper,
+} from "@/components/createPost/mainContainer/mainContainer.styles"
+import TopNavigation from "@/components/createPost/topNavigation/topNavigation"
+import StepButtons from "@/components/createPost/stepButtons/stepButtons"
+import BottomButtons from "@/components/createPost/bottomButtons/bottomButtons"
 const Section = styled.div`
   background-color: #f4f0ec;
   height: 100%;
@@ -33,6 +44,11 @@ const Section = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 576px) {
+    height: auto; /* Adjust as needed for mobile layout */
+  }
 `
 
 const Frame = styled.div`
@@ -63,8 +79,8 @@ const Box1 = styled.div`
   align-items: center;
   border-radius: 6px;
   background: #fff;
-
   flex-shrink: 0;
+  border: 3px dotted salmon;
 `
 
 const ImageWrapper = styled.div`
@@ -158,26 +174,44 @@ const Page: NextPageWithLayout = () => {
   }
   return (
     <Section>
-      <Container style={{ border: "1px solid black", height: "80%" }}>
-        <Row style={{ border: "1px solid black", height: "100%" }}>
-          <Col
-            style={{ border: "1px solid black", height: "100%" }}
-            col={6}
-            xs={12}
-            xl={6}
-          >
-            <div style={{ height: "300px" }}>salm hayak</div>
-          </Col>
-          <Col
-            style={{ border: "1px solid black", height: "100%" }}
-            col={6}
-            xs={12}
-            xl={6}
-          >
-            <div style={{ height: "300px" }}>hey</div>
-          </Col>
-        </Row>
-      </Container>
+      <MainContainer>
+        <MainConatinerRow>
+          <MainContainerCol col={6} xs={12} xl={6}>
+            <ImageUploadCol>
+              {images.length > 0 && (
+                <ImageWrapper>
+                  {images?.map((link: any) => (
+                    <Image
+                      width={300}
+                      height={400}
+                      object-fit="contain"
+                      key={link}
+                      src={link}
+                      alt="sc"
+                    />
+                  ))}
+                </ImageWrapper>
+              )}
+              <Box1>
+                <FlotingMenu
+                  handelChange={handelChange}
+                  label="Click to upload or drag and drop"
+                ></FlotingMenu>
+                <FlotingMenu label="Choose from Instagram"></FlotingMenu>
+              </Box1>
+            </ImageUploadCol>
+          </MainContainerCol>
+          <MainContainerCol2 col={6} xs={12} xl={6}>
+            <Box>
+              <Box1_Wrapper>
+                <TopNavigation label="TopNavigation"></TopNavigation>
+                <StepButtons />
+              </Box1_Wrapper>
+              <BottomButtons />
+            </Box>
+          </MainContainerCol2>
+        </MainConatinerRow>
+      </MainContainer>
     </Section>
   )
 }
@@ -189,7 +223,46 @@ Page.getLayout = function getLayout(page: ReactElement) {
 export default Page
 
 {
-  /* <section style={{ backgroundColor: "#f4f0ec", height: "100%" }}>
-          hello me{" "}
-        </section> */
+  /* <Container style={{ border: "1px solid black", height: "80%" }}>
+  <Row style={{ border: "1px solid black", height: "100%" }}>
+    <Col
+      style={{ border: "1px solid black", height: "100%" }}
+      col={6}
+      xs={12}
+      xl={6}
+    >
+      <ImageUploadCol>
+        {images.length > 0 && (
+          <ImageWrapper>
+            {images?.map((link: any) => (
+              <Image
+                width={400}
+                height={500}
+                object-fit="contain"
+                key={link}
+                src={link}
+                alt="sc"
+              />
+            ))}
+          </ImageWrapper>
+        )}
+        <Box1>
+          <FlotingMenu
+            handelChange={handelChange}
+            label="Click to upload or drag and drop"
+          ></FlotingMenu>
+          <FlotingMenu label="Choose from Instagram"></FlotingMenu>
+        </Box1>
+      </ImageUploadCol>
+    </Col>
+    <Col
+      style={{ border: "1px solid black", height: "100%" }}
+      col={6}
+      xs={12}
+      xl={6}
+    >
+      <div style={{ height: "300px" }}>hey</div>
+    </Col>
+  </Row>
+</Container> */
 }

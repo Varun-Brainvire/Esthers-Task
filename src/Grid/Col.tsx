@@ -35,8 +35,10 @@ export const ImageUploadCol = styled(sbgCol)`
   align-items: center;
   overflow: scroll;
   gap: 20px;
-
+  height: 100%;
   border-radius: 8px 0px 0px 8px;
+
+  border: 3px dotted salmon;
   background: var(--Form-big-toggle, #f8f8f8);
   ::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
