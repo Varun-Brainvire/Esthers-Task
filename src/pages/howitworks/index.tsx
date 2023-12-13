@@ -33,6 +33,10 @@ const index = (props: Props) => {
     { image: image5, text: "rushikesh" },
     { image: image1, text: "hairbyriddhi" },
     { image: image2, text: "rushikesh" },
+    { image: image2, text: "rushikesh" },
+    { image: image2, text: "rushikesh" },
+    { image: image2, text: "rushikesh" },
+    { image: image2, text: "rushikesh" },
   ];
   return (
     <>
@@ -44,8 +48,8 @@ const index = (props: Props) => {
           {/* <TopCreatorContainer data={data} /> */}
           <TopCreators data={images} />
           <CarauselContainer />
-          <ClientContainer />
-          <BrandContainer />
+          {/* <ClientContainer /> */}
+          {/* <BrandContainer /> */}
           {/* <MakeupContainer /> */}
           <CenterTabComponent
             mainText={"Makeup genius?"}
@@ -53,8 +57,8 @@ const index = (props: Props) => {
             image={beauty}
           />
         </MainContainer>
-        <ContainerDownload />
-        <YoutubeContainer />
+        {/* <ContainerDownload /> */}
+        {/* <YoutubeContainer /> */}
         <CenterTabComponent
           mainText={"Style guru??"}
           innerText={"Share your outfits & make your looks shoppable"}

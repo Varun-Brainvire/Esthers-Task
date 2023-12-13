@@ -5,15 +5,19 @@ import {
   MidMainContainer,
   TextContainer,
   TextDivStyle,
-} from "./midcontainerstyle";
+} from "./midcontainer.style";
 import Image from "next/image";
+import { Col, Container, Row } from "..";
+import Banner from "../bannerImage/Banner";
 
 type Props = {};
 
 function MidContainer({}: Props) {
+  const imageUrl = "/images/aboutus_banner.png";
   return (
     <>
-      <MidMainContainer>
+      <Banner text={"Shop the styles of your favorite creators"} />
+      {/* <MidMainContainer>
         <TextDivStyle>
           <TextContainer>
             <p className="heading">
@@ -35,7 +39,7 @@ function MidContainer({}: Props) {
             />
           </ImageDiv>
         </TextDivStyle>
-      </MidMainContainer>
+      </MidMainContainer> */}
     </>
   );
 }
