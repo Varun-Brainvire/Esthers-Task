@@ -97,8 +97,8 @@ export const CloseButton = styled.div`
 `;
 
 export const SearchInputField = styled.input<{
-  isOpen: boolean;
-  screen: boolean;
+  isOpen?: boolean;
+  screen?: boolean;
 }>`
   width: ${(props) => (props.isOpen ? "250px" : "72px")};
   padding: 10px;
