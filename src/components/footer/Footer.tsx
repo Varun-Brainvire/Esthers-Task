@@ -84,7 +84,7 @@ const Footer = () => {
                     <BarSeparator></BarSeparator>
 
                     <UlOfLeftSection>
-                      <LiOfLeftSection>Blog</LiOfLeftSection>
+                      <LiOfLeftSection margin={true}>Blog</LiOfLeftSection>
                       <LiOfLeftSection marginTop={true}></LiOfLeftSection>
                     </UlOfLeftSection>
                   </FlexDiv>

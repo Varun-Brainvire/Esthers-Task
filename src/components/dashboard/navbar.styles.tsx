@@ -6,7 +6,7 @@ interface ListTagProps {
   isActive: boolean;
 }
 
-export const HeaderDiv = styled.div`
+export const NavDiv = styled.div`
   background-color: beige;
 `;
 

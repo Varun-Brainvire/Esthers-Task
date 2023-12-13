@@ -62,7 +62,6 @@ const Step2 = () => {
 
   const IconOption = (props:any) => (
     <Option {...props}>
-    {console.log(props)}
       <img
         src={props.data.icons}
         style={{ width: 20 }}
