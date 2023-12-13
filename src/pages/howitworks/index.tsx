@@ -16,12 +16,12 @@ import image2 from "../../../public/htskse9m0xyldvqdtfvt.jpg.png";
 import image3 from "../../../public/k1c24ostzy9wpkdggibz.jpg.png";
 import image4 from "../../../public/josefiin.png";
 import image5 from "../../../public/m27yhspfsiuqrhg2sdsu.jpg.png";
-import CenterTabComponent from "@/components/centerTabComponent/CenterTabComponent";
 import beauty from "../../../public/beauty.png";
 import beauty2 from "../../../public/Images/beauty2.svg";
 import ContainerDownload from "@/components/ContainerDownload/ContainerDownload";
 import YoutubeContainer from "@/components/YoutubeContainer/YoutubeContainer";
 import Footer from "@/components/footer/Footer";
+import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
 
 type Props = {};
 const index = (props: Props) => {
@@ -42,12 +42,12 @@ const index = (props: Props) => {
           <MidContainer />
           <MobileTextContainer />
           {/* <TopCreatorContainer data={data} /> */}
-          <TopCreators images={images} />
+          <TopCreators data={images} />
           <CarauselContainer />
           <ClientContainer />
           <BrandContainer />
           {/* <MakeupContainer /> */}
-          <CenterTabComponent
+          <AdvertisingBanner
             mainText={"Makeup genius?"}
             innerText={"Share your best tips & products with your followers"}
             image={beauty}
@@ -55,7 +55,7 @@ const index = (props: Props) => {
         </MainContainer>
         <ContainerDownload />
         <YoutubeContainer />
-        <CenterTabComponent
+        <AdvertisingBanner
           mainText={"Style guru??"}
           innerText={"Share your outfits & make your looks shoppable"}
           image={beauty2}

@@ -67,8 +67,8 @@ export const UlOfLeftSection = styled.ul<Props>`
 `;
 
 export const LiOfLeftSection = styled.li<Props>`
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   color: ${colors.color.beige};
   margin-top: ${({ marginTop }) => (marginTop ? "19%" : "0px")};
@@ -109,8 +109,8 @@ export const SocialMediaIndividualDivWrapper = styled.div`
 `;
 
 export const FooterPara = styled.div<Props>`
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
   color: ${colors.color.beige};
 
@@ -124,8 +124,8 @@ interface FooterLinkProps {
 }
 
 export const FooterLink = styled(Link)<FooterLinkProps>`
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   color: ${colors.color.beige};
   margin-top: 0px;
   text-decoration: none;

@@ -5,7 +5,7 @@ interface CarouselContainerProps {
 }
 
 export const CarouselContainer = styled.div<CarouselContainerProps>`
-  padding: 2% 12% 2% 12%;
+  padding: 2% 12% 3% 12%;
   background-color: rgb(244, 240, 236);
 
   @media (max-width: 375px) {
