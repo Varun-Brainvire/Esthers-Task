@@ -10,6 +10,8 @@ import Banner from "@/components/bannerImage/Banner";
 import TopCreators from "@/components/topCreators/TopCreators";
 import Categories from "@/components/categories/Categories";
 import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
+import Layout from "@/components/Layout";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -50,3 +52,7 @@ export default function Home() {
     </>
   );
 }
+
+Home.getLayout = function getLayout(page: any) {
+  return <Layout>{page}</Layout>;
+};
