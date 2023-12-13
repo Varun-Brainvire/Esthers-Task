@@ -14,6 +14,11 @@ const MainContainer = styled(Container)`
   border: 1px solid var(--Light-Grey, #eee);
   background: #fff;
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.06);
+
+  @media (max-width: 576px) {
+    /* Adjust as needed for mobile layout */
+    width: 100%;
+  }
 `
 
 const MainConatinerRow = styled(Row)`
@@ -32,7 +37,11 @@ const MainContainerCol = styled(Col)`
   margin: 0;
   box-sizing: border-box;
   padding: 0;
-  overflow: scroll;
+  flex: 1;
+  border: 5px solid black;
+  /* border: 1px solid black; */
+
+  /* overflow: scroll; */
 `
 
 const MainContainerCol2 = styled(Col)`
@@ -44,6 +53,8 @@ const MainContainerCol2 = styled(Col)`
   gap: 10px;
   align-self: stretch;
   padding: 50px 0px;
+
+  border: 3px solid blue;
 `
 
 const Box = styled.div`
@@ -66,6 +77,22 @@ const Box1_Wrapper = styled.div`
   align-self: stretch;
 `
 
+const ImageUploadCol = styled(Container)`
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  gap: 20px;
+  height: 100%;
+  border-radius: 8px 0px 0px 8px;
+  border: 3px dotted salmon;
+  background: var(--Form-big-toggle, #f8f8f8);
+  ::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+`
+
 export {
   Box,
   MainContainer,
@@ -73,4 +100,5 @@ export {
   MainContainerCol,
   MainConatinerRow,
   Box1_Wrapper,
+  ImageUploadCol,
 }

@@ -26,7 +26,6 @@
 // const Layout = ({ children }: { children: ReactNode }) => {
 //   const route = useRouter()
 
-<<<<<<< HEAD
 //   console.log(route.route, "route")
 //   return (
 //     <>
@@ -73,21 +72,5 @@
 //     </>
 //   )
 // }
-=======
-  console.log(route.route, "route");
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const handleTabClick = (category: string) => {
-    setSelectedCategory(category);
-  };
-  return (
-    <>
-      <Navbar />
-      <main>{children}</main>
-      {route.route === "/create-post" ? " " : <Footer />}
-    </>
-  );
-};
->>>>>>> 7bc0e973e592a9daf79a795938adf014b65912c5
 
 // export default Layout
