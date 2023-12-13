@@ -5,7 +5,7 @@ import {
   ContainerPost,
   // Container,
   // Row,
-  ImageUploadCol,
+  // ImageUploadCol,
   CreatePostRow,
 } from "../Grid/index"
 
@@ -33,6 +33,7 @@ import {
   MainContainerCol2,
   Box,
   Box1_Wrapper,
+  ImageUploadCol,
 } from "@/components/createPost/mainContainer/mainContainer.styles"
 import TopNavigation from "@/components/createPost/topNavigation/topNavigation"
 import StepButtons from "@/components/createPost/stepButtons/stepButtons"
