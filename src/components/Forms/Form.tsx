@@ -40,10 +40,9 @@ const Form = () => {
     password: Yup.string()
       .required("Password is required")
       .min(5, "Your password is too short."),
-    confirmpassword: Yup.string().oneOf(
-      [Yup.ref("password")],
-      "Passwords must match"
-    ),
+    confirmpassword: Yup.string()
+      .oneOf([Yup.ref("password")], "Passwords must match")
+      .required("Please enter password"),
   });
 
   return (
@@ -56,10 +55,9 @@ const Form = () => {
       }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
-        // console.log(values);
       }}
       handleSubmit={(values: any) => {
-        // console.log(values)
+        
       }}
     >
       {({
@@ -106,7 +104,6 @@ const Form = () => {
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? <FaRegEye /> : <FaRegEyeSlash />}
-                    
                   </InnerPasswordDiv>
                   <InputField
                     type={showPassword ? "text" : "password"}

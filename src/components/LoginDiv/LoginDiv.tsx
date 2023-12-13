@@ -9,12 +9,11 @@ const LoginDiv = () => {
   const [buttonClick,setButtonClick] =  useState("")
   const [active, setActive] = useState(false);
   const router = useRouter();
-  // console.log(router.query,"in Login div")
   return (
     <LoginDivContainer>
       <LoginMainDiv>
         <Buttons buttonClick={buttonClick} setButtonClick={setButtonClick} active={active} setActive={setActive} type={router.query}/>
-        <MiddleText buttonClick={buttonClick}/>
+        <MiddleText buttonClick={buttonClick} setButtonClick={setButtonClick} active={active} setActive={setActive}/>
         <Form />
         </LoginMainDiv>
     </LoginDivContainer>

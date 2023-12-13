@@ -11,7 +11,6 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = (props) => {
   const router = useRouter();
-  console.log(props);
   return (
     <div>
       {/* <Link href="/signUp" > */}
