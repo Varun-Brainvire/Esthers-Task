@@ -34,7 +34,9 @@ import {
   WelcomeDiv,
 } from "./step2.styles";
 import {
+  A,
   CreateAccountButton,
+  ErrorDiv,
   InputDiv,
   InputField,
   LineDiv,
@@ -42,7 +44,9 @@ import {
 import { Country, State, City } from "country-state-city";
 import data from "../../../icons.json";
 import Router, { useRouter } from "next/router";
-import Select , { components } from "react-select";
+import Select, { components } from "react-select";
+import { Formik, ErrorMessage, Field } from "formik";
+import * as Yup from "yup";
 
 interface types {
   label: string;
@@ -56,28 +60,49 @@ interface icons {
 
 const Step2 = () => {
   const [toggleClick, setToggleClick] = useState({});
+  const [submitting,setSubmitting] = useState(false)
   const router = useRouter();
 
   const { Option } = components;
 
-  const IconOption = (props:any) => (
+  const IconOption = (props: any) => (
     <Option {...props}>
       <img
         src={props.data.icons}
         style={{ width: 20 }}
         alt={props.data.label}
       />
-      {/* {props.data.label} */}
     </Option>
   );
-  
 
-  const handleChange = (e: any) => {
+  const handleTabChange = (e: any) => {
     const { name, value } = e.target;
     setToggleClick({
       [name]: value,
     });
   };
+
+  const validationSchema = Yup.object().shape({
+    firstname: Yup.string()
+      .required("Please enter your first name"),
+      lastname: Yup.string()
+      .required("Please enter your last name"),
+      Companyname: Yup.string()
+      .required("Please enter your company name"),
+      website: Yup.string()
+      .required("Please enter your website"),
+      country:Yup.object().required("Please Select Country"),
+      socialmedia:Yup.string()
+      .required("Please enter social media username"),
+      retailcollaboration:Yup.string().required("Please select if you are interested in retail collaborations"),
+      agree:Yup.boolean().oneOf(
+        [true],
+        "Please accept the terms and conditions"
+      ),
+      socialmediaradio:Yup.string().required("Please select your consent for social media")
+  });
+
+
 
   const customStyles = {
     control: (provided: any, state: any) => ({
@@ -93,7 +118,7 @@ const Step2 = () => {
     option: (provided: any, state: any) => ({
       ...provided,
       backgroundColor: state.isSelected ? "#e0e0e0" : "white",
-      color: state.isSelected ? "white" : "black",
+      // color: state.isSelected ? "white" : "black",
       overflow: "hidden",
       display: "inline-block",
       family: "Strawford,Lexend Deca, Inter, sans-serif",
@@ -131,16 +156,16 @@ const Step2 = () => {
       setIcons(dataArray);
     }
   }, []);
-// console.log(icons,"icons")
-// console.log(iconsSelected,"iconsSelected")
   const [selecteOption, setSelectedOption] = useState("");
 
   const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(e.target.value);
   };
-  // console.log(selecteOption);
+
   return (
+
     <>
+    
       <ElementBox forText={false} forStep2={true}>
         <HeroDiv>
           <CreateAccountDiv>
@@ -153,7 +178,37 @@ const Step2 = () => {
         </HeroDiv>
 
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <form action="">
+        <Formik
+    initialValues={{
+      firstname:"",
+      lastname:"",
+      country:"",
+      socialmedia:"",
+      retailcollaboration:"",
+      agree:false,
+      socialmediaradio:"",
+      Companyname:"",
+      website:""
+    }}
+    validationSchema={validationSchema}
+    onSubmit={(values) => {
+      
+    }}
+    handleSubmit = {(values:any) => {
+      
+    }}
+    >
+{({values,
+        errors,
+        touched,
+        handleSubmit,
+        isSubmitting,
+        isValidating,
+        isValid,
+        handleChange,
+        setFieldValue,}) => {
+          return(
+            <form action="" onSubmit={handleSubmit}>
             <FormDiv>
               <InputDiv forStep2={true}>
                 <InputField
@@ -176,18 +231,19 @@ const Step2 = () => {
                 <Container>
                   <ButtonsDiv>
                     <MainButtonDiv>
-                      <BothButtonDiv forStep2={true} isActive={active}>
+                      <BothButtonDiv forStep2={true} isActive={!active}>
                         <Inputs
                           name="creator"
                           type="radio"
                           id="creator"
                           value="creator"
-                          onClick={() => {
-                            handleChange;
+                          checked
+                          onClick={(e) => {
+                            handleTabChange(e);
                             setActive(!active);
                           }}
                         />
-                        <Label isActive={active}>Creator</Label>
+                        <Label isActive={!active}>Creator</Label>
                       </BothButtonDiv>
                     </MainButtonDiv>
                   </ButtonsDiv>
@@ -195,18 +251,18 @@ const Step2 = () => {
                 <Container>
                   <ButtonsDiv>
                     <MainButtonDiv>
-                      <BothButtonDiv forStep2={true} isActive={!active}>
+                      <BothButtonDiv forStep2={true} isActive={active}>
                         <Inputs
                           name="brand"
                           type="radio"
                           id="brand"
                           value="brand"
-                          onClick={() => {
-                            handleChange;
+                          onClick={(e) => {
+                            handleTabChange(e);
                             setActive(!active);
                           }}
                         />
-                        <Label isActive={!active}>Brand</Label>
+                        <Label isActive={active}>Brand</Label>
                       </BothButtonDiv>
                     </MainButtonDiv>
                   </ButtonsDiv>
@@ -216,17 +272,39 @@ const Step2 = () => {
               <InputDiv forStep2={true}>
                 <InputField
                   forStep2={false}
-                  placeholder="First name *"
+                  placeholder={`${
+                    toggleClick.creator ? "First name *" : "Company name *"
+                  }`}
                   type="text"
+                  name={`${
+                    toggleClick.creator ? "firstname" : "Companyname"
+                  }`}
+                  onChange={handleChange}
                 />
+                {toggleClick.creator ?
+                <ErrorDiv>{errors.firstname}</ErrorDiv>
+                :
+                <ErrorDiv>{errors.Companyname}</ErrorDiv>
+                }
               </InputDiv>
 
               <InputDiv forStep2={true}>
                 <InputField
                   forStep2={false}
-                  placeholder="Last name *"
+                  placeholder={`${
+                    toggleClick.creator ? "Last name *" : "website *"
+                  }`}
                   type="text"
+                  name={`${
+                    toggleClick.creator ? "lastname" : "website"
+                  }`}
+                  onChange={handleChange}
                 />
+                {toggleClick.creator ?
+                <ErrorDiv>{errors.firstname}</ErrorDiv>
+                :
+                <ErrorDiv>{errors.website}</ErrorDiv>
+                }
               </InputDiv>
 
               <InputDiv>
@@ -244,37 +322,41 @@ const Step2 = () => {
                         let event = {
                           target: { name: "country", value: item },
                         };
-                        // console.log(item, "item.label");
                         setCountrySelected(item);
+                        handleChange(event)
                       }}
                     />
+                    <ErrorDiv>{errors.country}</ErrorDiv>
                   </SelectWrapper>
                 </SelectDiv>
               </InputDiv>
-
-              <SocialMediaDiv>
-                <SocailMediaText>Main social media channel</SocailMediaText>
-                <SelectAndInputDiv>
-                  <CustomSelect
-                    name="icons"
-                    id="icons"
-                    options={data}
-                    defaultValue={data[0]}
-                    value={iconsSelected}
-                    flex={true}
-                    styles={customStyles}
-                    components={{ Option: IconOption }}
-                    onChange={(item:any) => {
-                      let event= {
-                        target:{name:"icons",value:item.icons}
-                      }
-                      console.log(item, "item.label");
-                      setIconsSelected(item.name)
-                    }}
-                  />
-                  <InputField placeholder="Social media username *" />
-                </SelectAndInputDiv>
-              </SocialMediaDiv>
+              {toggleClick.creator ? (
+                <SocialMediaDiv>
+                  <SocailMediaText>Main social media channel</SocailMediaText>
+                  <SelectAndInputDiv>
+                    <CustomSelect
+                      name="icons"
+                      id="icons"
+                      options={data}
+                      defaultValue={data[0]}
+                      value={iconsSelected}
+                      flex={true}
+                      styles={customStyles}
+                      components={{ Option: IconOption }}
+                      onChange={(item: any) => {
+                        let event = {
+                          target: { name: "icons", value: item.icons },
+                        };
+                        setIconsSelected(item.name);
+                      }}
+                    />
+                    <InputField placeholder="Social media username *" name="socialmedia" onChange={handleChange}/>
+                  </SelectAndInputDiv>
+                    <ErrorDiv>{errors.socialmedia}</ErrorDiv>
+                </SocialMediaDiv>
+              ) : (
+                ""
+              )}
             </FormDiv>
 
             <RadioQuestions>
@@ -286,8 +368,9 @@ const Step2 = () => {
                 <SingleRadio>
                   <RadioInput
                     type="radio"
-                    onChange={onValueChange}
+                    onChange={onValueChange,handleChange}
                     value="yes"
+                    name="retailcollaboration"
                   />
                   {/* <RadioLabel></RadioLabel> */}
                   <RadioP>Yes</RadioP>
@@ -295,13 +378,15 @@ const Step2 = () => {
                 <SingleRadio>
                   <RadioInput
                     type="radio"
-                    onChange={onValueChange}
+                    onChange={onValueChange,handleChange}
                     value="no"
+                    name="retailcollaboration"
                   />
                   {/* <RadioLabel></RadioLabel> */}
                   <RadioP>No</RadioP>
                 </SingleRadio>
               </RadioWrapper>
+                <ErrorDiv>{errors.retailcollaboration}</ErrorDiv>
             </ElementBox>
 
             <RadioQuestions>
@@ -313,8 +398,9 @@ const Step2 = () => {
                 <SingleRadio>
                   <RadioInput
                     type="radio"
-                    onChange={onValueChange}
+                    onChange={onValueChange,handleChange}
                     value="yes"
+                    name="socialmediaradio"
                   />
                   {/* <RadioLabel></RadioLabel> */}
                   <RadioP>Yes</RadioP>
@@ -322,29 +408,45 @@ const Step2 = () => {
                 <SingleRadio>
                   <RadioInput
                     type="radio"
-                    onChange={onValueChange}
+                    onChange={onValueChange,handleChange}
                     value="no"
+                    name="socialmediaradio"
                   />
                   {/* <RadioLabel></RadioLabel> */}
                   <RadioP>No</RadioP>
                 </SingleRadio>
               </RadioWrapper>
+              <ErrorDiv>{errors.socialmediaradio}</ErrorDiv>
             </ElementBox>
 
             <LineDiv></LineDiv>
 
             <CheckboxDiv>
-              <Checkbox type="checkbox" />
+              <Checkbox type="checkbox" name="agree" onChange={handleChange}/>
               <CheckBoxP>
-                I agree to Esther's scandinavia AB's terms of service
+                I agree to Esther's scandinavia AB's <A>terms of service</A> 
               </CheckBoxP>
             </CheckboxDiv>
+              <ErrorDiv>{errors.agree}</ErrorDiv>
 
-            <CreateAccountButton forStep2={true}>Apply</CreateAccountButton>
-            {/* <div>
-                        <button><span>Apply</span></button>
-                      </div> */}
+            <CreateAccountButton 
+            type="submit" onClick={() => {
+              handleSubmit
+              setSubmitting(!submitting)
+              if(submitting == true) {
+                // alert("Form Submitted")
+                router.push({
+                  pathname:"/signup/verification",
+                  query:{q:router.query.email}
+                })
+              }
+            }}
+            forStep2={true}>Apply</CreateAccountButton>
           </form>
+          )
+        }}
+    </Formik>
+         
         </div>
       </ElementBox>
     </>
