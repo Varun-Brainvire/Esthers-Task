@@ -34,7 +34,7 @@ export const CategoryContainer = styled.div`
 `;
 
 export const SingleCategoryCard = styled.div`
-  width: 230px;
+  width: 252px;
   height: 180px;
   object-fit: cover;
   object-position: center;
@@ -46,14 +46,6 @@ export const SingleCategoryCard = styled.div`
     height: 130px;
     width: 130px;
   }
-  @media screen and (max-width: 768px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 130px;
-    width: 130px;
-  }
 
   &:hover {
     cursor: pointer;
@@ -62,7 +54,7 @@ export const SingleCategoryCard = styled.div`
 
 export const OverlayDiv = styled.div`
   position: absolute;
-  width: 230px;
+  width: 252px;
   height: 180px;
   left: 0px;
   top: 0px;
@@ -80,20 +72,12 @@ export const OverlayDiv = styled.div`
     color: white;
     margin: 0;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
   }
 
   @media screen and (max-width: 576px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 768px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 130px;
-    width: 130px;
+    height: 100%;
+    width: 100%
   }
 `;
 
@@ -101,22 +85,14 @@ export const OverlayText = styled.span`
   color: white;
   margin: 0px;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 500;
   line-height: "17px";
 `;
 
 export const CategoryImage = styled(Image)`
   border-radius: 6px;
   @media screen and (max-width: 576px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 768px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 130px;
-    width: 130px;
+    height: 100%;
+    width: 100%;
   }
 `;

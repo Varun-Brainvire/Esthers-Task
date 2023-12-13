@@ -1,6 +1,11 @@
 import colors from "@/theme";
-import Link from "next/link";
-import styled from "styled-components";
+import Link, { LinkProps } from "next/link";
+import { AnchorHTMLAttributes } from "react";
+import styled, { css } from "styled-components";
+
+interface ListTagProps {
+  isActive: boolean;
+}
 
 export const HeaderDiv = styled.div`
   background-color: beige;
@@ -55,7 +60,7 @@ export const UlWrapper = styled.ul`
   width: 100%;
 `;
 
-export const LiWrapper = styled.li`
+export const LiWrapper = styled.li<ListTagProps>`
   margin-right: 0px;
   padding-left: 25px;
   width: 100px;
@@ -64,7 +69,17 @@ export const LiWrapper = styled.li`
   justify-content: center;
   text-transform: capitalize;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
-  border-right: 1px solid rgb(243, 244, 246);
+  ${(props) => {
+    console.log("isActive:", props.isActive);
+    return (
+      props.isActive &&
+      css`
+        color: rgb(58, 58, 58);
+        border-bottom: 3px solid rgb(58, 58, 58);
+        margin-bottom: -21px;
+      `
+    );
+  }}
 `;
 
 export const AnchorTag = styled(Link)`
