@@ -1,0 +1,10 @@
+[
+  {
+    "svg": "./public/fb.svg",
+    "content":"Register with facebook"
+  },
+  {
+    "svg": "./public/google.svg",
+    "content":"Register with Google"
+  }
+]

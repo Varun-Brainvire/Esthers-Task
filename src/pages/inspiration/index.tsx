@@ -3,12 +3,11 @@ import ImageGallery from "../../components/inspirationPage/PostCard";
 import { InspirationPageWrapper } from "@/components/inspirationPage/inspiration.styles";
 import { useState } from "react";
 
-const Index: React.FC = () => {
-  // Setting the initial selected category to "All" for default rendering
+
+const InspirationPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   const handleCategoryChange = (category: string) => {
-    // Updated selected category when a category tab is clicked
     setSelectedCategory(category);
   };
 
@@ -25,4 +24,4 @@ const Index: React.FC = () => {
   );
 };
 
-export default Index;
+export default InspirationPage;

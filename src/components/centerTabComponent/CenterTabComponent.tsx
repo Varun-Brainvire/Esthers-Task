@@ -14,11 +14,17 @@ interface CenterComponentProps {
   mainText?: string;
   innerText?: string;
   image?: any;
+  screen?: boolean;
 }
 
-export const CenterTabContainer = styled.div`
+export const CenterTabContainer = styled.div<CenterComponentProps>`
   padding: 2% 12% 4% 12%;
   background-color: rgb(244, 240, 236);
+
+  @media (max-width: 768px) {
+    padding: ${({ screen }) => (screen ? "0" : "")};
+    margin-bottom: 20px;
+  }
 `;
 
 export const InnerTabContainer = styled.div`
@@ -55,19 +61,20 @@ export const ButtonDiv = styled.div`
 
 const CenterTabComponent: React.FC<CenterComponentProps> = (props) => {
   return (
-    <CenterTabContainer>
+    <CenterTabContainer screen={true}>
       <InnerTabContainer>
-        <ImageOverlayContainer>
+        <ImageOverlayContainer screen={true}>
           <Container>
             <Row>
-              <Col md={12}>
+              <Col md={12} screen={true}>
                 <StyledImage
                   src={props.image}
                   alt="beauty"
                   width={300}
                   height={235}
+                  screen={true}
                 />
-                <OverlayBackground height={true} />
+                <OverlayBackground height={true} screen={true} />
                 <OverlayTextContent>
                   <p>{props.mainText}</p>
                   <span>{props.innerText}</span>
