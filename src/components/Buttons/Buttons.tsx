@@ -40,7 +40,7 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props)
       <Container className="">
         <ButtonsDiv>
           <MainButtonDiv>
-            {router.query.type === 'creator' ?"":""}
+            {router.query.type === 'creator' ?"varun":""}
             <BothButtonDiv isActive={active}>
               <Inputs
                 type="radio"

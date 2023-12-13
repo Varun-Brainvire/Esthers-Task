@@ -140,3 +140,9 @@ export const ErrorDiv = styled.div`
   font-size: 12px;
   text-align: left;
 `;
+
+export const A = styled.a`
+text-decoration: none;
+color: ${colors.color.linkBlueColor};
+cursor: pointer;
+`
