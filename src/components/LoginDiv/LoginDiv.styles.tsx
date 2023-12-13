@@ -9,7 +9,19 @@ export const LoginMainDiv = styled.div`
   text-align: center;
   border: 1px solid rgb(238, 238, 238);
   padding: 36px 42px;
-  min-width: 47%;
+  min-width: 40%;
+
+  @media only screen and (max-width: 400px) {
+   width :90% ;
+  }
+
+  @media only screen and (max-width: 500px) {
+   width :90% ;
+  }
+
+  @media only screen and (max-width: 768px) {
+   width :90% ;
+  }
 `;
 
 export const LoginDivContainer = styled.div`

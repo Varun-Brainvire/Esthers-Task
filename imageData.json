@@ -1,0 +1,214 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "kitchen",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "alice",
+      "total": 2,
+      "category" : "all"
+    },
+    {
+      "id": 2,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "sofa",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "alice",
+      "total": 2,
+      "category" : "all"
+    },
+    {
+      "id": 3,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "all"
+    },
+    {
+      "id": 4,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "kitchen",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "alice",
+      "total": 2,
+      "category" : "all"
+    },
+    {
+      "id": 5,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "all"
+    },
+    {
+      "id": 6,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 1,
+      "category" : "all"
+    },
+    {
+      "id": 7,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 3,
+      "category" : "all"
+    },
+    {
+      "id": 8,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 6,
+      "category" : "all"
+    },
+    {
+      "id": 9,
+      "imageSrc": "/inspirationpageimages/beauty 1.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 8,
+      "category" : "beauty"
+    },
+    {
+      "id": 10,
+      "imageSrc": "/inspirationpageimages/beauty 1.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "beauty"
+    },
+    {
+      "id": 11,
+      "imageSrc": "/inspirationpageimages/beauty 1.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "beauty"
+    },
+    {
+      "id":11,
+      "imageSrc": "/inspirationpageimages/Fashion 1.png",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "fashion"
+    },
+    {
+      "id": 12,
+      "imageSrc": "/inspirationpageimages/Fashion 1.png",
+      "description": "house",
+      "type": "Oldest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 1,
+      "category" : "fashion"
+    },
+    {
+      "id": 13,
+      "imageSrc": "/inspirationpageimages/Fashion 1.png",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "fashion"
+    },
+    {
+      "id": 14,
+      "imageSrc": "/inspirationpageimages/beauty 1.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "fashion"
+    },
+    {
+      "id": 15,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Oldest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "all"
+    },
+    {
+      "id": 16,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "home"
+    },
+    {
+      "id": 17,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Latest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "home"
+    },
+    {
+      "id": 18,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Oldest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "home"
+    },
+    {
+      "id": 19,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Oldest",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "home"
+    },
+    {
+      "id": 20,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "type": "Oldest",
+      "icon": "/inspirationpageimages/person.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "all"
+    }
+  ]
+}

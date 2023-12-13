@@ -9,7 +9,9 @@ interface HeadingTextProps {
 const HeadingText: React.FC<HeadingTextProps> = (props) => {
   return (
     <>
-      <Heading marginBottom={props.marginBottom}>{props.text}</Heading>
+      <Heading marginBottom={props.marginBottom} screen={true}>
+        {props.text}
+      </Heading>
     </>
   );
 };
