@@ -16,24 +16,36 @@ export const MidMainContainer = styled.div`
   }
 `;
 
+// export const TextDivStyle = styled.div`
+//   display: flex;
+//   width: calc(100% - (100% - 1029px));
+//   /* padding: 0px 306px; */
+//   padding-right: 56px;
+//   margin-left: auto;
+//   padding-left: 56px;
+//   margin-right: auto;
+//   margin-top: 140px;
+
+//   @media (max-width: 768px) {
+//     /* display: flex; */
+//     /* padding: 0px 16px; */
+//     flex-direction: column;
+//     /* justify-content: center; */
+//     /* align-items: center; */
+//     /* gap: 32px; */
+//     /* align-self: stretch; */
+//   }
+// `;
 export const TextDivStyle = styled.div`
   display: flex;
-  width: calc(100% - (100% - 1029px));
-  /* padding: 0px 306px; */
-  padding-right: 56px;
-  margin-left: auto;
-  padding-left: 56px;
-  margin-right: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 56px;
   margin-top: 140px;
 
   @media (max-width: 768px) {
-    /* display: flex; */
-    /* padding: 0px 16px; */
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* gap: 32px; */
-    /* align-self: stretch; */
+    padding: 0 16px;
   }
 `;
 
