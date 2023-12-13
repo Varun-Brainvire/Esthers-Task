@@ -13,13 +13,21 @@ export const Col = styled(sbgCol)`
   `}
 
   ${media.xl`
-  padding-left: 10px;
+  padding-left: 10px; 
   padding-right: 10px;
+
+   @media (min-width: 768px) {
+    padding-left: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
+    padding-right: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
+  }
   `}
 
   ${media.md`
-  padding-left: 10px !important;
-  padding-right: 10px !important;
+
+  @media (min-width: 768px) {
+    padding-left: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
+    padding-right: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
+  }
   `}
 
    ${media.sm`

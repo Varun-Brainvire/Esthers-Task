@@ -9,9 +9,16 @@ export const BannerContainer = styled.div`
   position: relative;
 `;
 
-export const BannerImage = styled(Image)`
+interface BannerImageProps {
+  screen?: boolean;
+}
+
+export const BannerImage = styled(Image)<BannerImageProps>`
   width: 100%;
-  height: auto;
+
+  @media (max-width: 768px) {
+    height: ${({ screen }) => (screen ? "300px" : "auto")};
+  }
 `;
 
 export const Overlay = styled.div`
@@ -19,7 +26,7 @@ export const Overlay = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  height: 99%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
@@ -27,7 +34,7 @@ export const Overlay = styled.div`
   flex-direction: column;
 `;
 
-export const Text = styled.div`
+export const Text = styled.div<BannerImageProps>`
   color: #fff;
   font-size: 80px;
   font-weight: 600;
@@ -35,6 +42,11 @@ export const Text = styled.div`
   line-height: 78px;
   text-align: center;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: ${({ screen }) => (screen ? "20px" : "80px")};
+    line-height: ${({ screen }) => (screen ? "23px" : "78px")};
+  }
 `;
 
 export const BannerButtonDiv = styled.div`

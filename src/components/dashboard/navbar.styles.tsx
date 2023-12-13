@@ -1,11 +1,20 @@
 import colors from "@/theme";
-import styled from "styled-components";
+import Link  from "next/link";
+import styled, { css } from "styled-components";
 
-export const HeaderDiv = styled.div`
+interface ListTagProps {
+  isActive: boolean;
+}
+
+export const NavDiv = styled.div`
   background-color: beige;
 `;
 
-export const RootHeaderWrapper = styled.div`
+interface LayoutProps {
+  screen?: boolean;
+}
+
+export const RootHeaderWrapper = styled.div<LayoutProps>`
   padding-left: 48px;
   padding-right: 48px;
   justify-content: space-between;
@@ -18,6 +27,11 @@ export const RootHeaderWrapper = styled.div`
   position: fixed;
   background-color: ${colors.color.white};
   border-bottom: 1px solid rgb(243, 244, 246);
+
+  @media (max-width: 425px) {
+    padding-left: ${({ screen }) => (screen ? "12px" : "48px")};
+    padding-right: ${({ screen }) => (screen ? "12px" : "48px")};
+  }
 `;
 
 export const ImageWrapperDiv = styled.div`
@@ -31,6 +45,10 @@ export const NavWrapperContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding-left: 27px;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 export const UlWrapper = styled.ul`
@@ -41,18 +59,28 @@ export const UlWrapper = styled.ul`
   width: 100%;
 `;
 
-export const LiWrapper = styled.li`
+export const LiWrapper = styled.li<ListTagProps>`
   margin-right: 0px;
-  padding-left: 25px;
   width: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: capitalize;
   font-family: Strawford, "Lexend Deca", Inter, sans-serif;
+  ${(props) => {
+    console.log("isActive:", props.isActive);
+    return (
+      props.isActive &&
+      css`
+        color: rgb(58, 58, 58);
+        border-bottom: 3px solid rgb(58, 58, 58);
+        margin-bottom: -21px;
+      `
+    );
+  }}
 `;
 
-export const AnchorTag = styled.a`
+export const AnchorTag = styled(Link)`
   text-decoration: none;
   display: block;
   height: 100%;
