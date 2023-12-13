@@ -6,16 +6,16 @@ import colors from "@/theme";
 
 export const InputDiv = styled.div<Props>`
   margin-bottom: 10px;
-  width: ${({ forStep2 }) => (forStep2 ? "38%" : "")};
-  margin-left: ${({ forStep2 }) => (forStep2 ? "auto" : "")};
-  margin-right: ${({ forStep2 }) => (forStep2 ? "auto" : "")};
-`;
+  width: ${({forStep2}) => forStep2 ? "100%" :""};
+  margin-left: ${({forStep2}) => forStep2 ? "auto" :""};
+  margin-right: ${({forStep2}) => forStep2 ? "auto" :""};
+`
 
 export const InputField = styled.input<Props>`
   background-color: ${({ forStep2 }) => (forStep2 ? "#eeeeee" : "white")};
   padding: 10px 16px;
   width: 100%;
-  border: 1px solid rgb(238, 238, 238);
+  border:${({border}) => border ? "1px solid #34554a" :"1px solid rgb(238, 238, 238)"} ;
   border-radius: 3px;
   font-style: inherit;
   font-variant: inherit;
@@ -50,7 +50,7 @@ export const FieldSetDiv = styled.div`
   width: 100%;
 `;
 
-export const CreateAccountButton = styled.button`
+export const CreateAccountButton = styled.button<Props>`
   display: inline-flex;
   -webkit-box-pack: center;
   justify-content: center;
@@ -71,6 +71,7 @@ export const CreateAccountButton = styled.button`
   letter-spacing: 0.3px;
   border-radius: 99px;
   cursor: pointer;
+  margin-top: ${({forStep2}) => forStep2 ? "30px" :""};;
   &:hover {
     cursor: pointer;
     background-color: ${colors.color.green};

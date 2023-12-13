@@ -143,3 +143,26 @@
   font-weight: 700;
   line-height: normal;
 }
+
+.downloadtext {
+  color: #f4f0ec;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.youtube-vid1 {
+  width: 790px;
+  height: 444px;
+  left: 0px;
+  top: 3px;
+}
+
+@media (max-width: 768px) {
+  .banner-img {
+    /* background-color: green;
+    display: flex;
+    flex-direction: column; */
+  }
+}

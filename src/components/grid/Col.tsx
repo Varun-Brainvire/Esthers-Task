@@ -11,7 +11,7 @@ export const Col = styled(sbgCol)`
   `}
 
   ${media.xl`
-  padding-left: 10px;
+  padding-left: 10px; 
   padding-right: 10px;
   `}
 

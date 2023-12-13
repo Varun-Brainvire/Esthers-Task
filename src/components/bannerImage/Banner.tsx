@@ -10,12 +10,14 @@ import {
   SingleBannerButton,
   Text,
 } from "./banner.styles";
+import { useRouter } from "next/router";
 
 interface BannerProps {
   text: string;
 }
 
 const Banner: React.FC<BannerProps> = (props) => {
+  const router = useRouter()
   return (
     <BannerContainer>
       <BannerImage
@@ -30,10 +32,10 @@ const Banner: React.FC<BannerProps> = (props) => {
         <Text screen={true}>{props.text}</Text>
         <BannerButtonDiv>
           <SingleBannerButton marginRight={true}>
-            <Button content={"Start exploring"} margin={true} />
+            <Button content={"Start exploring"} margin={true} type="register"/>
           </SingleBannerButton>
           <SingleBannerButton>
-            <Button content={"Create your shop"} margin={true} />
+            <Button content={"Create your shop"} margin={true} type="creator"/>
           </SingleBannerButton>
         </BannerButtonDiv>
       </Overlay>
