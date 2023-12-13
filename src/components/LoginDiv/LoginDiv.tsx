@@ -7,8 +7,8 @@ import { useRouter } from "next/router";
 
 const LoginDiv = () => {
   const [buttonClick,setButtonClick] =  useState("")
-  const [active, setActive] = useState(false);
   const router = useRouter();
+  const [active, setActive] = useState(router.query.type === "register" ? true : false);
   return (
     <LoginDivContainer>
       <LoginMainDiv>

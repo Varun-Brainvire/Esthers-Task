@@ -19,7 +19,8 @@ interface Props {
 }
 
 const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props) => {
-  // console.log(active)
+  const router = useRouter();
+  console.log(active,"active",router.query.type)
 
   useEffect(() => {
     window. scrollTo(0, 0)
@@ -32,13 +33,12 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props)
     });
   };
 
-  const router = useRouter();
+  
   return (
     <ElementBox forText={false}>
       <Container className="">
         <ButtonsDiv>
           <MainButtonDiv>
-            {router.query.type === 'register' ?setActive(true):""}
             <BothButtonDiv isActive={active}>
               <Inputs
                 type="radio"

@@ -2,6 +2,7 @@ import React from "react";
 import { Button, ElementBox } from "../Buttons/Buttons.styles";
 import { Circle, CircleContainer, CircleWrapper, Li, MainCircleDiv, Span, Ul } from "./MiddleText.styles";
 import fb from "../../../public/fb.svg";
+import { useRouter } from "next/router";
 
 interface Props {
   buttonClick: Object;
@@ -12,12 +13,12 @@ interface Props {
 
 const MiddleText = ({buttonClick,setButtonClick,active,setActive}: Props) => {
 console.log(buttonClick,"buttonClick")
-
+const router = useRouter();
   return (
     <>
       <ElementBox forText={true}>
         <Ul>
-          {buttonClick.hasOwnProperty("Join as a member") ? (
+          {active ? (
             <>
               <Li>Unlock premium content, unique offers and extra features</Li>
               <Li>Get inspired and interact with your favorite creators</Li>
