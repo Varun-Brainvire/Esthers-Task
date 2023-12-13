@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, ElementBox } from "../Buttons/Buttons.styles";
-import { Circle, CircleContainer, CircleWrapper, Li, MainCircleDiv, Ul } from "./MiddleText.styles";
+import { Circle, CircleContainer, CircleWrapper, Li, MainCircleDiv, Span, Ul } from "./MiddleText.styles";
 import fb from "../../../public/fb.svg";
 
 interface Props {
@@ -55,7 +55,7 @@ const MiddleText = (buttonClick: Props) => {
       
 
       <ElementBox>
-        <Button onClick={() => alert("clicked")}>
+        <Button>
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,13 +73,13 @@ const MiddleText = (buttonClick: Props) => {
               </g>
             </svg>
           </div>
-          <span style={{ width: "100%", paddingRight: "35px" }}>
-            Register With Facebook
-          </span>
+          <Span>
+            Register with Facebook
+          </Span>
         </Button>
       </ElementBox>
 
-      <Button onClick={() => alert("clicked")} googleButton={true}>
+      <Button googleButton={true}>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,9 +116,9 @@ const MiddleText = (buttonClick: Props) => {
             </g>
           </svg>
         </div>
-        <span style={{ width: "100%", paddingRight: "35px" }}>
-          Register With Google
-        </span>
+        <Span >
+          Register with Google
+        </Span>
       </Button>
     </>
   );

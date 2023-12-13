@@ -39,3 +39,8 @@ export const Circle = styled.div<Props>`
     background-color: ${({background}) => background ?"#f2f4f4":"#34554a"};
     color:  ${({color}) => color ?"black":"white"};
 `
+
+export const Span = styled.span`
+    width: 100%;
+    padding-right: 35px;
+`
