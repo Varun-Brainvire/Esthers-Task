@@ -1,5 +1,5 @@
 import { Container, ContainerPost, CreatePostContainer } from "./Container"
-import { Col, ImageUploadCol } from "./Col"
+import { Col } from "./Col"
 import { Row, CreatePostRow } from "./Row"
 
 export {
@@ -7,7 +7,6 @@ export {
   CreatePostRow,
   Col,
   Row,
-  ImageUploadCol,
   ContainerPost,
   CreatePostContainer,
 }
