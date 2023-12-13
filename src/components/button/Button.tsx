@@ -18,7 +18,7 @@ const Button: React.FC<ButtonProps> = (props) => {
         margin={props.margin}
         type={props.type}
         onClick={() => {
-          router.push({ pathname: "/signUp", query: { type: props.type } });
+          router.push({ pathname: "/signup", query: { type: props.type } });
         }}
       >
         {props.content}
