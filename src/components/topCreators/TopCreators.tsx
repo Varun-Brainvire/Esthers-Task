@@ -106,7 +106,7 @@ const TopCreators: React.FC<CarouselProps> = ({ data }) => {
           </WrapperDiv>
         </HeadingWrapper>
         <ImageWrapper translateX={-currentIndex * 100}>
-          {data.map((image, index) => (
+          {data?.map((image, index) => (
             <CarouselImageDiv>
               <Image
                 key={index}

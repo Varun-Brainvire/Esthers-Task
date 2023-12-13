@@ -1,13 +1,8 @@
 import React from "react";
 import { MainContainer } from "./howitStyle";
 import { NavbarContainer } from "@/components/Navbar/NavbarStyle";
-import MidContainer from "@/components/MidContainer/MidContainer";
-import MobileTextContainer from "@/components/MobileTextContainer/MobileTextContainer";
 import TopCreatorContainer from "@/components/TopCreatorContainer/TopCreatorContainer";
 import data from "../../constants/topcreators.json";
-import CarauselContainer from "@/components/CarauselContainer/CarauselContainer";
-import ClientContainer from "@/components/ClientContainer/ClientContainer";
-import BrandContainer from "@/components/BrandContainer/BrandContainer";
 import { MainMakeupConatiner } from "@/components/MakeupContainer/MakeupStyle";
 import MakeupContainer from "@/components/MakeupContainer/MakeupContainer";
 import TopCreators from "@/components/topCreators/TopCreators";
@@ -18,9 +13,14 @@ import image4 from "../../../public/josefiin.png";
 import image5 from "../../../public/m27yhspfsiuqrhg2sdsu.jpg.png";
 import beauty from "../../../public/beauty.png";
 import beauty2 from "../../../public/Images/beauty2.svg";
-import ContainerDownload from "@/components/ContainerDownload/ContainerDownload";
 import YoutubeContainer from "@/components/YoutubeContainer/YoutubeContainer";
 import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
+import MidContainer from "@/components/MidContainer/MidContainer";
+import MobileTextContainer from "@/components/MobileTextContainer/MobileTextContainer";
+import CarauselContainer from "@/components/CarauselContainer/CarauselContainer";
+import ClientContainer from "@/components/ClientContainer/ClientContainer";
+import BrandContainer from "@/components/BrandContainer/BrandContainer";
+import ContainerDownload from "@/components/ContainerDownload/ContainerDownload";
 
 type Props = {};
 const index = (props: Props) => {
@@ -59,6 +59,7 @@ const index = (props: Props) => {
           innerText={"Share your outfits & make your looks shoppable"}
           image={beauty2}
         />
+        {/* <Footer /> */}
       </div>
     </>
   );
