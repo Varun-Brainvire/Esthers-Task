@@ -36,11 +36,14 @@ export default function Home() {
           mainText={"Makeup genius?"}
           innerText={"Share your best tips & products with your followers"}
           image={beauty}
+          isMobile={true}
         />
         <AdvertisingBanner
           mainText={"Got a beautiful home?"}
           innerText={"Share your design inspiration & make your home shoppable"}
           image={home}
+          backgroundColor={true}
+          isMobile={true}
           marginBottom={true}
         />
       </div>
