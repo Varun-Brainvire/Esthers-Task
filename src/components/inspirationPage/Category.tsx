@@ -67,7 +67,7 @@ const Category: React.FC<CategoryProps> = ({
           <Row>
             <CategoryContainer>
               {filters.map((filter) => (
-                <Col lg={3}>
+                <Col lg={3} sm={3}>
                   <SingleCategoryCard
                     key={filter.label}
                     onClick={() => {
@@ -82,9 +82,11 @@ const Category: React.FC<CategoryProps> = ({
                     }}
                     style={{
                       backgroundColor:
-                        selectedCategory !== "All"
-                          ? "rgba(244, 240, 236, 1)"
-                          : "rgba(244, 240, 236, 1)",
+                        filter.label === "All"
+                          ? selectedCategory === "All"
+                            ? "rgba(52, 85, 74, 1)" // Selected "All" tab
+                            : "rgba(244, 240, 236, 1)"
+                          : "rgba(244, 240, 236, 1)", // Other tabs
                     }}
                   >
                     {filter.imageSrc && (
@@ -106,7 +108,7 @@ const Category: React.FC<CategoryProps> = ({
                             ? "rgba(52, 85, 74 ,1)"
                             : selectedCategory === "All"
                             ? "rgba(244, 240, 236, 0.4)"
-                            : "rgba(0, 0, 0, 0.0)",
+                            : "rgba(0, 0, 0, 0.4)",
                       }}
                     >
                       <OverlayText>{filter.label}</OverlayText>

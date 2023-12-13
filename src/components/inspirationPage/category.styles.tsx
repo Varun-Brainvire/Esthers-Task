@@ -46,14 +46,6 @@ export const SingleCategoryCard = styled.div`
     height: 130px;
     width: 130px;
   }
-  @media screen and (max-width: 768px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 130px;
-    width: 130px;
-  }
 
   &:hover {
     cursor: pointer;
@@ -84,16 +76,8 @@ export const OverlayDiv = styled.div`
   }
 
   @media screen and (max-width: 576px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 768px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 130px;
-    width: 130px;
+    height: 100%;
+    width: 100%
   }
 `;
 
@@ -108,15 +92,7 @@ export const OverlayText = styled.span`
 export const CategoryImage = styled(Image)`
   border-radius: 6px;
   @media screen and (max-width: 576px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 768px) {
-    height: 130px;
-    width: 130px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 130px;
-    width: 130px;
+    height: 100%;
+    width: 100%;
   }
 `;

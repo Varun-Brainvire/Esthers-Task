@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   SortButton,
-  ImageDiv,
+  PostCardDiv,
   MainOverlayDiv,
   LikeOverlay,
   LikeButtonDiv,
@@ -10,7 +10,7 @@ import {
   SortButtonDiv,
   LeftContentDiv,
   ContentVisibleDiv,
-  GalleryImage,
+  PostImage,
   AvtarImage,
   ContentText,
   ImageContainer,
@@ -71,12 +71,12 @@ const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
         <Row>
           {loadedImages.map((item) => (
             <Col lg={3} md={6} sm={6} xs={6}>
-              <ImageDiv
+              <PostCardDiv
                 key={item.id}
                 onMouseEnter={() => handleMouseEnter(item.id.toString())}
                 onMouseLeave={() => handleMouseLeave(item.id.toString())}
               >
-                <GalleryImage
+                <PostImage
                   src={item.imageSrc}
                   alt={item.description}
                   height={252}
@@ -133,7 +133,7 @@ const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
                     </LikeButtonDiv>
                   </MainOverlayDiv>
                 )}
-              </ImageDiv>
+              </PostCardDiv>
             </Col>
           ))}
         </Row>
