@@ -7,7 +7,7 @@ import {
   StyledImage,
 } from "../categories/categories.styles";
 import Button from "../button/Button";
-import { Container, Row, Col } from "../../components/index";
+import { Container, Row, Col } from "../index";
 import colors from "@/theme";
 
 interface CenterComponentProps {
@@ -67,13 +67,16 @@ const CenterTabComponent: React.FC<CenterComponentProps> = (props) => {
           <Container>
             <Row>
               <Col md={12} screen={true}>
-                <StyledImage
-                  src={props.image}
-                  alt="beauty"
-                  width={300}
-                  height={235}
-                  screen={true}
-                />
+                <div>
+                  <StyledImage
+                    src={props.image}
+                    alt="beauty"
+                    width={300}
+                    height={235}
+                    screen={true}
+                  />
+                </div>
+
                 <OverlayBackground height={true} screen={true} />
                 <OverlayTextContent>
                   <p>{props.mainText}</p>

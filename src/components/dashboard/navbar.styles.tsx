@@ -2,7 +2,7 @@ import colors from "@/theme";
 import Link from "next/link";
 import styled from "styled-components";
 
-export const HeaderDiv = styled.div`
+export const NavDiv = styled.div`
   background-color: beige;
 `;
 
