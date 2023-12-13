@@ -7,7 +7,7 @@ import {
   CarauselTextDiv,
   CarauselTextInnerDiv,
   MainCarauselContainer,
-} from "./CarauselStyle";
+} from "./carausel.style.tsx";
 import Image from "next/image";
 
 interface Props {}

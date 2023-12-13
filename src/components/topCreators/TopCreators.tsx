@@ -101,14 +101,14 @@ const TopCreators: React.FC<CarouselProps> = ({ data }) => {
           </WrapperDiv>
         </HeadingWrapper>
         <ImageWrapper translateX={-currentIndex * 100}>
-          {data.map((image, index) => (
+          {data?.map((image, index) => (
             <CarouselImageDiv>
               <Image
                 key={index}
                 src={image.image}
                 alt={`Image ${index + 1}`}
                 width={!isTablet ? 135 : 80}
-                height={! isTablet ? 135 : 80}
+                height={!isTablet ? 135 : 80}
               />
               <ImageText screen={true}>
                 <p>{image.text}</p>
