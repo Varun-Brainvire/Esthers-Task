@@ -9,59 +9,24 @@ import {
 import Button from "../button/Button";
 import { Container, Row, Col } from "../index";
 import colors from "@/theme";
+import {
+  ButtonDiv,
+  CenterTabContainer,
+  InnerTabContainer,
+  OverlayTextContent,
+} from "./advertising.styles";
 
 interface CenterComponentProps {
   mainText?: string;
   innerText?: string;
   image?: any;
   screen?: boolean;
+  marginBottom?: boolean;
 }
 
-export const CenterTabContainer = styled.div<CenterComponentProps>`
-  padding: 2% 12% 4% 12%;
-  background-color: rgb(244, 240, 236);
-
-  @media (max-width: 768px) {
-    padding: ${({ screen }) => (screen ? "0" : "")};
-    margin-bottom: 20px;
-  }
-`;
-
-export const InnerTabContainer = styled.div`
-  margin-right: auto;
-  margin-left: auto;
-`;
-
-export const OverlayTextContent = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: ${colors.color.white};
-  text-align: center;
-  width: 100%;
-  font-family: Strawford, "Lexend Deca", Inter, sans-serif;
-
-  p {
-    font-size: 28px;
-    font-weight: bold;
-    padding-bottom: 10px;
-    font-family: Strawford, "Lexend Deca", Inter, sans-serif;
-  }
-
-  span {
-    margin: 5px 0px 20px;
-    font-family: Strawford, "Lexend Deca", Inter, sans-serif;
-  }
-`;
-
-export const ButtonDiv = styled.div`
-  margin-top: 20px;
-`;
-
-const CenterTabComponent: React.FC<CenterComponentProps> = (props) => {
+const AdvertisingBanner: React.FC<CenterComponentProps> = (props) => {
   return (
-    <CenterTabContainer screen={true}>
+    <CenterTabContainer screen={true} marginBottom={true}>
       <InnerTabContainer>
         <ImageOverlayContainer screen={true}>
           <Container>
@@ -94,4 +59,4 @@ const CenterTabComponent: React.FC<CenterComponentProps> = (props) => {
   );
 };
 
-export default CenterTabComponent;
+export default AdvertisingBanner;

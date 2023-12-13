@@ -9,7 +9,7 @@ import home from "../../public/home.png";
 import Banner from "@/components/bannerImage/Banner";
 import TopCreators from "@/components/topCreators/TopCreators";
 import Categories from "@/components/categories/Categories";
-import AdvertisingBanner from "@/components/centerTabComponent/AdvertisingBanner";
+import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -41,6 +41,7 @@ export default function Home() {
           mainText={"Got a beautiful home?"}
           innerText={"Share your design inspiration & make your home shoppable"}
           image={home}
+          marginBottom={true}
         />
       </div>
     </>
