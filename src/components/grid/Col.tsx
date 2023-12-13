@@ -25,6 +25,7 @@ export const Col = styled(sbgCol)`
   padding-right: 5px;
   `}
 
+  
   @media (max-width: 768px) {
     padding-left: ${({ screen }) => (screen ? "0" : "10px")};
     padding-right: ${({ screen }) => (screen ? "0" : "10px")};

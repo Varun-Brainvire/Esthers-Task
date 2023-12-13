@@ -1,18 +1,29 @@
 import React from "react";
 import {
   BarSeparator,
+  FlexDiv,
   FooterLeftSection,
+  FooterLink,
   FooterLogoSpanWrapper,
   FooterPara,
+  FooterParaForMobile,
   FooterRightSection,
   FooterWrapper,
+  ImageFlexDivForMobile,
   LeftSectionDiv,
   LiOfLeftSection,
+  ListOfMobile,
   MainUlWrapper,
+  PaddingWrapper,
+  ResponsiveFooter,
+  SectionLeftForMobile,
+  SectionMain,
+  SocialIconWrapperDivForMobile,
   SocialMediaIndividualDivWrapper,
   SocialMediaLogoWrapperDiv,
   UlOfLeftSection,
   UlWrapperForLestSection,
+  UlWrapperForMobile,
   WrapperDivForLeftSection,
 } from "./footer.styles";
 import { Container, Row, Col } from "../../components/index";
@@ -22,12 +33,11 @@ import youtube from "../../../public/youtube.svg.svg";
 import facebook from "../../../public/fb.svg.svg";
 import instagram from "../../../public/instagram.svg.svg";
 import linkedin from "../../../public/linkedin.svg.svg";
-import Link from "next/link";
 
 const Footer = () => {
   return (
-    <FooterWrapper>
-      <Container>
+    <FooterWrapper screen={true}>
+      <PaddingWrapper>
         <MainUlWrapper>
           <FooterLeftSection>
             <FooterLogoSpanWrapper>
@@ -40,13 +50,19 @@ const Footer = () => {
                   <BarSeparator></BarSeparator>
                   <UlWrapperForLestSection>
                     <UlOfLeftSection>
-                      <LiOfLeftSection>About Us</LiOfLeftSection>
+                      <LiOfLeftSection>
+                        <FooterLink href={"/inspiration"}>
+                          Inspiration
+                        </FooterLink>
+                      </LiOfLeftSection>
                       <LiOfLeftSection>Contact Us</LiOfLeftSection>
                     </UlOfLeftSection>
 
                     <UlOfLeftSection marginLeft={true}>
                       <LiOfLeftSection>
-                        <Link href={"/howitworks"}>How it works</Link>
+                        <FooterLink href={"/howitworks"}>
+                          How it works
+                        </FooterLink>
                       </LiOfLeftSection>
 
                       <LiOfLeftSection marginTop={true}></LiOfLeftSection>
@@ -54,22 +70,24 @@ const Footer = () => {
 
                     <BarSeparator></BarSeparator>
                   </UlWrapperForLestSection>
+                  <FlexDiv>
+                    <UlOfLeftSection>
+                      <LiOfLeftSection>Cookie policy</LiOfLeftSection>
+                      <LiOfLeftSection>Privacy policy</LiOfLeftSection>
+                    </UlOfLeftSection>
 
-                  <UlOfLeftSection>
-                    <LiOfLeftSection>Cookie policy</LiOfLeftSection>
-                    <LiOfLeftSection>Privacy policy</LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <UlOfLeftSection marginLeft={true}>
+                      <LiOfLeftSection>Terms of service</LiOfLeftSection>
+                      <LiOfLeftSection marginTop={true}></LiOfLeftSection>
+                    </UlOfLeftSection>
 
-                  <UlOfLeftSection marginLeft={true}>
-                    <LiOfLeftSection>Terms of service</LiOfLeftSection>
-                    <LiOfLeftSection marginTop={true}></LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <BarSeparator></BarSeparator>
 
-                  <BarSeparator></BarSeparator>
-
-                  <UlOfLeftSection>
-                    <LiOfLeftSection>Blog</LiOfLeftSection>
-                  </UlOfLeftSection>
+                    <UlOfLeftSection>
+                      <LiOfLeftSection>Blog</LiOfLeftSection>
+                      <LiOfLeftSection marginTop={true}></LiOfLeftSection>
+                    </UlOfLeftSection>
+                  </FlexDiv>
                 </LeftSectionDiv>
               </WrapperDivForLeftSection>
             </div>
@@ -78,19 +96,19 @@ const Footer = () => {
           <FooterRightSection>
             <SocialMediaLogoWrapperDiv>
               <SocialMediaIndividualDivWrapper>
-                <Image src={youtube} alt="yt" width={20} height={20} />
+                <Image src={youtube} alt="yt" width={25} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={facebook} alt="yt" />
+                <Image src={facebook} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={linkedin} alt="yt" />
+                <Image src={linkedin} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
 
               <SocialMediaIndividualDivWrapper>
-                <Image src={instagram} alt="yt" />
+                <Image src={instagram} alt="yt" width={20} height={30} />
               </SocialMediaIndividualDivWrapper>
             </SocialMediaLogoWrapperDiv>
             <div>
@@ -98,7 +116,69 @@ const Footer = () => {
             </div>
           </FooterRightSection>
         </MainUlWrapper>
-      </Container>
+      </PaddingWrapper>
+
+      <ResponsiveFooter>
+        <SectionMain>
+          <SectionLeftForMobile>
+            <ImageFlexDivForMobile>
+              <Image src={footerLogo} alt="footerLogo" />
+            </ImageFlexDivForMobile>
+            <div>
+              <UlWrapperForMobile>
+                <ul>
+                  <ListOfMobile>
+                    <FooterLink href={"/inspiration"} screen={true}>
+                      Inspiration
+                    </FooterLink>
+                  </ListOfMobile>
+                  <ListOfMobile screen={true}>Contact Us</ListOfMobile>
+                  <ListOfMobile>
+                    <FooterLink href={"/howitworks"} screen={true}>
+                      How it works
+                    </FooterLink>
+                  </ListOfMobile>
+                </ul>
+                <div>
+                  <BarSeparator screen={true}></BarSeparator>
+                </div>
+                <ul>
+                  <ListOfMobile screen={true}>Cookie policy</ListOfMobile>
+                  <ListOfMobile screen={true}>Privacy policy</ListOfMobile>
+                  <ListOfMobile screen={true}>Terms of service</ListOfMobile>
+                </ul>
+                <div>
+                  <BarSeparator screen={true}></BarSeparator>
+                </div>
+
+                <ul>
+                  <ListOfMobile screen={true}>Blog</ListOfMobile>
+                </ul>
+              </UlWrapperForMobile>
+              <SocialIconWrapperDivForMobile>
+                <SocialMediaIndividualDivWrapper>
+                  <Image src={youtube} alt="yt" width={25} height={30} />
+                </SocialMediaIndividualDivWrapper>
+
+                <SocialMediaIndividualDivWrapper>
+                  <Image src={facebook} alt="yt" width={20} height={30} />
+                </SocialMediaIndividualDivWrapper>
+
+                <SocialMediaIndividualDivWrapper>
+                  <Image src={linkedin} alt="yt" width={20} height={30} />
+                </SocialMediaIndividualDivWrapper>
+
+                <SocialMediaIndividualDivWrapper>
+                  <Image src={instagram} alt="yt" width={20} height={30} />
+                </SocialMediaIndividualDivWrapper>
+              </SocialIconWrapperDivForMobile>
+            </div>
+            <FooterParaForMobile>
+              <FooterPara screen={true}>Esther’s Scandinavia AB ©</FooterPara>
+            </FooterParaForMobile>
+          </SectionLeftForMobile>
+        </SectionMain>
+      </ResponsiveFooter>
     </FooterWrapper>
   );
 };

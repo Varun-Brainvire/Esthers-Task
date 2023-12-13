@@ -20,12 +20,15 @@ import { FaBars } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import Button from "./button/Button";
 import Link from "next/link";
+import Footer from "./footer/Footer";
+import { useRouter } from "next/router";
 
 const Layout = ({ children }: any) => {
+  const route = useRouter();
   return (
     <>
       <HeaderDiv>
-        <RootHeaderWrapper>
+        <RootHeaderWrapper screen={true}>
           <ImageWrapperDiv>
             <Link href="/">
               <Image src={darkLogo} alt="logo" />
@@ -34,13 +37,13 @@ const Layout = ({ children }: any) => {
           <NavWrapperContainer>
             <UlWrapper>
               <LiWrapper>
-                <a>Beauty</a>
+                <AnchorTag href="/home">Home</AnchorTag>
               </LiWrapper>
               <LiWrapper>
-                <AnchorTag>Home</AnchorTag>
+                <AnchorTag href="/beauty">Beauty</AnchorTag>
               </LiWrapper>
               <LiWrapper>
-                <AnchorTag>Fashion</AnchorTag>
+                <AnchorTag href="/fashion">Fashion</AnchorTag>
               </LiWrapper>
             </UlWrapper>
           </NavWrapperContainer>
@@ -63,6 +66,7 @@ const Layout = ({ children }: any) => {
         </RootHeaderWrapper>
       </HeaderDiv>
       <main>{children}</main>
+      {route.route === "/create-post" ? " " : <Footer />}
     </>
   );
 };

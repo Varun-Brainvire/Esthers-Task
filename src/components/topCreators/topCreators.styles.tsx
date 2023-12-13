@@ -1,8 +1,16 @@
 import styled from "styled-components";
 
-export const CarouselContainer = styled.div`
+interface CarouselContainerProps {
+  screen?: boolean;
+}
+
+export const CarouselContainer = styled.div<CarouselContainerProps>`
   padding: 2% 12% 2% 12%;
   background-color: rgb(244, 240, 236);
+
+  @media (max-width: 375px) {
+    padding: ${({ screen }) => (screen ? "2% 6% 2% 6%" : "2% 12% 2% 12%")};
+  }
 `;
 
 export const InnerContainer = styled.div`
@@ -24,12 +32,22 @@ export const HeadingWrapper = styled.div`
 `;
 
 export const CarouselImageDiv = styled.div`
-  margin: 10px;
+  margin-right: 10px;
+
+  @media (max-width: 375px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
-export const ImageText = styled.div`
+export const ImageText = styled.div<CarouselContainerProps>`
   p {
     text-align: center;
+    font-family: Strawford, "Lexend Deca", Inter, sans-serif;
+
+    @media (max-width: 375px) {
+      font-size: ${({ screen }) => (screen ? "10px" : "")};
+    }
   }
 `;
 
@@ -47,6 +65,10 @@ export const ArrowDiv = styled.div`
 
 export const ArrowWrapper = styled.div`
   display: flex;
+
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
 
 export const SearchContainer = styled.div`
@@ -74,7 +96,10 @@ export const CloseButton = styled.div`
   transition: visibility 0.3s ease;
 `;
 
-export const SearchInputField = styled.input<{ isOpen: boolean }>`
+export const SearchInputField = styled.input<{
+  isOpen: boolean;
+  screen: boolean;
+}>`
   width: ${(props) => (props.isOpen ? "250px" : "72px")};
   padding: 10px;
   border: none;
@@ -90,6 +115,11 @@ export const SearchInputField = styled.input<{ isOpen: boolean }>`
 
   &:focus + ${CloseButton} {
     visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
+  }
+
+  @media (max-width: 375px) {
+    width: ${(props) =>
+      props.isOpen ? (props.screen ? "113px" : "250px") : "72px"};
   }
 `;
 
