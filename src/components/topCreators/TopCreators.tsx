@@ -24,7 +24,6 @@ import {
   WrapperDiv,
 } from "./topCreators.styles";
 import HeadingText from "../headingComponent/HeadingText";
-import { device, deviceSize } from "@/device";
 
 const isWindowDefined = typeof window !== "undefined";
 

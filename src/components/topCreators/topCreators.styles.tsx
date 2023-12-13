@@ -105,7 +105,7 @@ export const SearchInputField = styled.input<{
   border: none;
   outline: none;
   transition: width 0.3s ease, background-color 0.3s ease,
-  border-radius 0.3s ease;
+    border-radius 0.3s ease;
   background-color: ${(props) => (props.isOpen ? "#fff" : "transparent")};
   border-radius: ${(props) => (props.isOpen ? "50px" : "0")};
   color: #fff;
