@@ -43,7 +43,6 @@ import BottomButtons from "@/components/createPost/bottomButtons/bottomButtons"
 const Section = styled.div`
   background-color: #f4f0ec;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,22 +53,22 @@ const Section = styled.div`
   }
 `
 
-const Frame = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`
+// const Frame = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   height: 100%;
+// `
 
-const Col1 = styled(Col)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  border-radius: 8px 0px 0px 8px;
-  background: var(--Form-big-toggle, #f8f8f8);
-  overflow-y: scroll;
-`
+// const Col1 = styled(Col)`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0;
+//   border-radius: 8px 0px 0px 8px;
+//   background: var(--Form-big-toggle, #f8f8f8);
+//   overflow-y: scroll;
+// `
 const Box1 = styled.div`
   margin: auto 0;
   display: flex;
@@ -116,7 +115,6 @@ const Page: NextPageWithLayout = () => {
   }
   return (
     <Section>
-      {/* <Mobile_TopNavigation label="salm ahayak" /> */}
       <MainContainer>
         <MainConatinerRow>
           <MainContainerCol col={6} xs={12} xl={6}>
