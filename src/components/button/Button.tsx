@@ -11,7 +11,6 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = (props) => {
   const router = useRouter();
-  console.log(props);
   return (
     <div>
       {/* <Link href="/signUp" > */}
@@ -19,7 +18,7 @@ const Button: React.FC<ButtonProps> = (props) => {
         margin={props.margin}
         type={props.type}
         onClick={() => {
-          router.push({ pathname: "/signUp", query: { type: props.type } });
+          router.push({ pathname: "/signuppage", query: { type: props.type } });
         }}
       >
         {props.content}

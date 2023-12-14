@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/SignupBanner";
 import LoginDiv from "@/components/LoginDiv/LoginDiv";
 import React from "react";
 import Layout from "@/components/Layout";
@@ -10,8 +10,6 @@ const SignUp = () => {
     <Header />
     <LoginDiv />
     </Layout>
-      {/* <Header />
-      <LoginDiv /> */}
     </>
   );
 };

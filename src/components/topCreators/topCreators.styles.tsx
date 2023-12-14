@@ -5,7 +5,7 @@ interface CarouselContainerProps {
 }
 
 export const CarouselContainer = styled.div<CarouselContainerProps>`
-  padding: 2% 12% 2% 12%;
+  padding: 2% 12% 3% 12%;
   background-color: rgb(244, 240, 236);
 
   @media (max-width: 375px) {
@@ -97,8 +97,8 @@ export const CloseButton = styled.div`
 `;
 
 export const SearchInputField = styled.input<{
-  isOpen: boolean;
-  screen: boolean;
+  isOpen?: boolean;
+  screen?: boolean;
 }>`
   width: ${(props) => (props.isOpen ? "250px" : "72px")};
   padding: 10px;

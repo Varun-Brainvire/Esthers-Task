@@ -1,21 +1,24 @@
 import React from "react";
 import { Button, ElementBox } from "../Buttons/Buttons.styles";
-import { Circle, CircleContainer, CircleWrapper, Li, MainCircleDiv, Ul } from "./MiddleText.styles";
+import { Circle, CircleContainer, CircleWrapper, Li, MainCircleDiv, Span, Ul } from "./MiddleText.styles";
 import fb from "../../../public/fb.svg";
+import { useRouter } from "next/router";
 
 interface Props {
   buttonClick: Object;
+  setButtonClick: React.Dispatch<React.SetStateAction<any>>;
+  active: boolean;
+  setActive: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const MiddleText = (buttonClick: Props) => {
-
-  console.log(buttonClick.buttonClick,"buttonClick.buttonClick")
-
+const MiddleText = ({buttonClick,setButtonClick,active,setActive}: Props) => {
+console.log(buttonClick,"buttonClick")
+const router = useRouter();
   return (
     <>
       <ElementBox forText={true}>
         <Ul>
-          {buttonClick.buttonClick.hasOwnProperty("Join as a member") ? (
+          {active ? (
             <>
               <Li>Unlock premium content, unique offers and extra features</Li>
               <Li>Get inspired and interact with your favorite creators</Li>
@@ -36,7 +39,7 @@ const MiddleText = (buttonClick: Props) => {
           )}
         </Ul>
       </ElementBox>
-{buttonClick.buttonClick.hasOwnProperty("Join as a creator") ?(
+{buttonClick.hasOwnProperty("Join as a creator") || active == false ? (
   <ElementBox>
         <MainCircleDiv>
           <CircleContainer>
@@ -55,7 +58,7 @@ const MiddleText = (buttonClick: Props) => {
       
 
       <ElementBox>
-        <Button onClick={() => alert("clicked")}>
+        <Button>
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,13 +76,13 @@ const MiddleText = (buttonClick: Props) => {
               </g>
             </svg>
           </div>
-          <span style={{ width: "100%", paddingRight: "35px" }}>
-            Register With Facebook
-          </span>
+          <Span>
+            Register with Facebook
+          </Span>
         </Button>
       </ElementBox>
 
-      <Button onClick={() => alert("clicked")} googleButton={true}>
+      <Button googleButton={true}>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -116,9 +119,9 @@ const MiddleText = (buttonClick: Props) => {
             </g>
           </svg>
         </div>
-        <span style={{ width: "100%", paddingRight: "35px" }}>
-          Register With Google
-        </span>
+        <Span >
+          Register with Google
+        </Span>
       </Button>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   SortButton,
-  ImageDiv,
+  PostCardDiv,
   MainOverlayDiv,
   LikeOverlay,
   LikeButtonDiv,
@@ -10,21 +10,18 @@ import {
   SortButtonDiv,
   LeftContentDiv,
   ContentVisibleDiv,
-  GalleryImage,
+  PostImage,
   AvtarImage,
   ContentText,
-  MainContainer,
-} from "./imagegallery.styles";
+} from "./postcard.styles";
 import imageData from "../../../imageData.json";
 import { Container, Row, Col } from "../index";
-import { useRouter } from "next/router";
 
-interface ImageGalleryProps {
+interface PostCardProps {
   selectedCategory: string;
 }
 
-const ImageGallery: React.FC<ImageGalleryProps> = ({ selectedCategory }) => {
-  const router = useRouter();
+const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
   const [overlayVisibility, setOverlayVisibility] = useState<{
     [key: string]: boolean;
   }>({});
@@ -44,36 +41,25 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ selectedCategory }) => {
     setOverlayVisibility((prev) => ({ ...prev, [id]: false }));
   };
 
-  useEffect(() => {
-    const initialImages = isLatest
-      ? imageData.data.filter((item) => item.type === "Latest")
-      : imageData.data.filter((item) => item.type === "Oldest");
+  const handleSorting = (a: any, b: any) => {
+    if (isLatest) {
+      return b.id - a.id; //latest  in desc  order
+    } else {
+      return a.id - b.id; //oldest in asc order
+    }
+  };
 
+  useEffect(() => {
     const filteredImages =
       selectedCategory && selectedCategory !== "All"
-        ? initialImages.filter(
+        ? imageData?.data?.filter(
             (item) =>
-              item.category.toLowerCase() ===
-              selectedCategory.toLocaleLowerCase()
+              item?.category?.toLowerCase() ===
+              selectedCategory?.toLocaleLowerCase()
           )
-        : initialImages;
-
-    setLoadedImages(filteredImages);
-    // const handleScroll = () => {
-    //   const { scrollTop, clientHeight, scrollHeight } =
-    //     document.documentElement;
-
-    //   if (scrollTop + clientHeight >= scrollHeight - 10) {
-    //     //  adding  more of the same data to view working of infinite scroll
-    //     setLoadedImages((prevImages) => [...prevImages, ...prevImages]);
-    //   }
-    // };
-
-    // window.addEventListener("scroll", handleScroll);
-
-    // return () => {
-    //   window.removeEventListener("scroll", handleScroll);
-    // };
+        : imageData.data;
+    const sortedImages = [...filteredImages]?.sort(handleSorting);
+    setLoadedImages(sortedImages);
   }, [isLatest, selectedCategory]);
 
   return (
@@ -85,18 +71,18 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ selectedCategory }) => {
       </SortButtonDiv>
       <Container>
         <Row>
-          {loadedImages.map((item) => (
-            <Col lg={3} sm={6} md={6}>
-              <ImageDiv
-                key={item.id}
+          {loadedImages?.map((item) => (
+            <Col lg={3} md={6} sm={6} xs={6}>
+              <PostCardDiv
+                key={item?.id}
                 onMouseEnter={() => handleMouseEnter(item.id.toString())}
                 onMouseLeave={() => handleMouseLeave(item.id.toString())}
               >
-                <GalleryImage
-                  src={item.imageSrc}
-                  alt={item.description}
-                  height={250}
-                  width={230}
+                <PostImage
+                  src={item?.imageSrc}
+                  alt={item?.description}
+                  height={252}
+                  width={252}
                 />
                 <ContentVisibleDiv>
                   <BagIconContainer>
@@ -112,20 +98,20 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ selectedCategory }) => {
                         fill="white"
                       />
                     </svg>
-                    <ContentText>{item.total}</ContentText>
+                    <ContentText>{item?.total}</ContentText>
                   </BagIconContainer>
                 </ContentVisibleDiv>
-                {overlayVisibility[item.id] && (
+                {overlayVisibility[item?.id] && (
                   <MainOverlayDiv>
                     <ContentDiv>
                       <LeftContentDiv>
                         <AvtarImage
-                          src={item.icon}
+                          src={item?.icon}
                           alt="avtaar"
-                          height={30}
-                          width={30}
+                          height={32}
+                          width={32}
                         />
-                        <ContentText>{item.username}</ContentText>
+                        <ContentText>{item?.username}</ContentText>
                       </LeftContentDiv>
                     </ContentDiv>
                     <LikeButtonDiv>
@@ -149,7 +135,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ selectedCategory }) => {
                     </LikeButtonDiv>
                   </MainOverlayDiv>
                 )}
-              </ImageDiv>
+              </PostCardDiv>
             </Col>
           ))}
         </Row>
@@ -157,4 +143,4 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ selectedCategory }) => {
     </>
   );
 };
-export default ImageGallery;
+export default PostCard;
