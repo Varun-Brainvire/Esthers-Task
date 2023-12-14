@@ -102,7 +102,7 @@ const Step2 = () => {
       socialmediaradio:Yup.string().required("Please select your consent for social media")
   });
 
-  console.log(toggleClick);
+
 
   const customStyles = {
     control: (provided: any, state: any) => ({
@@ -192,10 +192,10 @@ const Step2 = () => {
     }}
     validationSchema={validationSchema}
     onSubmit={(values) => {
-      // console.log(values);
+      
     }}
     handleSubmit = {(values:any) => {
-      // console.log(values)
+      
     }}
     >
 {({values,

@@ -10,10 +10,11 @@ export const MidMainContainer = styled.div`
   background-position: center center;
   /* margin-top: -60px; */
   /* height: calc(100vh - 180px); */
-  width: 100%;
+  /* width: 100%; */
+  width: 1200px;
   z-index: 100;
   @media (max-width: 768px) {
-    width: 100%;
+    /*   */
   }
 `;
 

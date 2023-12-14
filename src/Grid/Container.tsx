@@ -134,13 +134,15 @@ export const CreatePostContainer = styled(sbgContainer)`
   ${media.sm`
     padding-right: 20px;
     padding-left: 20px;
-  `} 
+  `}
   ${media.md`
     padding-right: 26px;
     padding-left: 26px;
   `}
    ${media.lg`
-  `} 
+    //padding-right: 56px;
+    //padding-left: 56px;
+  `}
   ${media.xl`
     padding-right: 56px;
     padding-left: 56px;

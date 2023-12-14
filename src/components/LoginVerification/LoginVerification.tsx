@@ -7,7 +7,6 @@ import { ElementBox } from '../Buttons/Buttons.styles'
 
 const LoginVerification = () => {
     const router = useRouter()
-    console.log(router.query)
   return (
     <>
     <HeaderDiv forLogin={true}>
