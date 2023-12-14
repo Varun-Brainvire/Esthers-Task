@@ -62,7 +62,7 @@ const Headercontainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 7px 53px;
-
+  height: 56px;
   background: #fff;
   @media (max-width: 991px) {
     padding: 0 20px;
