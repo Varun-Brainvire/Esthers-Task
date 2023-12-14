@@ -5,7 +5,7 @@ import {
   BrandItemsThree,
   BrandItemsTwo,
   MainBrandContainer,
-} from "./BrandStyle";
+} from "./brand.style.tsx";
 import Image from "next/image";
 import brandImageOne from "../../../public/Images/brand1.svg";
 import brandImageTwo from "../../../public/Images/brand2.svg";
