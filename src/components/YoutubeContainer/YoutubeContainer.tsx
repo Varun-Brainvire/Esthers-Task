@@ -4,7 +4,7 @@ import {
   MainYoutubeContainer,
   YoutubeLg,
   YoutubeSm,
-} from "./YoutubeContainerStyle";
+} from "./youtubeContainer.style";
 import Image from "next/image";
 import { Container, Row } from "styled-bootstrap-grid";
 
