@@ -10,8 +10,6 @@ const SignUp = () => {
     <Header />
     <LoginDiv />
     </Layout>
-      {/* <Header />
-      <LoginDiv /> */}
     </>
   );
 };
