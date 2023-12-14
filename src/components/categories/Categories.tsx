@@ -49,16 +49,6 @@ const Categories = () => {
             })}
           </Row>
         </Container>
-
-        <Container>
-          <Row>
-            <Col xl={3}>col 1</Col>
-            <Col xl={2}>col 2</Col>
-            <Col xl={2}>col 3</Col>
-            <Col xl={2}>col 4</Col>
-            <Col xl={2}>col 5</Col>
-          </Row>
-        </Container>
       </InnerCategoryContainer>
     </CategoriesContainer>
   );
