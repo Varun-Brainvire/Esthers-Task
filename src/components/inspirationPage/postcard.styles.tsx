@@ -6,6 +6,7 @@ export const MainContainer = styled.div`
   padding: 21px 0px 20px 0px;
   align-items: center;
 `;
+
 export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -14,7 +15,7 @@ export const ImageContainer = styled.div`
 
 export const PostCardDiv = styled.div`
   height: 252px;
-  max-width: 252px;
+  width: 252px;
   object-fit: cover;
   object-position: center;
   border-radius: 6px;
@@ -23,16 +24,12 @@ export const PostCardDiv = styled.div`
   margin-bottom: 8px;
 
   @media screen and (max-width: 576px) {
+    width: 100%;
     height: 165px;
-    width: 165px;
   }
   @media screen and (max-width: 768px) {
+    width: 100%;
     height: 165px;
-    width: 165px;
-  }
-  @media screen and (max-width: 992px) {
-    width: 165px;
-    width: 165px;
   }
 `;
 
@@ -92,15 +89,11 @@ export const MainOverlayDiv = styled.div`
 
   @media screen and (max-width: 576px) {
     height: 165px;
-    width: 165px;
+    width: 100%;
   }
   @media screen and (max-width: 768px) {
     height: 165px;
-    width: 165px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 165px;
-    width: 165px;
+    width: 100%;
   }
 `;
 
@@ -142,12 +135,11 @@ export const ContentVisibleDiv = styled.div`
   }
 
   @media screen and (max-width: 576px) {
-    height: 165px;
-    width: 165px;
+    width: 100%;
+  
   }
   @media screen and (max-width: 768px) {
-    height: 165px;
-    width: 165px;
+    width: 100%;
   }
 `;
 
@@ -204,12 +196,12 @@ export const PostImage = styled(Image)`
   border-radius: 6px;
 
   @media screen and (max-width: 576px) {
+    width: 100%;
     height: 165px;
-    width: 165px;
   }
   @media screen and (max-width: 768px) {
+    width: 100%;
     height: 165px;
-    width: 165px;
   }
 `;
 
@@ -223,13 +215,8 @@ export const AvtarImage = styled(Image)`
   @media screen and (max-width: 576px) {
     height: 24px;
     width: 24px;
-    opacity: 1;
   }
   @media screen and (max-width: 768px) {
-    height: 24px;
-    width: 24px;
-  }
-  @media screen and (max-width: 992px) {
     height: 24px;
     width: 24px;
   }

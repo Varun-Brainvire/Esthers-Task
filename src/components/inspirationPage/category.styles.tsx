@@ -99,7 +99,7 @@ export const OverlayText = styled.span`
   color: white;
   margin: 0px;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: "17px";
 `;
 
