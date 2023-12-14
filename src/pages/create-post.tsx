@@ -81,7 +81,6 @@ const Box1 = styled.div`
   border-radius: 6px;
   background: #fff;
   flex-shrink: 0;
-  border: 3px dotted salmon;
 `
 
 const ImageWrapper = styled.div`

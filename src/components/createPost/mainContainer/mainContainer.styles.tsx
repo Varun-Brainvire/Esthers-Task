@@ -27,7 +27,6 @@ const MainConatinerRow = styled(Row)`
   padding: 0;
   width: 100%;
   display: flex;
-  border: 1px solid black;
 `
 
 const MainContainerCol = styled(Col)`
@@ -38,7 +37,7 @@ const MainContainerCol = styled(Col)`
   box-sizing: border-box;
   padding: 0;
   flex: 1;
-  border: 5px solid black;
+
   /* border: 1px solid black; */
 
   /* overflow: scroll; */
@@ -53,8 +52,6 @@ const MainContainerCol2 = styled(Col)`
   gap: 10px;
   align-self: stretch;
   padding: 50px 0px;
-
-  border: 3px solid blue;
 `
 
 const Box = styled.div`
@@ -86,7 +83,7 @@ const ImageUploadCol = styled(Container)`
   gap: 20px;
   height: 100%;
   border-radius: 8px 0px 0px 8px;
-  border: 3px dotted salmon;
+
   background: var(--Form-big-toggle, #f8f8f8);
   ::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
