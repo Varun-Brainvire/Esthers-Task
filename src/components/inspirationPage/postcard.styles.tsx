@@ -25,11 +25,11 @@ export const PostCardDiv = styled.div`
 
   @media screen and (max-width: 576px) {
     width: 100%;
-    height: 165px;
+    height: 175px;
   }
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 165px;
+    height: 175px;
   }
 `;
 
@@ -88,11 +88,11 @@ export const MainOverlayDiv = styled.div`
   padding: 15px;
 
   @media screen and (max-width: 576px) {
-    height: 165px;
+    height: 175px;
     width: 100%;
   }
   @media screen and (max-width: 768px) {
-    height: 165px;
+    height: 175px;
     width: 100%;
   }
 `;
@@ -197,11 +197,11 @@ export const PostImage = styled(Image)`
 
   @media screen and (max-width: 576px) {
     width: 100%;
-    height: 165px;
+    height: 175px;
   }
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 165px;
+    height: 175px;
   }
 `;
 

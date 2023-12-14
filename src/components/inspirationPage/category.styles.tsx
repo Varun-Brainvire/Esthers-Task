@@ -5,7 +5,6 @@ export const HeadContainer = styled.div`
   display: flex;
   padding: 28px 0px 50px 0px;
   flex-direction: column;
-  align-items: center;
   gap: 13px;
 `;
 
