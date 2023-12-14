@@ -16,6 +16,7 @@ export const CarauselHeading = styled.div`
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  padding-top: 5%;
 `;
 
 export const CarauselDiv = styled.div`
@@ -52,6 +53,7 @@ export const CarauselTextDiv = styled.div`
 `;
 
 export const CarauselTextInnerDiv = styled.div`
+  padding-top: 6%;
   display: flex;
   flex-direction: column;
   align-items: center;
