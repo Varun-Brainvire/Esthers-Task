@@ -39,7 +39,7 @@ const router = useRouter();
           )}
         </Ul>
       </ElementBox>
-{buttonClick.hasOwnProperty("Join as a creator") ?(
+{buttonClick.hasOwnProperty("Join as a creator") || active == false ? (
   <ElementBox>
         <MainCircleDiv>
           <CircleContainer>
