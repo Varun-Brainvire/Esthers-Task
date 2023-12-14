@@ -1,6 +1,5 @@
 import colors from "@/theme";
-import Link, { LinkProps } from "next/link";
-import { AnchorHTMLAttributes } from "react";
+import Link  from "next/link";
 import styled, { css } from "styled-components";
 
 interface ListTagProps {
@@ -62,7 +61,6 @@ export const UlWrapper = styled.ul`
 
 export const LiWrapper = styled.li<ListTagProps>`
   margin-right: 0px;
-  padding-left: 25px;
   width: 100px;
   display: flex;
   align-items: center;

@@ -166,3 +166,14 @@
     flex-direction: column; */
   }
 }
+
+.btn-div {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .btn-div {
+    display: flex;
+    justify-content: center;
+  }
+}

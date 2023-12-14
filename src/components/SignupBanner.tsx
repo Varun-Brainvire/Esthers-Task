@@ -3,7 +3,7 @@ import { HeaderDiv } from './Header.styles'
 
 const SignupBanner = () => {
   return (
-    <HeaderDiv>
+    <HeaderDiv forLogin={false}>
         <h1>Join Esther's community today</h1>
         </HeaderDiv>
   )

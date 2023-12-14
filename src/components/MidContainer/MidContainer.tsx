@@ -5,7 +5,7 @@ import {
   MidMainContainer,
   TextContainer,
   TextDivStyle,
-} from "./MidContainerStyle";
+} from "./midcontainerstyle";
 import Image from "next/image";
 
 type Props = {};

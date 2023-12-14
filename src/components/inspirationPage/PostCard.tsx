@@ -13,17 +13,15 @@ import {
   PostImage,
   AvtarImage,
   ContentText,
-  ImageContainer,
 } from "./postcard.styles";
 import imageData from "../../../imageData.json";
 import { Container, Row, Col } from "../index";
-import { useRouter } from "next/router";
+
 interface PostCardProps {
   selectedCategory: string;
 }
 
 const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
-  const router = useRouter();
   const [overlayVisibility, setOverlayVisibility] = useState<{
     [key: string]: boolean;
   }>({});
@@ -43,21 +41,25 @@ const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
     setOverlayVisibility((prev) => ({ ...prev, [id]: false }));
   };
 
-  useEffect(() => {
-    const initialImages = isLatest
-      ? imageData.data.filter((item) => item.type === "Latest")
-      : imageData.data.filter((item) => item.type === "Oldest");
+  const handleSorting = (a: any, b: any) => {
+    if (isLatest) {
+      return b.id - a.id; //latest  in desc  order
+    } else {
+      return a.id - b.id; //oldest in asc order
+    }
+  };
 
+  useEffect(() => {
     const filteredImages =
       selectedCategory && selectedCategory !== "All"
-        ? initialImages.filter(
+        ? imageData?.data?.filter(
             (item) =>
-              item.category.toLowerCase() ===
-              selectedCategory.toLocaleLowerCase()
+              item?.category?.toLowerCase() ===
+              selectedCategory?.toLocaleLowerCase()
           )
-        : initialImages;
-
-    setLoadedImages(filteredImages);
+        : imageData.data;
+    const sortedImages = [...filteredImages]?.sort(handleSorting);
+    setLoadedImages(sortedImages);
   }, [isLatest, selectedCategory]);
 
   return (
@@ -69,16 +71,16 @@ const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
       </SortButtonDiv>
       <Container>
         <Row>
-          {loadedImages.map((item) => (
+          {loadedImages?.map((item) => (
             <Col lg={3} md={6} sm={6} xs={6}>
               <PostCardDiv
-                key={item.id}
+                key={item?.id}
                 onMouseEnter={() => handleMouseEnter(item.id.toString())}
                 onMouseLeave={() => handleMouseLeave(item.id.toString())}
               >
                 <PostImage
-                  src={item.imageSrc}
-                  alt={item.description}
+                  src={item?.imageSrc}
+                  alt={item?.description}
                   height={252}
                   width={252}
                 />
@@ -96,20 +98,20 @@ const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
                         fill="white"
                       />
                     </svg>
-                    <ContentText>{item.total}</ContentText>
+                    <ContentText>{item?.total}</ContentText>
                   </BagIconContainer>
                 </ContentVisibleDiv>
-                {overlayVisibility[item.id] && (
+                {overlayVisibility[item?.id] && (
                   <MainOverlayDiv>
                     <ContentDiv>
                       <LeftContentDiv>
                         <AvtarImage
-                          src={item.icon}
+                          src={item?.icon}
                           alt="avtaar"
                           height={32}
                           width={32}
                         />
-                        <ContentText>{item.username}</ContentText>
+                        <ContentText>{item?.username}</ContentText>
                       </LeftContentDiv>
                     </ContentDiv>
                     <LikeButtonDiv>

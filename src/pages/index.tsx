@@ -34,15 +34,15 @@ export default function Home() {
         <TopCreators data={images} />
         <Categories />
         <AdvertisingBanner
-          mainText={"Makeup genius?"}
-          innerText={"Share your best tips & products with your followers"}
-          image={beauty}
-          isMobile={true}
-        />
-        <AdvertisingBanner
           mainText={"Got a beautiful home?"}
           innerText={"Share your design inspiration & make your home shoppable"}
           image={home}
+          isMobile={true}
+        />
+        <AdvertisingBanner
+          mainText={"Makeup genius?"}
+          innerText={"Share your best tips & products with your followers"}
+          image={beauty}
           backgroundColor={true}
           isMobile={true}
           marginBottom={true}

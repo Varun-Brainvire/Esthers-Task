@@ -1,7 +1,8 @@
 import React from "react";
-import { MidMainContainer } from "../MidContainer/MidContainerStyle";
-import { Container, MobileDiv, TextDiv } from "./MobileTextStyle";
+``;
+import { Container, MobileDiv, TextDiv } from "./mobiletext.style";
 import Image from "next/image";
+import { MidMainContainer } from "../midContainer/midcontainerstyle";
 
 interface Props {}
 

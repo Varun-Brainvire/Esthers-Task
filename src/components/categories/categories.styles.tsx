@@ -28,7 +28,7 @@ interface StyledImageProps {
 export const ImageOverlayContainer = styled.div<CategoriesProp>`
   position: relative;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -39,7 +39,7 @@ export const ImageOverlayContainer = styled.div<CategoriesProp>`
 
 export const StyledImage = styled(Image)<StyledImageProps>`
   width: 100%;
-  border-radius: 10px;
+  border-radius: 6px;
 
   @media (max-width: 768px) {
     border-radius: ${({ screen }) => (screen ? "0" : "10px")};
@@ -53,7 +53,7 @@ export const OverlayBackground = styled.div<CategoriesProp>`
   width: 100%;
   height: ${(props) => (props.height ? "235px" : "189px")};
   background: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: 6px;
 
   @media (max-width: 768px) {
     border-radius: ${({ screen }) => (screen ? "0" : "10px")};
