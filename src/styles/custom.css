@@ -22,7 +22,16 @@
   gap: 85px;
   flex: 1 0 0;
 }
-
+.btn-join {
+  display: flex;
+  height: 63px;
+  padding: 12.051px 22px 12.533px 22px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 96.41px;
+  background: #34554a;
+  color: #fff;
+}
 .content1 {
   width: 352px;
   height: auto;

@@ -136,7 +136,7 @@ const Form = () => {
               type="submit"
               onClick={() => {
                 handleSubmit;
-                setSubmitting(!submitting);
+                setSubmitting(true);
                 if (submitting == true) {
                   router.push({
                     pathname: "/signup",
