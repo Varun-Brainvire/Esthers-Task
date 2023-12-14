@@ -26,7 +26,7 @@ interface CenterComponentProps {
 }
 
 const AdvertisingBanner: React.FC<CenterComponentProps> = (props) => {
-  console.log(props.image.src, "i");
+
   return (
     <CenterTabContainer
       screen={true}

@@ -11,13 +11,13 @@ export const Col = styled(sbgCol)<ColProps>`
   padding-right: 5px;
 
   ${media.lg`
-  padding-left: 10px;
-  padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   `}
 
   ${media.xl`
-  padding-left: 10px; 
-  padding-right: 10px;
+    padding-left: 10px; 
+    padding-right: 10px;
 
    @media (min-width: 768px) {
     padding-left: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
@@ -26,7 +26,6 @@ export const Col = styled(sbgCol)<ColProps>`
   `}
 
   ${media.md`
-
   @media (min-width: 768px) {
     padding-left: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
     padding-right: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
