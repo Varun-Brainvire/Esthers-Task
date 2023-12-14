@@ -7,6 +7,8 @@ const Conatiner = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
+
+  /* styles for the first div child */
 `
 
 const Button = styled.button`

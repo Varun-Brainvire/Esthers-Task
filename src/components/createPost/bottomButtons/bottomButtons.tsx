@@ -16,8 +16,8 @@ export default function BottomButtons() {
       </ButtonBox>
       <ButtonBox>
         <Button label="Save as draft" />
+        <PublishButton />
       </ButtonBox>
-      <PublishButton />
     </Container>
   )
 }

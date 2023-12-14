@@ -35,7 +35,12 @@ const MainContainerCol = styled(Col)`
   box-sizing: border-box;
   flex: 1;
   padding: 0;
-  margin: 0;
+  flex: 1;
+
+  @media screen and (max-width: 991px) {
+    margin-top: 64px;
+  }
+
   /* border: 1px solid black; */
 
   @media (min-width: 576px) {
@@ -53,6 +58,19 @@ const MainContainerCol2 = styled(Col)`
   gap: 10px;
   align-self: stretch;
   padding: 50px 0px;
+
+  @media screen and (width < 576px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 0px 0px 80px;
+    height: auto;
+  }
+  /* @media screen and (max-width: 991px) {
+    padding: 0px 0px 80px;
+    height: auto;
+  } */
 `
 
 const Box = styled.div`
@@ -63,6 +81,11 @@ const Box = styled.div`
   align-items: center;
   flex-shrink: 0;
   align-self: stretch;
+
+  @media screen and (width < 576px) {
+    width: 100%;
+    padding: none;
+  }
 
   /* width: 100%; */
 `

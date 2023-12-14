@@ -23,7 +23,6 @@ export const Col = styled(sbgCol)`
   `}
 
   ${media.md`
-
   @media (min-width: 768px) {
     padding-left: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
     padding-right: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};

@@ -6,6 +6,12 @@ const Container = styled.div`
   align-items: flex-start;
   align-self: stretch;
   background: #fff;
+  align-items: center;
+  /* border: 1px solid black; */
+
+  @media (width <= 576px) {
+    margin-top: 5px;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -17,6 +23,12 @@ const ButtonContainer = styled.div`
   align-items: center;
   gap: 10px;
   align-self: stretch;
+
+  @media screen and (max-width: 991px) {
+    min-height: 60px;
+    padding: 4px 15px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px -10px 10px -10px;
+  }
 `
 
 const ButtonWrapper = styled.div`
