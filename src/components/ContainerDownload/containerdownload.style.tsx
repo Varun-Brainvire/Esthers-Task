@@ -12,12 +12,17 @@ export const MainContainerDownload = styled.div`
 
 export const InnerContainerDownload = styled.div`
   display: flex;
-  width: 1208px;
+  width: 100%;
   padding: 60px 0px;
   justify-content: center;
   align-items: center;
   gap: 10px;
   background: #34554a;
+`;
+export const CustomDivText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 `;
 
 export const InnerIconContainer = styled.div`
