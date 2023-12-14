@@ -154,7 +154,7 @@ export const ContentText = styled.p`
 export const BagIconContainer = styled.div`
   position: absolute;
   top: 1%;
-  right: 3%;
+  right: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
