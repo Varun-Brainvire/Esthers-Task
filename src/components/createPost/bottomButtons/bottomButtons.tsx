@@ -12,7 +12,7 @@ import {
 import styled from "styled-components"
 
 const WrapperBox = styled.div`
-  @media (width < 576px) {
+  @media (width < 911px) {
     display: none;
   }
 
@@ -23,7 +23,7 @@ const WrapperBox = styled.div`
 `
 
 const MobileWrapperBox = styled.div`
-  @media (width >= 576px) {
+  @media (width >= 911px) {
     display: none;
   }
 
