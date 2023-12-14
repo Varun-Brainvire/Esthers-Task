@@ -34,7 +34,6 @@ import {
   Box,
   Box1_Wrapper,
   ImageUploadCol,
-  ImageUploadCol,
 } from "@/components/createPost/mainContainer/mainContainer.styles"
 import TopNavigation, {
   Mobile_TopNavigation,
