@@ -10,6 +10,7 @@ export interface Props {
   border?: boolean;
   flex?: boolean;
   forVerification?:boolean
+  forCircle?:boolean
 }
 
 export const ButtonsDiv = styled.div`
@@ -54,7 +55,7 @@ export const MainButtonDiv = styled.div`
 `;
 
 export const ElementBox = styled.div<Props>`
-  margin-bottom: ${({ forStep2 }) => (forStep2 ? "" : "10px")};
+  margin-bottom: ${({ forStep2,forCircle }) => (forStep2,forCircle ? "" : "10px")};
   display: ${({ forText }) => (forText ? "flex" : "")};
   justify-content: ${({ forText }) => (forText ? "center" : "")};
   text-align: ${({ forText }) => (forText ? "left" : "")};
