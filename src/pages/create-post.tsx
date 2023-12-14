@@ -1,13 +1,13 @@
 import styled, { createGlobalStyle } from "styled-components"
-import {
-  CreatePostContainer,
-  // Col,
-  ContainerPost,
-  // Container,
-  // Row,
-  // ImageUploadCol,
-  CreatePostRow,
-} from "../Grid/index"
+// import {
+//   CreatePostContainer,
+//   // Col,
+//   ContainerPost,
+//   // Container,
+//   // Row,
+//   // ImageUploadCol,
+//   CreatePostRow,
+// } from "../Grid/index"
 
 import NavBar from "../create-post-component.tsx/NavBar"
 import FlotingMenu from "../create-post-component.tsx/FlotingMenu"
@@ -94,70 +94,6 @@ const ImageWrapper = styled.div`
   margin-top: 10px;
 `
 
-// const Section = styled.section`
-//   /* height: calc(676px); */
-//   height: 100%;
-//   background-color: #f4f0ec;
-//   margin: 10px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   /* flex-wrap: wrap; */
-//   padding: 10px;
-// `
-// function Home() {
-//   const [images, setImages] = useState<any>([])
-//   const handelChange = (e: any) => {
-//     for (const file of e.target.files) {
-//       const reader = new FileReader()
-//       reader.readAsDataURL(file)
-//       reader.onload = () => {
-//         setImages((imgs: any) => [...imgs, reader.result])
-//       }
-//       reader.onerror = () => {
-//         console.log(reader.error)
-//       }
-//     }
-//   }
-//   return (
-//     <PostWrapper>
-//       <NavBar />
-//       <Frame>
-//         <CreatePostContainer>
-//           <CreatePostRow>
-//             <ImageUploadCol>
-//               {images.length > 0 && (
-//                 <ImageWrapper>
-//                   {images?.map((link: any) => (
-//                     <Image
-//                       width={400}
-//                       height={500}
-//                       object-fit="contain"
-//                       key={link}
-//                       src={link}
-//                       alt="sc"
-//                     />
-//                   ))}
-//                 </ImageWrapper>
-//               )}
-//               <Box1>
-//                 <FlotingMenu
-//                   handelChange={handelChange}
-//                   label="Click to upload or drag and drop"
-//                 ></FlotingMenu>
-//                 <FlotingMenu label="Choose from Instagram"></FlotingMenu>
-//               </Box1>
-//             </ImageUploadCol>
-//             <Col>
-//               <Box2Container />
-//             </Col>
-//           </CreatePostRow>
-//         </CreatePostContainer>
-//       </Frame>
-//     </PostWrapper>
-//   )
-// }
-
 const Page: NextPageWithLayout = () => {
   const [images, setImages] = useState<any>([])
   const handelChange = (e: any) => {
@@ -225,44 +161,108 @@ export default Page
 {
   /* <Container style={{ border: "1px solid black", height: "80%" }}>
   <Row style={{ border: "1px solid black", height: "100%" }}>
-    <Col
-      style={{ border: "1px solid black", height: "100%" }}
-      col={6}
-      xs={12}
-      xl={6}
-    >
-      <ImageUploadCol>
+  <Col
+  style={{ border: "1px solid black", height: "100%" }}
+  col={6}
+  xs={12}
+  xl={6}
+  >
+  <ImageUploadCol>
         {images.length > 0 && (
           <ImageWrapper>
-            {images?.map((link: any) => (
-              <Image
-                width={400}
-                height={500}
-                object-fit="contain"
-                key={link}
-                src={link}
-                alt="sc"
-              />
+          {images?.map((link: any) => (
+            <Image
+            width={400}
+            height={500}
+            object-fit="contain"
+            key={link}
+            src={link}
+            alt="sc"
+            />
             ))}
-          </ImageWrapper>
-        )}
-        <Box1>
-          <FlotingMenu
+            </ImageWrapper>
+            )}
+            <Box1>
+            <FlotingMenu
             handelChange={handelChange}
             label="Click to upload or drag and drop"
-          ></FlotingMenu>
-          <FlotingMenu label="Choose from Instagram"></FlotingMenu>
-        </Box1>
-      </ImageUploadCol>
-    </Col>
-    <Col
-      style={{ border: "1px solid black", height: "100%" }}
-      col={6}
-      xs={12}
-      xl={6}
-    >
-      <div style={{ height: "300px" }}>hey</div>
-    </Col>
-  </Row>
-</Container> */
+            ></FlotingMenu>
+            <FlotingMenu label="Choose from Instagram"></FlotingMenu>
+            </Box1>
+            </ImageUploadCol>
+            </Col>
+            <Col
+            style={{ border: "1px solid black", height: "100%" }}
+            col={6}
+            xs={12}
+            xl={6}
+            >
+            <div style={{ height: "300px" }}>hey</div>
+            </Col>
+            </Row>
+            </Container> */
 }
+
+// const Section = styled.section`
+//   /* height: calc(676px); */
+//   height: 100%;
+//   background-color: #f4f0ec;
+//   margin: 10px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   /* flex-wrap: wrap; */
+//   padding: 10px;
+// `
+// function Home() {
+//   const [images, setImages] = useState<any>([])
+//   const handelChange = (e: any) => {
+//     for (const file of e.target.files) {
+//       const reader = new FileReader()
+//       reader.readAsDataURL(file)
+//       reader.onload = () => {
+//         setImages((imgs: any) => [...imgs, reader.result])
+//       }
+//       reader.onerror = () => {
+//         console.log(reader.error)
+//       }
+//     }
+//   }
+//   return (
+//     <PostWrapper>
+//       <NavBar />
+//       <Frame>
+//         <CreatePostContainer>
+//           <CreatePostRow>
+//             <ImageUploadCol>
+//               {images.length > 0 && (
+//                 <ImageWrapper>
+//                   {images?.map((link: any) => (
+//                     <Image
+//                       width={400}
+//                       height={500}
+//                       object-fit="contain"
+//                       key={link}
+//                       src={link}
+//                       alt="sc"
+//                     />
+//                   ))}
+//                 </ImageWrapper>
+//               )}
+//               <Box1>
+//                 <FlotingMenu
+//                   handelChange={handelChange}
+//                   label="Click to upload or drag and drop"
+//                 ></FlotingMenu>
+//                 <FlotingMenu label="Choose from Instagram"></FlotingMenu>
+//               </Box1>
+//             </ImageUploadCol>
+//             <Col>
+//               <Box2Container />
+//             </Col>
+//           </CreatePostRow>
+//         </CreatePostContainer>
+//       </Frame>
+//     </PostWrapper>
+//   )
+// }
