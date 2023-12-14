@@ -1,12 +1,15 @@
-import LoginVerification from '@/components/LoginVerification/LoginVerification'
-import React from 'react'
+import Layout from "@/components/Layout";
+import LoginVerification from "@/components/LoginVerification/LoginVerification";
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 const Verification = (props: Props) => {
   return (
-    <LoginVerification></LoginVerification>
-  )
-}
+    <Layout>
+      <LoginVerification></LoginVerification>
+    </Layout>
+  );
+};
 
-export default Verification
+export default Verification;
