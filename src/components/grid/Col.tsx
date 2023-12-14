@@ -2,6 +2,8 @@ import styled from "styled-components"
 import { media, Col as sbgCol } from "styled-bootstrap-grid"
 
 export const Col = styled(sbgCol)`
+  /* padding: 0;
+  margin: 0; */
   padding-left: 10px;
   padding-right: 10px;
 
