@@ -6,6 +6,9 @@ export const MainBrandContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 85px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 export const BrandItemsOne = styled.div`
   display: flex;
