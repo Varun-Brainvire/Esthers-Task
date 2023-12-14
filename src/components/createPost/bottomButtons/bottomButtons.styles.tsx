@@ -7,7 +7,6 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
-  border: 1px solid black;
 
   @media screen and (width < 911px) {
     padding: 0;

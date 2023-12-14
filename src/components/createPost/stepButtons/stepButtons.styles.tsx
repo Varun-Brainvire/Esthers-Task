@@ -44,6 +44,20 @@ const ButtonText = styled.p`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 95%;
+
+  text-transform: capitalize;
+  font-weight: 600;
+
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 `
 
 export { Container, ButtonContainer, ButtonWrapper, ButtonText }

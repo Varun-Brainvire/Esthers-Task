@@ -24,9 +24,9 @@ const Button = styled.button`
 const Text = styled.div`
   color: var(--Green, #34554a);
   text-align: center;
-  font-size: 14px;
+  font-size: 15px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 14px; /* 100% */
   letter-spacing: 0.3px;
 `

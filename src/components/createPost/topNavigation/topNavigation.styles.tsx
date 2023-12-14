@@ -59,6 +59,13 @@ const ImageContainer = styled.div`
   align-items: center;
   gap: 74px;
 `
+
+const Text = styled.p`
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 500;
+  font-variant: bold;
+`
 const ImageWrapper = ({ icon }: { icon: any }) => {
   return (
     <ImageContainer>
@@ -67,4 +74,4 @@ const ImageWrapper = ({ icon }: { icon: any }) => {
   )
 }
 
-export { Box, Container, ImageWrapper, Mobile_Container }
+export { Box, Container, ImageWrapper, Mobile_Container, Text }

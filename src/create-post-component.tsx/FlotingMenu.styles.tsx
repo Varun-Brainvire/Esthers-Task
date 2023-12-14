@@ -54,8 +54,10 @@ const Text = styled.div`
   text-align: center;
   font-size: 16px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
+  margin: 5px 0px 0px;
+  overflow-wrap: break-word;
 
   @media screen and (max-width: 576px) {
     font-size: 12px;

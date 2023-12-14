@@ -5,6 +5,7 @@ import {
   Container,
   ImageWrapper,
   Mobile_Container,
+  Text,
 } from "./topNavigation.styles"
 import Icon_goback from "../../../../public/Images/Icon - Go back ( Left caret ) (2).png"
 export default function TopNavigation({ label }: { label: string }) {
@@ -12,7 +13,7 @@ export default function TopNavigation({ label }: { label: string }) {
     <Container>
       <Box>
         <ImageWrapper icon={Icon_goback} />
-        <div>{label}</div>
+        <Text>{label}</Text>
         <ImageWrapper icon={Icon_goback} />
       </Box>
     </Container>
