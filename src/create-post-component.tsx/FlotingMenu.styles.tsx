@@ -11,6 +11,11 @@ const FlotingMenuContainer = styled.div`
   align-self: stretch;
   border-radius: 6px 6px 0px 0px;
   border: 1px dashed #d9d9d9;
+
+  @media screen and (max-width: 991px) {
+    /* width: 100%; */
+    height: 150px;
+  }
 `
 
 const Box = styled.div`
@@ -51,5 +56,10 @@ const Text = styled.div`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+    font-weight: 600;
+  }
 `
 export { Label, Text, FlotingMenuContainer, Box, Input, ImageWrapper }

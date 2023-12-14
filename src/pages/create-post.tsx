@@ -5,7 +5,7 @@ import {
   ContainerPost,
   // Container,
   // Row,
-  ImageUploadCol,
+  // ImageUploadCol,
   CreatePostRow,
 } from "../Grid/index"
 
@@ -33,14 +33,17 @@ import {
   MainContainerCol2,
   Box,
   Box1_Wrapper,
+  ImageUploadCol,
 } from "@/components/createPost/mainContainer/mainContainer.styles"
-import TopNavigation from "@/components/createPost/topNavigation/topNavigation"
+import TopNavigation, {
+  Mobile_TopNavigation,
+} from "@/components/createPost/topNavigation/topNavigation"
 import StepButtons from "@/components/createPost/stepButtons/stepButtons"
 import BottomButtons from "@/components/createPost/bottomButtons/bottomButtons"
 const Section = styled.div`
   background-color: #f4f0ec;
   height: 100%;
-  border: 1px solid black;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +83,10 @@ const Box1 = styled.div`
   border-radius: 6px;
   background: #fff;
   flex-shrink: 0;
-  border: 3px dotted salmon;
+
+  /* & > div:first-child {
+    background-color: yellow;
+  } */
 `
 
 const ImageWrapper = styled.div`
@@ -174,6 +180,7 @@ const Page: NextPageWithLayout = () => {
   }
   return (
     <Section>
+      {/* <Mobile_TopNavigation label="salm ahayak" /> */}
       <MainContainer>
         <MainConatinerRow>
           <MainContainerCol col={6} xs={12} xl={6}>
@@ -204,7 +211,7 @@ const Page: NextPageWithLayout = () => {
           <MainContainerCol2 col={6} xs={12} xl={6}>
             <Box>
               <Box1_Wrapper>
-                <TopNavigation label="TopNavigation"></TopNavigation>
+                <TopNavigation label="Create Image Post "></TopNavigation>
                 <StepButtons />
               </Box1_Wrapper>
               <BottomButtons />
