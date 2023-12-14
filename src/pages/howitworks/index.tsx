@@ -43,13 +43,17 @@ const index = (props: Props) => {
       <div>
         <MainContainer>
           <NavbarContainer></NavbarContainer>
-          <MidContainer />
+          <MidContainer
+            text={
+              "Grow your affiliate business by making your content shoppable"
+            }
+          />
           <MobileTextContainer />
           {/* <TopCreatorContainer data={data} /> */}
           <TopCreators data={images} />
           <CarauselContainer />
-          {/* <ClientContainer /> */}
-          {/* <BrandContainer /> */}
+          <ClientContainer />
+          <BrandContainer />
           {/* <MakeupContainer /> */}
           <CenterTabComponent
             mainText={"Makeup genius?"}
