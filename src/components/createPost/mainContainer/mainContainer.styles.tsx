@@ -30,17 +30,18 @@ const MainConatinerRow = styled(Row)`
 `
 
 const MainContainerCol = styled(Col)`
-  padding: 0;
   width: 100%;
   height: 100%;
-  margin: 0;
   box-sizing: border-box;
-  padding: 0;
   flex: 1;
-
+  padding: 0;
+  margin: 0;
   /* border: 1px solid black; */
 
-  /* overflow: scroll; */
+  @media (min-width: 576px) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 `
 
 const MainContainerCol2 = styled(Col)`
