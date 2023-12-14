@@ -9,6 +9,8 @@ export interface Props {
   color?: boolean;
   border?: boolean;
   flex?: boolean;
+  forVerification?:boolean
+  forCircle?:boolean
 }
 
 export const ButtonsDiv = styled.div`
@@ -53,12 +55,13 @@ export const MainButtonDiv = styled.div`
 `;
 
 export const ElementBox = styled.div<Props>`
-  margin-bottom: ${({ forStep2 }) => (forStep2 ? "" : "10px")};
+  margin-bottom: ${({ forStep2,forCircle }) => (forStep2,forCircle ? "" : "10px")};
   display: ${({ forText }) => (forText ? "flex" : "")};
   justify-content: ${({ forText }) => (forText ? "center" : "")};
   text-align: ${({ forText }) => (forText ? "left" : "")};
   min-height: ${({ forStep2 }) => (forStep2 ? "100vh" : "")};
   padding-bottom: ${({ forStep2 }) => (forStep2 ? "120px" : "")};
+  margin-top: ${({ forVerification }) => (forVerification ? "20px" : "")};
 `;
 
 export const Container = styled.div`
