@@ -231,19 +231,18 @@ const Step2 = () => {
                 <Container>
                   <ButtonsDiv>
                     <MainButtonDiv>
-                      <BothButtonDiv forStep2={true} isActive={!active}>
+                      <BothButtonDiv forStep2={true} isActive={active}>
                         <Inputs
                           name="creator"
                           type="radio"
                           id="creator"
                           value="creator"
-                          checked
                           onClick={(e) => {
                             handleTabChange(e);
                             setActive(!active);
                           }}
                         />
-                        <Label isActive={!active}>Creator</Label>
+                        <Label isActive={active}>Creator</Label>
                       </BothButtonDiv>
                     </MainButtonDiv>
                   </ButtonsDiv>
@@ -251,18 +250,19 @@ const Step2 = () => {
                 <Container>
                   <ButtonsDiv>
                     <MainButtonDiv>
-                      <BothButtonDiv forStep2={true} isActive={active}>
+                      <BothButtonDiv forStep2={true} isActive={!active}>
                         <Inputs
                           name="brand"
                           type="radio"
                           id="brand"
                           value="brand"
+                          checked
                           onClick={(e) => {
                             handleTabChange(e);
                             setActive(!active);
                           }}
                         />
-                        <Label isActive={active}>Brand</Label>
+                        <Label isActive={!active}>Brand</Label>
                       </BothButtonDiv>
                     </MainButtonDiv>
                   </ButtonsDiv>
@@ -432,7 +432,7 @@ const Step2 = () => {
             <CreateAccountButton 
             type="submit" onClick={() => {
               handleSubmit
-              setSubmitting(!submitting)
+              setSubmitting(true)
               if(submitting == true) {
                 // alert("Form Submitted")
                 router.push({

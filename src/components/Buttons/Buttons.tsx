@@ -51,7 +51,7 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props)
                 name="Join as a member"
               />
               <Label htmlFor="join as member" isActive={active}>
-                Join as a Member
+                Join as a member
               </Label>
             </BothButtonDiv>
             <BothButtonDiv isActive={!active}>
@@ -66,7 +66,7 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props)
                 name="Join as a creator"
               />
               <Label htmlFor="join as creator" isActive={!active}>
-                Join as a Creator
+                Join as a creator
               </Label>
             </BothButtonDiv>
           </MainButtonDiv>
