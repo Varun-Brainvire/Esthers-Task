@@ -11,7 +11,6 @@ import TopCreators from "@/components/topCreators/TopCreators";
 import Categories from "@/components/categories/Categories";
 import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
 import Layout from "@/components/Layout";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
