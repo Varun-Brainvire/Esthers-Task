@@ -61,7 +61,7 @@ const Category: React.FC<CategoryProps> = ({
           <Row>
             <CategoryContainer>
               {filters.map((filter) => (
-                <Col lg={3} sm={3}>
+                <Col lg={3} sm={3}  key={filter.label}>
                   <SingleCategoryCard
                     key={filter.label}
                     onClick={() => {
