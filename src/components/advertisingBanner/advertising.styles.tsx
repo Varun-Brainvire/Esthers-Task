@@ -24,7 +24,15 @@ export const CenterTabContainer = styled.div<CenterComponentProps>`
 
   @media (max-width: 768px) {
     padding: ${({ screen }) => (screen ? "0" : "")};
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1000px) and (max-width: 2560px) {
+    height: ${({ isSpace }) => (isSpace ? "36%" : "")};
+  }
+
+  @media (min-width: 2560px) and (max-width: 4000px) {
+    height: ${({ isSpace }) => (isSpace ? "41%" : "")};
   }
 `;
 

@@ -6,7 +6,7 @@ interface RowProps {
 }
 
 export const Row = styled(sbgRow)<RowProps>`
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     display: ${({ screen }) => (screen ? "flex" : "")};
     flex-wrap: ${({ screen }) => (screen ? "nowrap" : "")};
     overflow-x: ${({ screen }) => (screen ? "auto" : "")};

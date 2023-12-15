@@ -7,8 +7,13 @@ interface ColProps {
 }
 
 export const Col = styled(sbgCol)<ColProps>`
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+  padding-right: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+
+  @media (min-width: 768px) {
+    padding-left: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+    padding-right: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+  }
 
   ${media.lg`
     padding-left: 10px;
@@ -35,6 +40,11 @@ export const Col = styled(sbgCol)<ColProps>`
    ${media.sm`
    padding-left: 5px;
    padding-right: 5px;
+
+     @media (min-width: 768px) {
+    padding-left: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+    padding-right: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+  }
   `}
 
   
@@ -43,7 +53,7 @@ export const Col = styled(sbgCol)<ColProps>`
     padding-right: ${({ isMobile }) => (isMobile ? "0" : "5px")};
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     flex: ${({ padding }) => (padding ? "0 0 auto" : "")};
     min-width: ${({ padding }) => (padding ? "300px" : "")};
   }
