@@ -21,6 +21,8 @@ import CarauselContainer from "@/components/carauselContainer/CarauselContainer"
 import ClientContainer from "@/components/clientContainer/ClientContainer";
 import BrandContainer from "@/components/brandContainer/BrandContainer";
 import ContainerDownload from "@/components/containerDownload/ContainerDownload";
+import AccordianContainer from "@/components/accordianContainer/AccordianContainer";
+import accordianJsonData from "../../constants/accordianData.json";
 
 type Props = {
   marginBottom: boolean;
@@ -64,6 +66,7 @@ const index = (props: Props) => {
         </MainContainer>
         <ContainerDownload />
         <YoutubeContainer />
+        <AccordianContainer data={accordianJsonData} isBackground />
         <AdvertisingBanner
           mainText={"Makeup genius?"}
           innerText={"Share your best tips & products with your followers"}
