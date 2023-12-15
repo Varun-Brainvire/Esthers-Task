@@ -1,23 +1,23 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export interface Props {
-  googleButton?: boolean;
-  isActive?: boolean;
-  forText?: boolean;
-  forStep2?: boolean;
-  background?: boolean;
-  color?: boolean;
-  border?: boolean;
-  flex?: boolean;
-  forVerification?: boolean;
-  forCircle?: boolean;
+  googleButton?: boolean
+  isActive?: boolean
+  forText?: boolean
+  forStep2?: boolean
+  background?: boolean
+  color?: boolean
+  border?: boolean
+  flex?: boolean
+  forVerification?: boolean
+  forCircle?: boolean
 }
 
 export const ButtonsDiv = styled.div`
   display: flex;
   /* background-color: yellowgreen; */
   justify-content: space-around;
-`;
+`
 
 export const BothButtonDiv = styled.div<Props>`
   min-width: ${({ forStep2 }) => (forStep2 ? "237px" : "254px")};
@@ -39,6 +39,7 @@ export const BothButtonDiv = styled.div<Props>`
   @media only screen and (min-width: 768px) {
     min-width: 254px;
   }
+`
 `;
 
 export const MainButtonDiv = styled.div`
@@ -51,7 +52,7 @@ export const MainButtonDiv = styled.div`
   overflow: hidden;
   position: relative;
   border: 1px solid rgb(238, 238, 238);
-`;
+`
 
 export const ElementBox = styled.div<Props>`
   margin-bottom: ${({ forStep2, forCircle }) => (forCircle ? "" : "10px")};
@@ -61,12 +62,12 @@ export const ElementBox = styled.div<Props>`
   min-height: ${({ forStep2 }) => (forStep2 ? "100vh" : "")};
   padding-bottom: ${({ forStep2 }) => (forStep2 ? "120px" : "")};
   margin-top: ${({ forVerification }) => (forVerification ? "20px" : "")};
-`;
+`
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;
-`;
+`
 export const Inputs = styled.input`
   opacity: 0;
   margin: 0px;
@@ -75,7 +76,7 @@ export const Inputs = styled.input`
   width: 100%;
   cursor: pointer;
   height: 100%;
-`;
+`
 
 export const Label = styled.label<Props>`
   cursor: pointer;
@@ -91,7 +92,7 @@ export const Label = styled.label<Props>`
   @media only screen and (max-width: 500px) {
     padding: 0px;
   }
-`;
+`
 
 export const Button = styled.button<Props>`
   display: inline-flex;
@@ -114,4 +115,4 @@ export const Button = styled.button<Props>`
   border-radius: 99px;
   cursor: pointer;
   padding: 12px 18px;
-`;
+`

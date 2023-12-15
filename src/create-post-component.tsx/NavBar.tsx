@@ -2,6 +2,15 @@ import * as React from "react"
 import styled from "styled-components"
 import profile2 from "../../public/Images/profile2.png"
 import Image from "next/image"
+
+const Text = styled.p`
+  color: var(--Green, #34554a);
+  font-family: Strawford;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+`
 function NavBar() {
   return (
     <Headercontainer>
@@ -12,9 +21,15 @@ function NavBar() {
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/90fd881281f3a9a49d3d0af066aa5ec219c8c6060e6151e70fd24c83d25d4cfb?"
           />
           <Pagesnavbar>
-            <Div>Inspiration</Div>
-            <Div2>DIY</Div2>
-            <div>Blogg</div>
+            <Div>
+              <Text>Inspiration</Text>
+            </Div>
+            <Div>
+              <Text>DIY</Text>
+            </Div>
+            <Div>
+              <Text>Blogg</Text>
+            </Div>
           </Pagesnavbar>
         </Box2>
         <Box3>
@@ -44,12 +59,17 @@ function NavBar() {
 const Headercontainer = styled.div`
   justify-content: center;
   background-color: #fff;
-
   display: flex;
   flex-direction: column;
   padding: 7px 53px;
+  height: 56px;
+  background: #fff;
   @media (max-width: 991px) {
     padding: 0 20px;
+  }
+
+  @media (width < 991px) {
+    display: none;
   }
 `
 

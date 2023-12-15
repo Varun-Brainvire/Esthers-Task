@@ -27,21 +27,26 @@ const MainConatinerRow = styled(Row)`
   padding: 0;
   width: 100%;
   display: flex;
-  border: 1px solid black;
 `
 
 const MainContainerCol = styled(Col)`
-  padding: 0;
   width: 100%;
   height: 100%;
-  margin: 0;
   box-sizing: border-box;
+  flex: 1;
   padding: 0;
   flex: 1;
-  border: 5px solid black;
+
+  @media screen and (max-width: 991px) {
+    margin-top: 64px;
+  }
+
   /* border: 1px solid black; */
 
-  /* overflow: scroll; */
+  @media (min-width: 576px) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 `
 
 const MainContainerCol2 = styled(Col)`
@@ -54,7 +59,18 @@ const MainContainerCol2 = styled(Col)`
   align-self: stretch;
   padding: 50px 0px;
 
-  border: 3px solid blue;
+  @media screen and (width < 576px) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 991px) {
+    padding: 0px 0px 80px;
+    height: auto;
+  }
+  /* @media screen and (max-width: 991px) {
+    padding: 0px 0px 80px;
+    height: auto;
+  } */
 `
 
 const Box = styled.div`
@@ -65,6 +81,11 @@ const Box = styled.div`
   align-items: center;
   flex-shrink: 0;
   align-self: stretch;
+
+  @media screen and (width < 576px) {
+    width: 100%;
+    padding: none;
+  }
 
   /* width: 100%; */
 `
@@ -86,7 +107,7 @@ const ImageUploadCol = styled(Container)`
   gap: 20px;
   height: 100%;
   border-radius: 8px 0px 0px 8px;
-  border: 3px dotted salmon;
+
   background: var(--Form-big-toggle, #f8f8f8);
   ::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */

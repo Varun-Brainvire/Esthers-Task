@@ -26,7 +26,7 @@ export default function Home() {
     { image: image2, text: "rushikesh" },
     { image: image2, text: "rushikesh" },
     { image: image2, text: "rushikesh" },
-  ];
+  ]
 
   return (
     <>
@@ -50,7 +50,7 @@ export default function Home() {
         />
       </div>
     </>
-  );
+  )
 }
 
 Home.getLayout = function getLayout(page: any) {
