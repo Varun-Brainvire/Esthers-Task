@@ -8,13 +8,19 @@ interface CenterComponentProps {
   screen?: boolean;
   marginBottom?: boolean;
   backgroundColor?: boolean;
+  isSpace?: boolean;
 }
 
 export const CenterTabContainer = styled.div<CenterComponentProps>`
   padding: 3% 12% 3% 12%;
   background-color: ${({ backgroundColor }) =>
     backgroundColor ? "#fff" : "rgb(244, 240, 236)"};
-  margin-bottom: ${({ marginBottom }) => (marginBottom ? "7%" : " ")};
+
+  @media (min-width: 991px) {
+    position: ${({ isSpace }) => (isSpace ? "absolute" : "")};
+    width: ${({ isSpace }) => (isSpace ? "100%" : "")};
+    height: ${({ isSpace }) => (isSpace ? "65%" : "")};
+  }
 
   @media (max-width: 768px) {
     padding: ${({ screen }) => (screen ? "0" : "")};

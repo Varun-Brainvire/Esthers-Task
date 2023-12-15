@@ -40,7 +40,6 @@ export const BothButtonDiv = styled.div<Props>`
     min-width: 254px;
   }
 `
-`;
 
 export const MainButtonDiv = styled.div`
   display: inline-flex;
