@@ -7,17 +7,22 @@ interface ColProps {
 }
 
 export const Col = styled(sbgCol)<ColProps>`
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+  padding-right: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+
+  @media (min-width: 768px) {
+    padding-left: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+    padding-right: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+  }
 
   ${media.lg`
-  padding-left: 10px;
-  padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
   `}
 
   ${media.xl`
-  padding-left: 10px; 
-  padding-right: 10px;
+    padding-left: 10px; 
+    padding-right: 10px;
 
    @media (min-width: 768px) {
     padding-left: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
@@ -26,7 +31,6 @@ export const Col = styled(sbgCol)<ColProps>`
   `}
 
   ${media.md`
-
   @media (min-width: 768px) {
     padding-left: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
     padding-right: ${({ paddingInBanner }) => (paddingInBanner ? "10px" : "0")};
@@ -36,6 +40,11 @@ export const Col = styled(sbgCol)<ColProps>`
    ${media.sm`
    padding-left: 5px;
    padding-right: 5px;
+
+     @media (min-width: 768px) {
+    padding-left: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+    padding-right: ${({ isMobile }) => (isMobile ? "0" : "5px")};
+  }
   `}
 
   
@@ -44,7 +53,7 @@ export const Col = styled(sbgCol)<ColProps>`
     padding-right: ${({ isMobile }) => (isMobile ? "0" : "5px")};
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     flex: ${({ padding }) => (padding ? "0 0 auto" : "")};
     min-width: ${({ padding }) => (padding ? "300px" : "")};
   }

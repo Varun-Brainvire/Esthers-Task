@@ -1,11 +1,9 @@
-// import Layout from "../components/Layout"
 import "../styles/globals.css"
 import "../styles/custom.css"
 import localFont from "next/font/local"
 import { ReactElement, ReactNode } from "react"
 import { AppProps } from "next/app"
 import { NextPage } from "next"
-import NestedLayout from "@/components/NestedLayout"
 import Layout from "@/components/Layout"
 
 const myFont = localFont({
@@ -19,17 +17,6 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
-
-// function MyApp({ Component, pageProps }: any) {
-//   const getLayout =
-//     Component.getLayout || ((page: any) => <Layout>{page}</Layout>)
-
-//   return getLayout(
-//     <main className={myFont.className}>
-//       <Component {...pageProps} />
-//     </main>
-//   )
-// }
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
