@@ -29,7 +29,7 @@ const Categories = () => {
           <Row screen={true}>
             {categoryData.map((category) => {
               return (
-                <Col xl={4} lg={4} md={4} sm={4} sx={4} padding={true}>
+                <Col xl={4} lg={4} md={4} sm={12} sx={12} padding={true}>
                   <>
                     <Link href="/inspiration/beauty">
                       <ImageOverlayContainer>

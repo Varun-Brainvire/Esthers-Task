@@ -12,7 +12,7 @@ export const CategoriesContainer = styled.div<CategoriesProp>`
   padding: 2% 12% 3% 12%;
 
   @media (max-width: 768px) {
-    padding: ${({ screen }) => (screen ? "2% 6% 2% 6%" : "2% 12% 2% 12%")};
+    padding: ${({ screen }) => (screen ? "3% 6% 4% 6%" : "2% 12% 2% 12%")};
   }
 `;
 
