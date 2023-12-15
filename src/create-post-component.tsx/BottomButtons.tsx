@@ -29,3 +29,19 @@ export default function BottomButtons() {
     </Conatiner>
   )
 }
+
+function Mobile_BottomButtons() {
+  return (
+    <Conatiner>
+      <Box1>
+        <Button>
+          <Text>My drafts</Text>
+        </Button>
+      </Box1>
+      <Publish_Buttons>
+        <Publish_Button_Text>Publish</Publish_Button_Text>
+      </Publish_Buttons>
+    </Conatiner>
+  )
+}
+export { Mobile_BottomButtons }
