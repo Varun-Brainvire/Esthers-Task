@@ -28,7 +28,7 @@ export const CenterTabContainer = styled.div<CenterComponentProps>`
   }
 
   @media (min-width: 1000px) and (max-width: 2560px) {
-    height: ${({ isSpace }) => (isSpace ? "36%" : "")};
+    height: ${({ isSpace }) => (isSpace ? "65%" : "")};
   }
 
   @media (min-width: 2560px) and (max-width: 4000px) {
