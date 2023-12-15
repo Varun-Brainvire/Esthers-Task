@@ -6,6 +6,7 @@ export const MainContainer = styled.div`
   padding: 21px 0px 20px 0px;
   align-items: center;
 `;
+
 export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -14,7 +15,7 @@ export const ImageContainer = styled.div`
 
 export const PostCardDiv = styled.div`
   height: 252px;
-  max-width: 252px;
+  width: 252px;
   object-fit: cover;
   object-position: center;
   border-radius: 6px;
@@ -23,16 +24,12 @@ export const PostCardDiv = styled.div`
   margin-bottom: 8px;
 
   @media screen and (max-width: 576px) {
-    height: 165px;
-    width: 165px;
+    width: 100%;
+    height: 175px;
   }
   @media screen and (max-width: 768px) {
-    height: 165px;
-    width: 165px;
-  }
-  @media screen and (max-width: 992px) {
-    width: 165px;
-    width: 165px;
+    width: 100%;
+    height: 175px;
   }
 `;
 
@@ -40,6 +37,7 @@ export const SortButtonDiv = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-bottom: 20px;
+  margin-top: -25px;
   @media screen and (max-width: 576px) {
     margin-left: 14px;
     justify-content: flex-start;
@@ -63,7 +61,6 @@ export const SortButton = styled.button`
   background-color: rgb(244, 240, 236);
   color: rgb(58, 58, 58);
   border: none;
-  /* border: 1px solid rgb(222, 222, 222); */
   padding: 12px 18px;
   max-height: 45px;
   width: auto;
@@ -91,16 +88,12 @@ export const MainOverlayDiv = styled.div`
   padding: 15px;
 
   @media screen and (max-width: 576px) {
-    height: 165px;
-    width: 165px;
+    height: 175px;
+    width: 100%;
   }
   @media screen and (max-width: 768px) {
-    height: 165px;
-    width: 165px;
-  }
-  @media screen and (max-width: 992px) {
-    height: 165px;
-    width: 165px;
+    height: 175px;
+    width: 100%;
   }
 `;
 
@@ -142,12 +135,11 @@ export const ContentVisibleDiv = styled.div`
   }
 
   @media screen and (max-width: 576px) {
-    height: 165px;
-    width: 165px;
+    width: 100%;
+  
   }
   @media screen and (max-width: 768px) {
-    height: 165px;
-    width: 165px;
+    width: 100%;
   }
 `;
 
@@ -162,7 +154,7 @@ export const ContentText = styled.p`
 export const BagIconContainer = styled.div`
   position: absolute;
   top: 1%;
-  right: 3%;
+  right: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,10 +167,9 @@ export const LikeButtonDiv = styled.div`
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  bottom: 5%;
-  right: 5%;
+  bottom: 3%;
+  right: 1%;
 `;
-
 export const LikeOverlay = styled.button`
   border: none;
   background: none;
@@ -205,12 +196,12 @@ export const PostImage = styled(Image)`
   border-radius: 6px;
 
   @media screen and (max-width: 576px) {
-    height: 165px;
-    width: 165px;
+    width: 100%;
+    height: 175px;
   }
   @media screen and (max-width: 768px) {
-    height: 165px;
-    width: 165px;
+    width: 100%;
+    height: 175px;
   }
 `;
 
@@ -224,13 +215,8 @@ export const AvtarImage = styled(Image)`
   @media screen and (max-width: 576px) {
     height: 24px;
     width: 24px;
-    opacity: 1;
   }
   @media screen and (max-width: 768px) {
-    height: 24px;
-    width: 24px;
-  }
-  @media screen and (max-width: 992px) {
     height: 24px;
     width: 24px;
   }

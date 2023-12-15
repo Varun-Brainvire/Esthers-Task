@@ -9,6 +9,11 @@ export const MainClientContainer = styled.div`
   gap: 35px;
   /* align-self: stretch; */
   background: #f4f0ec;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: auto;
+  }
 `;
 
 export const InnerClientContainer = styled.div`
@@ -18,6 +23,9 @@ export const InnerClientContainer = styled.div`
   align-items: center;
   gap: 35px;
   align-self: stretch;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const ClientHeader = styled.div`
@@ -27,12 +35,18 @@ export const ClientHeader = styled.div`
   align-items: center;
   gap: 10px;
   align-self: stretch;
+  padding: 54px;
+  @media (max-width: 768px) {
+  }
 `;
 
 export const ClientText = styled.div`
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const ClientCard = styled.div`
@@ -44,6 +58,10 @@ export const ClientCard = styled.div`
   padding: 60px;
   align-items: center;
   background: #fff;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
 `;
 
 export const ClientImage = styled.div`

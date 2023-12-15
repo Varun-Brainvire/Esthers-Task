@@ -10,6 +10,7 @@ import Banner from "@/components/bannerImage/Banner";
 import TopCreators from "@/components/topCreators/TopCreators";
 import Categories from "@/components/categories/Categories";
 import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
+import Layout from "@/components/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -33,17 +34,23 @@ export default function Home() {
         <TopCreators data={images} />
         <Categories />
         <AdvertisingBanner
-          mainText={"Makeup genius?"}
-          innerText={"Share your best tips & products with your followers"}
-          image={beauty}
-        />
-        <AdvertisingBanner
           mainText={"Got a beautiful home?"}
           innerText={"Share your design inspiration & make your home shoppable"}
           image={home}
+          isMobile={true}
+        />
+        <AdvertisingBanner
+          mainText={"Makeup genius?"}
+          innerText={"Share your best tips & products with your followers"}
+          image={beauty}
+          backgroundColor={true}
+          isMobile={true}
           marginBottom={true}
         />
       </div>
     </>
   );
 }
+Home.getLayout = function getLayout(page: any) {
+  return <Layout>{page}</Layout>;
+};

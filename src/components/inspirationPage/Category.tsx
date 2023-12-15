@@ -54,15 +54,9 @@ const Category: React.FC<CategoryProps> = ({
   return (
     <>
       <HeadContainer>
-        <Container>
-          <Row>
-            <Col lg={12}>
               <TitleContainer>
                 {getTitleContent(selectedCategory)}
               </TitleContainer>
-            </Col>
-          </Row>
-        </Container>
         <Container>
           <Row>
             <CategoryContainer>

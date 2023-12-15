@@ -7,9 +7,10 @@ import {
   ClientTextDiv,
   InnerClientContainer,
   MainClientContainer,
-} from "./ClientStyle";
+} from "./client.style";
 import Image from "next/image";
 import mainClientImage from "../../../public/Images/Image.svg";
+import { Col, Container, Row } from "..";
 
 interface Props {}
 const ClientContainer = (props: Props) => {

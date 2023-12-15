@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AnchorTag,
   BarButtonWrapper,
@@ -19,8 +19,10 @@ import { BiSearch } from "react-icons/bi";
 import { FaBars } from "react-icons/fa";
 import Button from "../button/Button";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const router = useRouter();
   return (
     <div>
       <NavDiv>
@@ -32,14 +34,25 @@ const Navbar = () => {
           </ImageWrapperDiv>
           <NavWrapperContainer>
             <UlWrapper>
-              <LiWrapper>
-                <AnchorTag href="/home">Home</AnchorTag>
+              <LiWrapper
+                isActive={router.asPath === "/inspiration/home" ? true : false}
+              >
+                <AnchorTag href="/inspiration/home">Home</AnchorTag>
               </LiWrapper>
-              <LiWrapper>
-                <AnchorTag href="/beauty">Beauty</AnchorTag>
+
+              <LiWrapper
+                isActive={
+                  router.asPath === "/inspiration/beauty" ? true : false
+                }
+              >
+                <AnchorTag href="/inspiration/beauty">Beauty</AnchorTag>
               </LiWrapper>
-              <LiWrapper>
-                <AnchorTag href="/fashion">Fashion</AnchorTag>
+              <LiWrapper
+                isActive={
+                  router.asPath === "/inspiration/fashion" ? true : false
+                }
+              >
+                <AnchorTag href="/inspiration/fashion">Fashion</AnchorTag>
               </LiWrapper>
             </UlWrapper>
           </NavWrapperContainer>

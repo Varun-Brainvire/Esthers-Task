@@ -5,7 +5,6 @@ export const HeadContainer = styled.div`
   display: flex;
   padding: 28px 0px 50px 0px;
   flex-direction: column;
-  align-items: center;
   gap: 13px;
 `;
 
@@ -25,6 +24,20 @@ export const CategoryContainer = styled.div`
   align-items: center;
 
   @media screen and (max-width: 576px) {
+    background-color: white;
+    color: white;
+    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  @media screen and (max-width: 768px) {
+    background-color: white;
+    color: white;
+    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  @media screen and (max-width: 992px) {
     background-color: white;
     color: white;
     overflow: hidden;
@@ -77,7 +90,7 @@ export const OverlayDiv = styled.div`
 
   @media screen and (max-width: 576px) {
     height: 100%;
-    width: 100%
+    width: 100%;
   }
 `;
 
@@ -85,7 +98,7 @@ export const OverlayText = styled.span`
   color: white;
   margin: 0px;
   font-size: 32px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: "17px";
 `;
 

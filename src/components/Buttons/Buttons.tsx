@@ -19,7 +19,8 @@ interface Props {
 }
 
 const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props) => {
-  console.log(active)
+  const router = useRouter();
+  console.log(active,"active",router.query.type)
 
   useEffect(() => {
     window. scrollTo(0, 0)
@@ -32,15 +33,12 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props)
     });
   };
 
-  const router = useRouter();
-// console.log(router.query.type,"in Buttons")
-// console.log(type)
+  
   return (
     <ElementBox forText={false}>
       <Container className="">
         <ButtonsDiv>
           <MainButtonDiv>
-            {router.query.type === 'creator' ?"":""}
             <BothButtonDiv isActive={active}>
               <Inputs
                 type="radio"
@@ -53,7 +51,7 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props)
                 name="Join as a member"
               />
               <Label htmlFor="join as member" isActive={active}>
-                Join as a Member
+                Join as a member
               </Label>
             </BothButtonDiv>
             <BothButtonDiv isActive={!active}>
@@ -68,7 +66,7 @@ const Buttons = ({ buttonClick, setButtonClick, active, setActive ,type}: Props)
                 name="Join as a creator"
               />
               <Label htmlFor="join as creator" isActive={!active}>
-                Join as a Creator
+                Join as a creator
               </Label>
             </BothButtonDiv>
           </MainButtonDiv>

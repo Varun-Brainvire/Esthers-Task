@@ -7,15 +7,76 @@ import {
   CarauselTextDiv,
   CarauselTextInnerDiv,
   MainCarauselContainer,
-} from "./CarauselStyle";
+} from "./carausel.style.tsx";
 import Image from "next/image";
+import { Col, Container, Row } from "..";
 
 interface Props {}
 
 const CarauselContainer = (props: Props) => {
   return (
     <>
-      <MainCarauselContainer>
+      <Container>
+        <CarauselHeading>
+          <div className="carausel-head-div">
+            <span className="howitwork">How It works</span>
+          </div>
+        </CarauselHeading>
+        <Row>
+          <Col xl={4} md={4} lg={4} sm={6} sx={12}>
+            <div style={{ paddingBottom: "10%" }}>
+              <Image
+                src="/Images/card1.svg"
+                height={391}
+                width={378.66}
+                alt="img"
+              />
+
+              <CarauselTextInnerDiv>
+                <span className="carausel-head">Create your profile</span>
+                <span className="carausel-text">
+                  Have your profile ready in less then 1 minute
+                </span>
+              </CarauselTextInnerDiv>
+            </div>
+          </Col>
+          <Col xl={4} md={4} lg={4} sm={6} sx={12}>
+            <div style={{ paddingBottom: "10%" }}>
+              <Image
+                src="/Images/card1.svg"
+                height={391}
+                width={378.66}
+                alt="img"
+              />
+
+              <CarauselTextInnerDiv>
+                <span className="carausel-head">Create your profile</span>
+                <span className="carausel-text">
+                  Have your profile ready in less then 1 minute
+                </span>
+              </CarauselTextInnerDiv>
+            </div>
+          </Col>
+          <Col xl={4} md={4} lg={4} sm={6} sx={12}>
+            <div style={{ paddingBottom: "10%" }}>
+              <Image
+                src="/Images/card1.svg"
+                height={391}
+                width={378.66}
+                alt="img"
+              />
+
+              <CarauselTextInnerDiv>
+                <span className="carausel-head">Create your profile</span>
+                <span className="carausel-text">
+                  Have your profile ready in less then 1 minute
+                </span>
+              </CarauselTextInnerDiv>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      {/* <MainCarauselContainer>
         <CarauselHeading>
           <div className="carausel-head-div">
             <span className="howitwork">How It works</span>
@@ -83,7 +144,7 @@ const CarauselContainer = (props: Props) => {
             </span>
           </CarauselTextInnerDiv>
         </CarauselTextDiv>
-      </MainCarauselContainer>
+      </MainCarauselContainer> */}
     </>
   );
 };
