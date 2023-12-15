@@ -40,6 +40,7 @@ export const BothButtonDiv = styled.div<Props>`
     min-width: 254px;
   }
 `
+`;
 
 export const MainButtonDiv = styled.div`
   display: inline-flex;
@@ -54,9 +55,7 @@ export const MainButtonDiv = styled.div`
 `
 
 export const ElementBox = styled.div<Props>`
-  margin-bottom: ${({ forStep2, forCircle }) => (
-    forStep2, forCircle ? "" : "10px"
-  )};
+  margin-bottom: ${({ forStep2, forCircle }) => (forCircle ? "" : "10px")};
   display: ${({ forText }) => (forText ? "flex" : "")};
   justify-content: ${({ forText }) => (forText ? "center" : "")};
   text-align: ${({ forText }) => (forText ? "left" : "")};

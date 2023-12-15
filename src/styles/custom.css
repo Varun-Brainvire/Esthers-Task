@@ -23,6 +23,40 @@
   flex: 1 0 0;
 }
 
+.text-banner {
+  color: #3a3a3a;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+.brand {
+  color: #f4f0ec;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.btn-join {
+  display: flex;
+  height: 63px;
+  padding: 12.051px 22px 12.533px 22px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 96.41px;
+  background: #34554a;
+  color: #fff;
+  margin-top: 25px;
+}
+
+.line {
+  border-left: 2px solid #718880; /* You can change the color by replacing #000 with your desired color code */
+  height: 100px; /* Adjust the height as needed */
+  margin: 0 20px;
+  margin-left: 45px;
+}
 .content1 {
   width: 352px;
   height: auto;

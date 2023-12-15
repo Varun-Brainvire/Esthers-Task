@@ -15,14 +15,16 @@ import beauty from "../../../public/beauty.png";
 import beauty2 from "../../../public/Images/beauty2.svg";
 import YoutubeContainer from "@/components/YoutubeContainer/YoutubeContainer";
 import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
-import MidContainer from "@/components/MidContainer/MidContainer";
-import MobileTextContainer from "@/components/MobileTextContainer/MobileTextContainer";
-import CarauselContainer from "@/components/CarauselContainer/CarauselContainer";
-import ClientContainer from "@/components/ClientContainer/ClientContainer";
-import BrandContainer from "@/components/BrandContainer/BrandContainer";
-import ContainerDownload from "@/components/ContainerDownload/ContainerDownload";
+import MidContainer from "@/components/midContainer/MidContainer";
+import MobileTextContainer from "@/components/mobileTextContainer/MobileTextContainer";
+import CarauselContainer from "@/components/carauselContainer/CarauselContainer";
+import ClientContainer from "@/components/clientContainer/ClientContainer";
+import BrandContainer from "@/components/brandContainer/BrandContainer";
+import ContainerDownload from "@/components/containerDownload/ContainerDownload";
 
-type Props = {};
+type Props = {
+  marginBottom: boolean;
+};
 const index = (props: Props) => {
   const images = [
     { image: image1, text: "hairbyriddhi" },
@@ -32,13 +34,21 @@ const index = (props: Props) => {
     { image: image5, text: "rushikesh" },
     { image: image1, text: "hairbyriddhi" },
     { image: image2, text: "rushikesh" },
+    { image: image2, text: "rushikesh" },
+    { image: image2, text: "rushikesh" },
+    { image: image2, text: "rushikesh" },
+    { image: image2, text: "rushikesh" },
   ];
   return (
     <>
       <div>
         <MainContainer>
           <NavbarContainer></NavbarContainer>
-          <MidContainer />
+          <MidContainer
+            text={
+              "Grow your affiliate business by making your content shoppable"
+            }
+          />
           <MobileTextContainer />
           {/* <TopCreatorContainer data={data} /> */}
           <TopCreators data={images} />
@@ -55,11 +65,13 @@ const index = (props: Props) => {
         <ContainerDownload />
         <YoutubeContainer />
         <AdvertisingBanner
-          mainText={"Style guru??"}
-          innerText={"Share your outfits & make your looks shoppable"}
-          image={beauty2}
+          mainText={"Makeup genius?"}
+          innerText={"Share your best tips & products with your followers"}
+          image={beauty}
+          backgroundColor={true}
+          isMobile={true}
+          marginBottom={true}
         />
-        {/* <Footer /> */}
       </div>
     </>
   );

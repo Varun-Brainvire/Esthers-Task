@@ -6,6 +6,7 @@ import { ReactElement, ReactNode } from "react"
 import { AppProps } from "next/app"
 import { NextPage } from "next"
 import NestedLayout from "@/components/NestedLayout"
+import Layout from "@/components/Layout"
 
 const myFont = localFont({
   src: "../../public/fonts/strawford-regular-webfont.woff",
@@ -31,7 +32,7 @@ type AppPropsWithLayout = AppProps & {
 // }
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout ?? ((page) => page)
+  const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
   
   return getLayout(
     <main style={{ height: "100%" }} className={myFont.className}>

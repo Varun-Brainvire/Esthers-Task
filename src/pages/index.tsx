@@ -51,7 +51,6 @@ export default function Home() {
     </>
   )
 }
-
 Home.getLayout = function getLayout(page: any) {
   return <Layout>{page}</Layout>;
 };
