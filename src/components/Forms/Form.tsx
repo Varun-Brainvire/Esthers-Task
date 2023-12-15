@@ -169,7 +169,7 @@ const Form = () => {
               <AlreadyAccounText>Already have an account?</AlreadyAccounText>
             </AlreadyAccountDiv>
 
-            <StyledLink href="/">Login</StyledLink>
+            <StyledLink href="/login">Login</StyledLink>
           </form>
         );
       }}

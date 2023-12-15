@@ -60,3 +60,14 @@ export const BannerButtonDiv = styled.div`
 export const SingleBannerButton = styled.div<BannerProps>`
   margin-right: ${(props) => (props.marginRight ? "10px" : "0")};
 `;
+
+export const Overlay2 = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+`;
