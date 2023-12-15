@@ -22,7 +22,9 @@ import ClientContainer from "@/components/clientContainer/ClientContainer";
 import BrandContainer from "@/components/brandContainer/BrandContainer";
 import ContainerDownload from "@/components/containerDownload/ContainerDownload";
 
-type Props = {};
+type Props = {
+  marginBottom: boolean;
+};
 const index = (props: Props) => {
   const images = [
     { image: image1, text: "hairbyriddhi" },
@@ -61,13 +63,15 @@ const index = (props: Props) => {
           />
         </MainContainer>
         <ContainerDownload />
-
+        <YoutubeContainer />
         <AdvertisingBanner
-          mainText={"Style guru??"}
-          innerText={"Share your outfits & make your looks shoppable"}
-          image={beauty2}
+          mainText={"Makeup genius?"}
+          innerText={"Share your best tips & products with your followers"}
+          image={beauty}
+          backgroundColor={true}
+          isMobile={true}
+          marginBottom={true}
         />
-        {/* <Footer /> */}
       </div>
     </>
   );
