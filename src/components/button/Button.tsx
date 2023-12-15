@@ -7,6 +7,7 @@ interface ButtonProps {
   content: string;
   margin?: boolean;
   type?: string;
+  color?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
@@ -15,6 +16,7 @@ const Button: React.FC<ButtonProps> = (props) => {
     <div>
       {/* <Link href="/signUp" > */}
       <StyledButton
+        color={props.color}
         margin={props.margin}
         type={props.type}
         onClick={() => {

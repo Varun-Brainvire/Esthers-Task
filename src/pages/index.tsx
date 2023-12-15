@@ -11,6 +11,7 @@ import TopCreators from "@/components/topCreators/TopCreators";
 import Categories from "@/components/categories/Categories";
 import AdvertisingBanner from "@/components/advertisingBanner/AdvertisingBanner";
 import Layout from "@/components/Layout";
+import { Col, Container, Row } from "../components/index";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -45,12 +46,13 @@ export default function Home() {
           image={beauty}
           backgroundColor={true}
           isMobile={true}
-          marginBottom={true}
+          isSpace={true}
         />
       </div>
     </>
   )
 }
+
 Home.getLayout = function getLayout(page: any) {
   return <Layout>{page}</Layout>;
 };
