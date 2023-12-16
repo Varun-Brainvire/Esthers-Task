@@ -6,12 +6,9 @@ import { describe, it } from "node:test";
 
 describe("Sign up page", () => {
     it("renders signup page",() => {
-        const { getByTestId } = render(<SignUp />);
-        const headerElement = getByTestId("");
-        const loginDivElement = getByTestId("");
-      
-        expect(headerElement)
-        expect(loginDivElement)
+        render(<SignUp />);
+        const myElem = screen.getByText("Join")
+        expect(myElem).toBeInTheDocument();
     })
 });
 
