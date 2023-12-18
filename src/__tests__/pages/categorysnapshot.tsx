@@ -9,7 +9,7 @@ jest.mock('next/router', () => ({
 
 it("renders category unchanged", () => {
   
-    const mockOnTabClick = jest.fn();
+  const mockOnTabClick = jest.fn();
   const { container } = render(<Category  selectedCategory="All" onTabClick={mockOnTabClick}/>)
   expect(container).toMatchSnapshot()
 });

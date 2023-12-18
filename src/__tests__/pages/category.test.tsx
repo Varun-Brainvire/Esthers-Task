@@ -50,7 +50,6 @@ describe('Category Component', () => {
 
     
     // Log the entire DOM structure
-    // console.log(screen.debug());
     screen.debug();
   });
 
