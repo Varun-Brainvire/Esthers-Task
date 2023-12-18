@@ -134,8 +134,9 @@ const Form = () => {
 
             <CreateAccountButton
               type="submit"
+              data-testid="createAccountButton"
               onClick={() => {
-                handleSubmit;
+                handleSubmit();
                 setSubmitting(true);
                 if (submitting == true) {
                   router.push({
