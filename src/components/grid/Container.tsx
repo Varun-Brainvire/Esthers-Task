@@ -6,7 +6,7 @@ interface ContainerProps {
 }
 
 export const Container = styled(sbgContainer)<ContainerProps>`
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     overflow: ${({ screen }) => (screen ? "auto" : "")};
   }
 `;

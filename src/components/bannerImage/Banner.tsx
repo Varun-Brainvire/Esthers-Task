@@ -14,6 +14,7 @@ import { useRouter } from "next/router";
 
 interface BannerProps {
   text: string;
+  color?: boolean;
 }
 
 const Banner: React.FC<BannerProps> = (props) => {
@@ -35,7 +36,12 @@ const Banner: React.FC<BannerProps> = (props) => {
             <Button content={"Start exploring"} margin={true} type="register" />
           </SingleBannerButton>
           <SingleBannerButton>
-            <Button content={"Create your shop"} margin={true} type="creator" />
+            <Button
+              content={"Create your shop"}
+              margin={true}
+              type="creator"
+              color={true}
+            />
           </SingleBannerButton>
         </BannerButtonDiv>
       </Overlay>
