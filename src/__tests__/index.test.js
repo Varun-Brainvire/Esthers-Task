@@ -46,10 +46,10 @@ describe("Home", () => {
     expect(text).toBeInTheDocument();
   });
 
-  // it("Checking Login Link", () => {
-  //   const link = screen.getByRole("link", {
-  //     name: /login/i,
-  //   });
-  //   expect(link).toBeInTheDocument();
-  // });
+  it("Checking Login Link", () => {
+    const link = screen.getByRole("link", {
+      name: /login/i,
+    });
+    expect(link).toBeInTheDocument();
+  });
 });
