@@ -11,7 +11,6 @@ import { Input } from "@/create-post-component.tsx/FlotingMenu.styles"
 it("renders a page", () => {
   render(<Page />)
   const heading = screen.getByText("Create Image Post")
-  screen.debug()
   expect(heading).toBeInTheDocument()
 })
 
@@ -36,8 +35,6 @@ it("renders a StepButtons ", () => {
   expect(button).toBeInTheDocument()
 })
 
-// Input
-
 it("renders a click to upload or drag and drop input label  ", () => {
   render(<Page />)
   let label = screen.getByText(/click to upload or drag and drop/i)
@@ -47,7 +44,46 @@ it("renders a click to upload or drag and drop input label  ", () => {
 it("renders a choose from instagram label   ", () => {
   render(<Page />)
   let label = screen.getByText(/choose from instagram/i)
+  // screen.debug()
   expect(label).toBeInTheDocument()
 })
 
 // getByText(/click to upload or drag and drop/i)
+
+//  querySelector('#image_upload')
+
+it("renders a choose from instagram label   ", () => {
+  let { container } = render(<Page />)
+  let label = container.querySelector("#image_upload")
+  screen.debug()
+  expect(label).toBeInTheDocument()
+})
+
+// getByText(/add products/i)
+
+it("rendersbuttons with text  add products ", () => {
+  render(<Page />)
+  let button = screen.getByText(/add products/i)
+  screen.debug()
+  expect(button).toBeInTheDocument()
+})
+
+// screen.getByText(/create image post/i)
+
+it("rendersbuttons with text  create image post ", () => {
+  render(<Page />)
+  let button = screen.getByText(/create image post/i)
+  screen.debug()
+  expect(button).toBeInTheDocument()
+})
+
+// screen.getByText(/add caption & hashtags/i)
+
+it("rendersbuttons with tex  add caption & hashtags ", () => {
+  render(<Page />)
+  let button = screen.getByText(/add caption & hashtags/i)
+  screen.debug()
+  expect(button).toBeInTheDocument()
+})
+
+// FileUploadField.test.tsx
