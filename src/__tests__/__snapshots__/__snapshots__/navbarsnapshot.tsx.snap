@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders navbar unchanged 1`] = `
+<div>
+  <div>
+    <div
+      class="sc-34ee5be3-0 WMZjc"
+    >
+      <div
+        class="sc-34ee5be3-1 jcBYfE"
+      >
+        <div
+          class="sc-34ee5be3-2 exBSli"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="darkLogo"
+              data-nimg="1"
+              decoding="async"
+              height="40"
+              loading="lazy"
+              src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+              style="color: transparent;"
+              width="40"
+            />
+          </a>
+        </div>
+        <div
+          class="sc-34ee5be3-3 cKoKTd"
+        >
+          <ul
+            class="sc-34ee5be3-4 jrCpne"
+          >
+            <li
+              class="sc-34ee5be3-5 eTmQSp"
+            >
+              <a
+                class="sc-34ee5be3-6 fjTCvE"
+                href="/inspiration/home"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="sc-34ee5be3-5 eTmQSp"
+            >
+              <a
+                class="sc-34ee5be3-6 fjTCvE"
+                href="/inspiration/beauty"
+              >
+                Beauty
+              </a>
+            </li>
+            <li
+              class="sc-34ee5be3-5 eTmQSp"
+            >
+              <a
+                class="sc-34ee5be3-6 fjTCvE"
+                href="/inspiration/fashion"
+              >
+                Fashion
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="sc-34ee5be3-7 fbgBjA"
+        >
+          <div
+            class="sc-34ee5be3-8 bVygsv"
+          >
+            <div
+              class="sc-34ee5be3-9 hjMpMN"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-34ee5be3-10 cbnXxB"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 448 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                />
+              </svg>
+            </div>
+            <div
+              class="sc-34ee5be3-11"
+            >
+              <a
+                href="/signIn"
+              >
+                <div>
+                  <button
+                    class="sc-4f16f0d6-0 guhWvH"
+                  >
+                    Sign in
+                  </button>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

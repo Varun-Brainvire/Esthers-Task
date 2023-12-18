@@ -79,7 +79,7 @@ export default function BottomButtons() {
 
 const Button = ({ label }: any) => {
   return (
-    <Styled_Button label={label}>
+    <Styled_Button data-testid={label} label={label}>
       <ButtonText label={label}> {label}</ButtonText>
     </Styled_Button>
   )
@@ -92,3 +92,5 @@ const PublishButton = () => {
     </Publish_buttom>
   )
 }
+
+export { Button }

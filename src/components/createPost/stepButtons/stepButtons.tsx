@@ -12,8 +12,8 @@ export default function StepButtons() {
     <Container>
       {/* <ButtonContainer></ButtonContainer> */}
       <Button>Add caption & hashtags</Button>
-      <Button>Add caption & hashtags</Button>
-      <Button>Add caption & hashtags</Button>
+      <Button>Add products</Button>
+      <Button>Add comments</Button>
     </Container>
   )
 }
