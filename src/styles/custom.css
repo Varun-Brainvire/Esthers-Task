@@ -223,5 +223,36 @@
   .btn-div {
     display: flex;
     justify-content: center;
+    width: 100%;
   }
+}
+.parent {
+  display: flex;
+  width: 100%;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+
+@media only screen and (max-width: 768px) {
+  .parent {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .parent {
+    position: relative;
+    top: 50px;
+    display: flex;
+    width: 100%;
+  }
+
+  /* .text-banner {
+    font-size: 14px;
+  }
+
+  .btn-join {
+    margin-top: 10px;
+  } */
 }

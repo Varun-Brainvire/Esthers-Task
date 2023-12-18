@@ -12,7 +12,7 @@ interface CenterComponentProps {
 }
 
 export const CenterTabContainer = styled.div<CenterComponentProps>`
-  padding: 3% 12% 3% 12%;
+  padding: 3% 12% 12%;
   background-color: ${({ backgroundColor }) =>
     backgroundColor ? "#fff" : "rgb(244, 240, 236)"};
 

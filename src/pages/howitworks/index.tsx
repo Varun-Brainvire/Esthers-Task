@@ -23,6 +23,7 @@ import BrandContainer from "@/components/brandContainer/BrandContainer";
 import ContainerDownload from "@/components/containerDownload/ContainerDownload";
 import AccordianContainer from "@/components/accordianContainer/AccordianContainer";
 import accordianJsonData from "../../constants/accordianData.json";
+import Banner from "@/components/bannerImage/Banner";
 
 type Props = {
   marginBottom: boolean;
@@ -51,11 +52,12 @@ const index = (props: Props) => {
               "Grow your affiliate business by making your content shoppable"
             }
           />
+
           <MobileTextContainer />
           {/* <TopCreatorContainer data={data} /> */}
           <TopCreators data={images} />
           <CarauselContainer />
-          <ClientContainer />
+          {/* <ClientContainer /> */}
           <BrandContainer />
           {/* <MakeupContainer /> */}
           <AdvertisingBanner
@@ -64,16 +66,15 @@ const index = (props: Props) => {
             image={beauty}
           />
         </MainContainer>
-        <ContainerDownload />
+        {/* <ContainerDownload /> */}
         <YoutubeContainer />
         <AccordianContainer data={accordianJsonData} isBackground />
         <AdvertisingBanner
           mainText={"Makeup genius?"}
           innerText={"Share your best tips & products with your followers"}
-          image={beauty}
+          image={beauty2}
           backgroundColor={true}
           isMobile={true}
-          marginBottom={true}
         />
       </div>
     </>
