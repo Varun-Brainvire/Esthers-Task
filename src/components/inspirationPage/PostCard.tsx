@@ -72,9 +72,8 @@ const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
       <Container>
         <Row>
           {loadedImages?.map((item) => (
-            <Col lg={3} md={6} sm={6} xs={6}>
+            <Col lg={3} md={6} sm={6} xs={6} key={item?.id}>
               <PostCardDiv
-                key={item?.id}
                 onMouseEnter={() => handleMouseEnter(item.id.toString())}
                 onMouseLeave={() => handleMouseLeave(item.id.toString())}
               >
@@ -102,7 +101,7 @@ const PostCard: React.FC<PostCardProps> = ({ selectedCategory }) => {
                   </BagIconContainer>
                 </ContentVisibleDiv>
                 {overlayVisibility[item?.id] && (
-                  <MainOverlayDiv>
+                  <MainOverlayDiv data-testid="main-overlay">
                     <ContentDiv>
                       <LeftContentDiv>
                         <AvtarImage

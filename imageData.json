@@ -100,7 +100,7 @@
       "category" : "beauty"
     },
     {
-      "id":11,
+      "id":12,
       "imageSrc": "/inspirationpageimages/Fashion 1.png",
       "description": "house",
       "icon": "/inspirationpageimages/person.jpg",
@@ -109,7 +109,7 @@
       "category" : "fashion"
     },
     {
-      "id": 12,
+      "id": 13,
       "imageSrc": "/inspirationpageimages/Fashion 1.png",
       "description": "house",
       "icon": "/inspirationpageimages/person2.jpg",
@@ -118,7 +118,7 @@
       "category" : "fashion"
     },
     {
-      "id": 13,
+      "id": 14,
       "imageSrc": "/inspirationpageimages/Fashion 1.png",
       "description": "house",
       "icon": "/inspirationpageimages/person.jpg",
@@ -127,7 +127,7 @@
       "category" : "fashion"
     },
     {
-      "id": 14,
+      "id": 15,
       "imageSrc": "/inspirationpageimages/beauty 1.jpg",
       "description": "house",
       "icon": "/inspirationpageimages/person2.jpg",
@@ -136,7 +136,7 @@
       "category" : "fashion"
     },
     {
-      "id": 15,
+      "id": 16,
       "imageSrc": "/inspirationpageimages/image.jpg",
       "description": "house",
       "icon": "/inspirationpageimages/person.jpg",
@@ -145,19 +145,10 @@
       "category" : "all"
     },
     {
-      "id": 16,
-      "imageSrc": "/inspirationpageimages/image.jpg",
-      "description": "house",
-      "icon": "/inspirationpageimages/person2.jpg",
-      "username" : "oliver",
-      "total": 2,
-      "category" : "home"
-    },
-    {
       "id": 17,
       "imageSrc": "/inspirationpageimages/image.jpg",
       "description": "house",
-      "icon": "/inspirationpageimages/person.jpg",
+      "icon": "/inspirationpageimages/person2.jpg",
       "username" : "oliver",
       "total": 2,
       "category" : "home"
@@ -175,13 +166,22 @@
       "id": 19,
       "imageSrc": "/inspirationpageimages/image.jpg",
       "description": "house",
-      "icon": "/inspirationpageimages/person2.jpg",
+      "icon": "/inspirationpageimages/person.jpg",
       "username" : "oliver",
       "total": 2,
       "category" : "home"
     },
     {
       "id": 20,
+      "imageSrc": "/inspirationpageimages/image.jpg",
+      "description": "house",
+      "icon": "/inspirationpageimages/person2.jpg",
+      "username" : "oliver",
+      "total": 2,
+      "category" : "home"
+    },
+    {
+      "id": 21,
       "imageSrc": "/inspirationpageimages/image.jpg",
       "description": "house",
       "icon": "/inspirationpageimages/person.jpg",

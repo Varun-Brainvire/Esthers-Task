@@ -20,11 +20,10 @@ describe('Category Component', () => {
   ];
 
   beforeEach(() => {
-    // Reset the mock before each test
-    jest.clearAllMocks();
+    jest.clearAllMocks();  // Reset the mock before each test
   });
 
-  it('renders Category component correctly', () => {
+  test('renders Category component correctly', () => {
     // Mock the useRouter implementation
     (useRouter as jest.Mock).mockReturnValue({
       push: jest.fn(),
@@ -49,27 +48,36 @@ describe('Category Component', () => {
       }
     });
 
+    
     // Log the entire DOM structure
-    console.log(screen.debug());
+    // console.log(screen.debug());
+    screen.debug();
   });
 
-  it('calls onTabClick when a category is clicked', () => {
+  test('calls onTabClick when a category is clicked', () => {
     // Mock the useRouter implementation
     (useRouter as jest.Mock).mockReturnValue({
       push: jest.fn(),
     });
 
     render(<Category selectedCategory="All" onTabClick={mockOnTabClick} />);
-    console.log(screen.debug());
+    screen.debug();
 
     // Simulate a click on the "Beauty" category
     fireEvent.click(screen.getByText(/Beauty/i));
-
     // Check if onTabClick was called with the correct argument
     expect(mockOnTabClick).toHaveBeenCalledWith('Beauty');
+
+   
+    fireEvent.click(screen.getByText(/Fashion/i));
+    expect(mockOnTabClick).toHaveBeenCalledWith('Fashion');
+
+    fireEvent.click(screen.getByText(/Home/i));
+    expect(mockOnTabClick).toHaveBeenCalledWith('Home');
+   
   });
 
-  it('navigates to the correct route when a category is clicked', () => {
+  test('navigates to the correct route when a category is clicked', () => {
     // Mock the useRouter implementation
     const pushMock = jest.fn();
     (useRouter as jest.Mock).mockReturnValue({
@@ -78,10 +86,16 @@ describe('Category Component', () => {
 
     render(<Category selectedCategory="All" onTabClick={mockOnTabClick} />);
 
-    // Simulate a click on the "Home" category
+    // Simulating a click on the "Home" category
     fireEvent.click(screen.getByText(/Home/i)); 
-
-    // Check if useRouter.push was called with the correct argument
+    // Checking if useRouter.push was called with the correct argument
     expect(pushMock).toHaveBeenCalledWith('/inspiration/home'); 
+    
+    fireEvent.click(screen.getByText(/Beauty/i)); 
+    expect(pushMock).toHaveBeenCalledWith('/inspiration/beauty'); 
+    
+    fireEvent.click(screen.getByText(/Fashion/i)); 
+    expect(pushMock).toHaveBeenCalledWith('/inspiration/fashion'); 
+  
   });
 });

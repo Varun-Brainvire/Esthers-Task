@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders category unchanged 1`] = `
+<div>
+  <div
+    class="sc-7ff8fb3c-0 gOXKjW"
+  >
+    <h1
+      class="sc-7ff8fb3c-1 dEDASR"
+    >
+      Explore
+    </h1>
+    <div
+      class="sc-bdfCDU sc-9af70b48-0 bCdRCv jukmPH"
+      data-name="container"
+    >
+      <div
+        class="sc-gsTDqH sc-ccc3d276-0 cyHZsm dONdvU"
+        data-name="row"
+      >
+        <div
+          class="sc-7ff8fb3c-2 eYGYWU"
+        >
+          <div
+            class="sc-dlfmHC sc-bbf47a8d-0 ZCqIT gLpuEv"
+            data-name="col-sm-3 col-lg-3"
+            lg="3"
+            sm="3"
+          >
+            <div
+              class="sc-7ff8fb3c-3 kVrHye"
+              style="background-color: rgb(52, 85, 74);"
+            >
+              <div
+                class="sc-7ff8fb3c-4 bBWMxU"
+                style="background-color: rgb(52, 85, 74);"
+              >
+                <span
+                  class="sc-7ff8fb3c-5 eJdcXx"
+                >
+                  All
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-dlfmHC sc-bbf47a8d-0 ZCqIT gLpuEv"
+            data-name="col-sm-3 col-lg-3"
+            lg="3"
+            sm="3"
+          >
+            <div
+              class="sc-7ff8fb3c-3 kVrHye"
+              style="background-color: rgb(244, 240, 236);"
+            >
+              <img
+                alt="Beauty pic"
+                class="sc-7ff8fb3c-6 leDqNG"
+                data-nimg="1"
+                decoding="async"
+                height="180"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent; opacity: 0.6;"
+                width="252"
+              />
+              <div
+                class="sc-7ff8fb3c-4 bBWMxU"
+                style="background-color: rgba(244, 240, 236, 0.4);"
+              >
+                <span
+                  class="sc-7ff8fb3c-5 eJdcXx"
+                >
+                  Beauty
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-dlfmHC sc-bbf47a8d-0 ZCqIT gLpuEv"
+            data-name="col-sm-3 col-lg-3"
+            lg="3"
+            sm="3"
+          >
+            <div
+              class="sc-7ff8fb3c-3 kVrHye"
+              style="background-color: rgb(244, 240, 236);"
+            >
+              <img
+                alt="Home pic"
+                class="sc-7ff8fb3c-6 leDqNG"
+                data-nimg="1"
+                decoding="async"
+                height="180"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent; opacity: 0.6;"
+                width="252"
+              />
+              <div
+                class="sc-7ff8fb3c-4 bBWMxU"
+                style="background-color: rgba(244, 240, 236, 0.4);"
+              >
+                <span
+                  class="sc-7ff8fb3c-5 eJdcXx"
+                >
+                  Home
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-dlfmHC sc-bbf47a8d-0 ZCqIT gLpuEv"
+            data-name="col-sm-3 col-lg-3"
+            lg="3"
+            sm="3"
+          >
+            <div
+              class="sc-7ff8fb3c-3 kVrHye"
+              style="background-color: rgb(244, 240, 236);"
+            >
+              <img
+                alt="Fashion pic"
+                class="sc-7ff8fb3c-6 leDqNG"
+                data-nimg="1"
+                decoding="async"
+                height="180"
+                loading="lazy"
+                src="/_next/image?url=%2Fimg.jpg&w=640&q=75"
+                srcset="/_next/image?url=%2Fimg.jpg&w=256&q=75 1x, /_next/image?url=%2Fimg.jpg&w=640&q=75 2x"
+                style="color: transparent; opacity: 0.6;"
+                width="252"
+              />
+              <div
+                class="sc-7ff8fb3c-4 bBWMxU"
+                style="background-color: rgba(244, 240, 236, 0.4);"
+              >
+                <span
+                  class="sc-7ff8fb3c-5 eJdcXx"
+                >
+                  Fashion
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
