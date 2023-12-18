@@ -8,6 +8,7 @@ interface ButtonProps {
   margin?: boolean;
   type?: string;
   color?: boolean;
+  id?: string;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
@@ -22,6 +23,7 @@ const Button: React.FC<ButtonProps> = (props) => {
         onClick={() => {
           router.push({ pathname: "/signuppage", query: { type: props.type } });
         }}
+        id={props.id}
       >
         {props.content}
       </StyledButton>
