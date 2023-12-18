@@ -23,7 +23,7 @@ import { Container, Row, Col } from "../components/index"
 //nexted layoiut
 
 import type { ReactElement } from "react"
-import NestedLayout from "../components/NestedLayout"
+// import NestedLayout from "../components/NestedLayout"
 import type { NextPageWithLayout } from "./_app"
 import { Conatiner } from "@/create-post-component.tsx/BottomButton.styles"
 import {
