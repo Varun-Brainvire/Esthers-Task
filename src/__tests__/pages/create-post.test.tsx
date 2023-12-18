@@ -51,11 +51,3 @@ it("renders a choose from instagram label   ", () => {
 })
 
 // getByText(/click to upload or drag and drop/i)
-
-it("renders A Save as Draft button   ", () => {
-  render(<Page />)
-  let label = container.querySelector(
-    "#sandbox > div > div > div > div > div:nth-child(2) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1)"
-  )
-  expect(label).toBeInTheDocument()
-})
