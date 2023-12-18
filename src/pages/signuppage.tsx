@@ -6,10 +6,10 @@ import Layout from "@/components/Layout";
 const SignUp = () => {
   return (
     <>
-    <Layout>
-    <Header />
-    <LoginDiv />
-    </Layout>
+      {/* <Layout> */}
+      <Header />
+      <LoginDiv />
+      {/* </Layout> */}
     </>
   );
 };
