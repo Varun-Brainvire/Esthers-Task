@@ -1,15 +1,31 @@
+body {
+  margin: 0;
+}
+
+#__next {
+  /* background: blue;
+  position: absolute;
+  inset: 0; */
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #f4f0ec; */
 }
+
+html,
+body {
+  height: 100%;
+}
+
 /* * {
   outline: 1px solid red;
 } */
 
 ::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+  display: none;
 }
 
 body {

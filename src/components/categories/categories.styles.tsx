@@ -9,10 +9,10 @@ interface CategoriesProp {
 }
 
 export const CategoriesContainer = styled.div<CategoriesProp>`
-  padding: 2% 12% 4% 12%;
+  padding: 2% 12% 3% 12%;
 
   @media (max-width: 768px) {
-    padding: ${({ screen }) => (screen ? "2% 6% 2% 6%" : "2% 12% 2% 12%")};
+    padding: ${({ screen }) => (screen ? "3% 6% 4% 6%" : "2% 12% 2% 12%")};
   }
 `;
 
@@ -28,7 +28,7 @@ interface StyledImageProps {
 export const ImageOverlayContainer = styled.div<CategoriesProp>`
   position: relative;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 6px;
   overflow: hidden;
 
   @media (max-width: 768px) {
@@ -39,7 +39,7 @@ export const ImageOverlayContainer = styled.div<CategoriesProp>`
 
 export const StyledImage = styled(Image)<StyledImageProps>`
   width: 100%;
-  border-radius: 10px;
+  border-radius: 6px;
 
   @media (max-width: 768px) {
     border-radius: ${({ screen }) => (screen ? "0" : "10px")};
@@ -52,8 +52,8 @@ export const OverlayBackground = styled.div<CategoriesProp>`
   left: 0;
   width: 100%;
   height: ${(props) => (props.height ? "235px" : "189px")};
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
 
   @media (max-width: 768px) {
     border-radius: ${({ screen }) => (screen ? "0" : "10px")};

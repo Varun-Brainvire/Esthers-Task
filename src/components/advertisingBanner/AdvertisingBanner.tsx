@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import {
   ImageOverlayContainer,
   OverlayBackground,
@@ -8,10 +7,10 @@ import {
 } from "../categories/categories.styles";
 import Button from "../button/Button";
 import { Container, Row, Col } from "../index";
-import colors from "@/theme";
 import {
   ButtonDiv,
   CenterTabContainer,
+  ImageDiv,
   InnerTabContainer,
   OverlayTextContent,
 } from "./advertising.styles";
@@ -21,26 +20,34 @@ interface CenterComponentProps {
   innerText?: string;
   image?: any;
   screen?: boolean;
-  marginBottom?: boolean;
+  backgroundColor?: boolean;
+  isMobile?: boolean;
+  isSpace?: boolean;
+  isPadding?: boolean;
 }
 
 const AdvertisingBanner: React.FC<CenterComponentProps> = (props) => {
   return (
-    <CenterTabContainer screen={true} marginBottom={true}>
+    <CenterTabContainer
+      screen={true}
+      backgroundColor={props?.backgroundColor}
+      isSpace={props.isSpace}
+      isPadding={props.isPadding}
+    >
       <InnerTabContainer>
         <ImageOverlayContainer screen={true}>
           <Container>
             <Row>
-              <Col md={12} screen={true}>
-                <div>
-                  <StyledImage
-                    src={props.image}
-                    alt="beauty"
-                    width={300}
-                    height={235}
-                    screen={true}
-                  />
-                </div>
+              <Col
+                xl={12}
+                lg={12}
+                md={12}
+                sm={12}
+                xs={12}
+                paddingInBanner={true}
+                isMobile={props?.isMobile}
+              >
+                <ImageDiv image={props.image.src} />
 
                 <OverlayBackground height={true} screen={true} />
                 <OverlayTextContent>

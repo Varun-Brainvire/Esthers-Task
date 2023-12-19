@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   AnchorTag,
   BarButtonWrapper,
@@ -21,6 +21,12 @@ import Button from "../button/Button";
 import Image from "next/image";
 
 const Navbar = () => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const handleTabClick = (category: string) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div>
       <NavDiv>
@@ -32,14 +38,29 @@ const Navbar = () => {
           </ImageWrapperDiv>
           <NavWrapperContainer>
             <UlWrapper>
-              <LiWrapper>
-                <AnchorTag href="/home">Home</AnchorTag>
+              <LiWrapper isActive={selectedCategory === "Home"}>
+                <AnchorTag
+                  href="/inspiration/home"
+                  onClick={() => handleTabClick("Home")}
+                >
+                  Home
+                </AnchorTag>
               </LiWrapper>
-              <LiWrapper>
-                <AnchorTag href="/beauty">Beauty</AnchorTag>
+              <LiWrapper isActive={selectedCategory === "Beauty"}>
+                <AnchorTag
+                  href="/inspiration/beauty"
+                  onClick={() => handleTabClick("Beauty")}
+                >
+                  Beauty
+                </AnchorTag>
               </LiWrapper>
-              <LiWrapper>
-                <AnchorTag href="/fashion">Fashion</AnchorTag>
+              <LiWrapper isActive={selectedCategory === "Fashion"}>
+                <AnchorTag
+                  href="/inspiration/fashion"
+                  onClick={() => handleTabClick("Fashion")}
+                >
+                  Fashion
+                </AnchorTag>
               </LiWrapper>
             </UlWrapper>
           </NavWrapperContainer>

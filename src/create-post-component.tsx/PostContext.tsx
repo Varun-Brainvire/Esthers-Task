@@ -1,13 +1,13 @@
 import React, { createContext, useContext, useState } from "react"
 
-type Theme = {
+type Post_Props = {
   selectedImages?: any
   setSelectedImages?: any
   handleImageChange?: any
   images: any
   handleFileUpload: any
 }
-const PostContext = createContext<Theme>({
+const PostContext = createContext<Post_Props>({
   images: [],
   handleFileUpload: () => {},
 })
@@ -28,12 +28,11 @@ export default function PostWrapper({
       reader.onload = () => {
         setImages((imgs: any) => [...imgs, reader.result])
       }
-      reader.onerror = () => {
-      }
+      reader.onerror = () => {}
     }
   }
 
-  const Context: Theme = {
+  const Context: Post_Props = {
     images,
     handleFileUpload,
     // selectedImages,

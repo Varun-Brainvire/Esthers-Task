@@ -7,7 +7,7 @@ import {
   ImageWrapper,
   Label,
   Text,
-} from "./FlotingMenu.styles"
+} from "../create-post-component.tsx/FlotingMenu.styles"
 import Image_square from "../../public/Images/image-square (1).png"
 
 const FlotingMenu = ({
@@ -22,15 +22,15 @@ const FlotingMenu = ({
   return (
     <FlotingMenuContainer>
       <Box>
-        <Label htmlFor="imgage_upload">
+        <Label htmlFor="image_upload">
           <ImageWrapper style={{ display: "flex", justifyContent: "center" }}>
             <Image alt="" src={Image_square}></Image>
           </ImageWrapper>
           <Input
             onChange={handelChange}
             multiple
-            name="imgage_upload"
-            id="imgage_upload"
+            name="image_upload"
+            id="image_upload"
             type="file"
           />
           <Text>{label}</Text>

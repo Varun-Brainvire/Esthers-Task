@@ -1,4 +1,5 @@
-import colors from "@/theme";
+// import colors from "@/theme";
+import colors from "../../theme";
 import styled from "styled-components";
 
 interface CenterComponentProps {
@@ -7,16 +8,40 @@ interface CenterComponentProps {
   image?: any;
   screen?: boolean;
   marginBottom?: boolean;
+  backgroundColor?: boolean;
+  isSpace?: boolean;
+  isPadding?: boolean;
 }
 
 export const CenterTabContainer = styled.div<CenterComponentProps>`
-  padding: 2% 12% 4% 12%;
-  background-color: rgb(244, 240, 236);
-  margin-bottom: ${({ marginBottom }) => (marginBottom === true ? "70px" : "")};
+  padding: 3% 12% 12%;
+  background-color: ${({ backgroundColor }) =>
+    backgroundColor ? "#fff" : "rgb(244, 240, 236)"};
+
+  @media (min-width: 991px) {
+    position: ${({ isSpace }) => (isSpace ? "absolute" : "")};
+    width: ${({ isSpace }) => (isSpace ? "100%" : "")};
+    height: ${({ isSpace }) => (isSpace ? "65%" : "")};
+  }
 
   @media (max-width: 768px) {
     padding: ${({ screen }) => (screen ? "0" : "")};
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1000px) and (max-width: 2560px) {
+    height: ${({ isSpace }) => (isSpace ? "65%" : "")};
+  }
+
+  @media (min-width: 2560px) and (max-width: 4000px) {
+    height: ${({ isSpace }) => (isSpace ? "41%" : "")};
+  }
+
+  @media (min-width: 1400px) and (max-width: 1500px) {
+    padding: ${({ isPadding }) => (isPadding ? "50px" : "")};
+  }
+  @media (min-width: 1500px) and (max-width: 2560px) {
+    padding: ${({ isPadding }) => (isPadding ? "50px" : "")};
   }
 `;
 
@@ -50,4 +75,12 @@ export const OverlayTextContent = styled.div`
 
 export const ButtonDiv = styled.div`
   margin-top: 20px;
+`;
+
+export const ImageDiv = styled.div<CenterComponentProps>`
+  background-image: ${({ image }) => `url(${image})`};
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  height: 200px;
 `;

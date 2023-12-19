@@ -31,6 +31,20 @@ export const CategoryContainer = styled.div`
     overflow-x: scroll;
     overflow-y: hidden;
   }
+  @media screen and (max-width: 768px) {
+    background-color: white;
+    color: white;
+    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+  @media screen and (max-width: 992px) {
+    background-color: white;
+    color: white;
+    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
 `;
 
 export const SingleCategoryCard = styled.div`
@@ -77,7 +91,7 @@ export const OverlayDiv = styled.div`
 
   @media screen and (max-width: 576px) {
     height: 100%;
-    width: 100%
+    width: 100%;
   }
 `;
 

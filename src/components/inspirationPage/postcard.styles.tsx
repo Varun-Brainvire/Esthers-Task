@@ -40,6 +40,7 @@ export const SortButtonDiv = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-bottom: 20px;
+  margin-top: -25px;
   @media screen and (max-width: 576px) {
     margin-left: 14px;
     justify-content: flex-start;
@@ -63,7 +64,6 @@ export const SortButton = styled.button`
   background-color: rgb(244, 240, 236);
   color: rgb(58, 58, 58);
   border: none;
-  /* border: 1px solid rgb(222, 222, 222); */
   padding: 12px 18px;
   max-height: 45px;
   width: auto;
@@ -175,10 +175,9 @@ export const LikeButtonDiv = styled.div`
   display: flex;
   justify-content: flex-end;
   position: absolute;
-  bottom: 5%;
-  right: 5%;
+  bottom: 3%;
+  right: 1%;
 `;
-
 export const LikeOverlay = styled.button`
   border: none;
   background: none;

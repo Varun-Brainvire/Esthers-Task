@@ -7,6 +7,8 @@ interface ButtonProps {
   content: string;
   margin?: boolean;
   type?: string;
+  color?: boolean;
+  id?: string;
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
@@ -15,11 +17,13 @@ const Button: React.FC<ButtonProps> = (props) => {
     <div>
       {/* <Link href="/signUp" > */}
       <StyledButton
+        color={props.color}
         margin={props.margin}
         type={props.type}
         onClick={() => {
-          router.push({ pathname: "/signup", query: { type: props.type } });
+          router.push({ pathname: "/signuppage", query: { type: props.type } });
         }}
+        id={props.id}
       >
         {props.content}
       </StyledButton>

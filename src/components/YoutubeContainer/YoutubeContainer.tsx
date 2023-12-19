@@ -1,55 +1,88 @@
 import React from "react";
 import {
   ChildYoutubeContainer,
-  MainYoutubeContainer,
+  YoutubeContainerMain,
   YoutubeLg,
   YoutubeSm,
-} from "./YoutubeContainerStyle";
+} from "./youtubeContainer.style";
 import Image from "next/image";
-import { Container, Row } from "styled-bootstrap-grid";
+// import { } from "styled-bootstrap-grid";
+import { Container, Row, Col } from "..";
 
 interface Props {}
 
 const YoutubeContainer = (props: Props) => {
   return (
-    <Container>
-      <Row>
-        <MainYoutubeContainer>
-          <ChildYoutubeContainer>
-            <div>
-              <YoutubeLg>
+    <>
+      <>
+        <Container>
+          <Row>
+            <Col xl={8}>
+              <iframe
+                className="youtube-vid1"
+                // width="200"
+                // height="200"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              ></iframe>
+            </Col>
+            <Col xl={4}>
+              <div>
                 <iframe
                   className="youtube-vid1"
-                  //   width="899.418"
-                  //   height="504.616"
-                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                ></iframe>
-              </YoutubeLg>
-            </div>
-            <div>
-              <YoutubeSm>
-                <iframe
-                  width="287.755"
-                  height="161.444"
+                  width="100"
+                  height="100"
                   src="https://www.youtube.com/embed/tgbNymZ7vqY"
                 ></iframe>
                 <iframe
-                  width="287.755"
-                  height="161.444"
+                  className="youtube-vid1"
+                  width="100"
+                  height="100"
                   src="https://www.youtube.com/embed/tgbNymZ7vqY"
                 ></iframe>
+                <iframe
+                  className="youtube-vid1"
+                  width="100"
+                  height="100"
+                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                ></iframe>
+              </div>
+            </Col>
+          </Row>
+        </Container>
 
-                <iframe
-                  width="287.755"
-                  height="161.444"
-                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
-                ></iframe>
-              </YoutubeSm>
-            </div>
-          </ChildYoutubeContainer>
-        </MainYoutubeContainer>
-      </Row>
-    </Container>
+        {/* <div className="yt1">
+          <iframe
+            className="youtube-vid1"
+            //   width="899.418"
+            //   height="504.616"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          ></iframe>
+        </div>
+        <div className="yt2">
+          <iframe
+            width="287.755"
+            height="161.444"
+            src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          ></iframe>
+          <div>
+            {" "}
+            <iframe
+              width="287.755"
+              height="161.444"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            ></iframe>
+          </div>
+          <div>
+            {" "}
+            <iframe
+              width="287.755"
+              height="161.444"
+              src="https://www.youtube.com/embed/tgbNymZ7vqY"
+            ></iframe>
+          </div>
+        </div> */}
+      </>
+    </>
   );
 };
 
