@@ -74,9 +74,9 @@ const Navbar = () => {
                 <FaBars />
               </BarButtonWrapper>
               <SignInButtonWrapper>
-                <Link href="/signIn">
+                {/* <Link href="/login"> */}
                   <Button content={"Sign in"} />
-                </Link>
+                {/* </Link> */}
               </SignInButtonWrapper>
             </ButtonContainer>
           </NavButtonWrapper>
