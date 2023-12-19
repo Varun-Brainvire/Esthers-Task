@@ -1,4 +1,5 @@
-import colors from "@/theme";
+// import colors from "@/theme";
+import colors from "../../theme";
 import styled from "styled-components";
 
 interface CenterComponentProps {
@@ -9,10 +10,11 @@ interface CenterComponentProps {
   marginBottom?: boolean;
   backgroundColor?: boolean;
   isSpace?: boolean;
+  isPadding?: boolean;
 }
 
 export const CenterTabContainer = styled.div<CenterComponentProps>`
-  padding: 3% 12% 3% 12%;
+  padding: 3% 12% 12%;
   background-color: ${({ backgroundColor }) =>
     backgroundColor ? "#fff" : "rgb(244, 240, 236)"};
 
@@ -33,6 +35,13 @@ export const CenterTabContainer = styled.div<CenterComponentProps>`
 
   @media (min-width: 2560px) and (max-width: 4000px) {
     height: ${({ isSpace }) => (isSpace ? "41%" : "")};
+  }
+
+  @media (min-width: 1400px) and (max-width: 1500px) {
+    padding: ${({ isPadding }) => (isPadding ? "50px" : "")};
+  }
+  @media (min-width: 1500px) and (max-width: 2560px) {
+    padding: ${({ isPadding }) => (isPadding ? "50px" : "")};
   }
 `;
 

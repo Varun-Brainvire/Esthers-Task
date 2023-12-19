@@ -47,55 +47,138 @@ const ContainerDownload = (props: Props) => {
           </InnerIconContainer>
         </InnerContainerDownload>
       </MainContainerDownload> */}
+      {/* <div>
+        <Row>
+          <InnerContainerDownload>
+            <InnerIconContainer>
+              <Col xl={4} md={4} lg={4} sm={12} sx={12}></Col>
+              <Col xl={4} md={4} lg={4} sm={12} sx={12}></Col>
+              <Col xl={4} md={4} lg={4} sm={12} sx={12}>
+                <InnerIconChild>
+                  <Image
+                    src={down1}
+                    alt="image"
+                    style={{ width: "42.14px", height: "47.238px" }}
+                  />
+                  <CustomDivText>
+                    <span className="downloadtext">500+</span>
+                    <span className="brand">Brands</span>
+                  </CustomDivText>
+                  <span className="line"></span>
+                </InnerIconChild>
+              </Col>
+            </InnerIconContainer>
+          </InnerContainerDownload>
+        </Row>
+      </div> */}
 
+      {/* <Container>
       <Row>
-        <InnerContainerDownload>
+      
+        <Col xl={2}>
           <InnerIconContainer>
-            <Col xl={4} md={4} lg={4} sm={12} sx={12}>
-              <InnerIconChild>
-                <Image
-                  src={down1}
-                  alt="image"
-                  style={{ width: "42.14px", height: "47.238px" }}
-                />
-                <CustomDivText>
-                  <span className="downloadtext">500+</span>
-                  <span className="brand">Brands</span>
-                </CustomDivText>
-                <span className="line"></span>
-              </InnerIconChild>
-            </Col>
-            <Col xl={4} md={4} lg={4} sm={12} sx={12}>
-              <InnerIconChild>
-                <Image
-                  src={down1}
-                  alt="image"
-                  style={{ width: "42.14px", height: "47.238px" }}
-                />
-                <CustomDivText>
-                  <span className="downloadtext">500+</span>
-                  <span className="brand">Brands</span>
-                </CustomDivText>
-                <span className="line"></span>
-              </InnerIconChild>
-            </Col>
-            <Col xl={4} md={4} lg={4} sm={12} sx={12}>
-              <InnerIconChild>
-                <Image
-                  src={down1}
-                  alt="image"
-                  style={{ width: "42.14px", height: "47.238px" }}
-                />
-                <CustomDivText>
-                  <span className="downloadtext">500+</span>
-                  <span className="brand">Brands</span>
-                </CustomDivText>
-                <span className="line"></span>
-              </InnerIconChild>
-            </Col>
+            <InnerIconChild>
+              <Image
+                src={down1}
+                alt="image"
+               
+              />
+              <CustomDivText>
+                <span className="downloadtext">500+</span>
+                <span className="brand">Brands</span>
+              </CustomDivText>
+              <span className="line"></span>
+            </InnerIconChild>
           </InnerIconContainer>
-        </InnerContainerDownload>
+        </Col>
+        <Col xl={2}>
+          {" "}
+          <InnerIconContainer>
+            <InnerIconChild>
+              <Image
+                src={down1}
+                alt="image"
+
+              />
+              <CustomDivText>
+                <span className="downloadtext">500+</span>
+                <span className="brand">Brands</span>
+              </CustomDivText>
+              <span className="line"></span>
+            </InnerIconChild>
+          </InnerIconContainer>
+        </Col>
+        <Col xl={2}>
+          {" "}
+          <InnerIconContainer>
+            <InnerIconChild>
+              <Image
+                src={down1}
+                alt="image"
+               
+              />
+              <CustomDivText>
+                <span className="downloadtext">500+</span>
+                <span className="brand">Brands</span>
+              </CustomDivText>
+              <span className="line"></span>
+            </InnerIconChild>
+          </InnerIconContainer>
+        </Col>
+        <Col xl={2}>
+          {" "}
+          <InnerIconContainer>
+            <InnerIconChild>
+              <Image
+                src={down1}
+                alt="image"
+              
+              />
+              <CustomDivText>
+                <span className="downloadtext">500+</span>
+                <span className="brand">Brands</span>
+              </CustomDivText>
+              <span className="line"></span>
+            </InnerIconChild>
+          </InnerIconContainer>
+        </Col>
+        <Col xl={2}>
+          {" "}
+          <InnerIconContainer>
+            <InnerIconChild>
+              <Image
+                src={down1}
+                alt="image"
+               
+              />
+              <CustomDivText>
+                <span className="downloadtext">500+</span>
+                <span className="brand">Brands</span>
+              </CustomDivText>
+              <span className="line"></span>
+            </InnerIconChild>
+          </InnerIconContainer>
+        </Col>
+        <Col xl={2}>
+          {" "}
+          <InnerIconContainer>
+            <InnerIconChild>
+              <Image
+                src={down1}
+                alt="image"
+                
+              />
+              <CustomDivText>
+                <span className="downloadtext">500+</span>
+                <span className="brand">Brands</span>
+              </CustomDivText>
+              <span className="line"></span>
+            </InnerIconChild>
+          </InnerIconContainer>
+        </Col>
+        
       </Row>
+      </Container> */}
     </>
   );
 };

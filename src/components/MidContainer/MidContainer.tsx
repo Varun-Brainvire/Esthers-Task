@@ -75,14 +75,13 @@ interface BannerProps {
 }
 
 const MidContainer: React.FC<BannerProps> = (props) => {
-  const router = useRouter();
   return (
     <>
       <BannerContainer>
         <BannerImage
           src={image}
-          width={1250}
-          height={500}
+          // width={1250}
+
           alt="Picture of the author"
           screen={true}
         />
@@ -93,12 +92,12 @@ const MidContainer: React.FC<BannerProps> = (props) => {
       </BannerContainer>
       <Overlay2>
         <Container>
-          <Row>
-            <Col xl={6} md={6} lg={6} sm={12} sx={12}>
+          <div className="parent">
+            <div className="child1">
               <BannerButtonDiv>
                 <SingleBannerButton marginRight={true}>
                   {/* <Button content={"Join for free"} margin={true} type="register" /> */}
-                  <div style={{ marginTop: "142px" }}>
+                  <div>
                     <span className="text-banner">
                       Grow your affiliate business by making your content
                       shoppable
@@ -106,20 +105,17 @@ const MidContainer: React.FC<BannerProps> = (props) => {
                     <button className="btn-join">Join for free</button>
                   </div>
                 </SingleBannerButton>
-                <SingleBannerButton>
-                  {/* <Button content={"Create your shop"} margin={true} type="creator" /> */}
-                </SingleBannerButton>
               </BannerButtonDiv>
-            </Col>
-            <Col xl={6} md={6} lg={6} sm={12} sx={12}>
+            </div>
+            <div className="child2">
               <MobileImage
                 src={image2}
-                width={517}
+                // width={517}
                 height={775}
                 alt="Picture"
               />
-            </Col>
-          </Row>
+            </div>
+          </div>
         </Container>
       </Overlay2>
     </>
