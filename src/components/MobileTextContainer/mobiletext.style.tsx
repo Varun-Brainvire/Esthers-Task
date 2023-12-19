@@ -30,4 +30,5 @@ export const TextDiv = styled.div`
 
 export const MobileImage = styled(Image)`
   width: 100%;
+  /* margin-top: -125px; */
 `;

@@ -13,7 +13,7 @@ export const MainContainerDownload = styled.div`
 export const InnerContainerDownload = styled.div`
   display: flex;
   width: 100%;
-  padding: 60px 0px;
+  /* padding: 60px 0px; */
   justify-content: center;
   align-items: center;
   gap: 10px;

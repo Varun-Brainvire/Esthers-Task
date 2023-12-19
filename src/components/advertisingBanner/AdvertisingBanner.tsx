@@ -23,15 +23,16 @@ interface CenterComponentProps {
   backgroundColor?: boolean;
   isMobile?: boolean;
   isSpace?: boolean;
+  isPadding?: boolean;
 }
 
 const AdvertisingBanner: React.FC<CenterComponentProps> = (props) => {
-
   return (
     <CenterTabContainer
       screen={true}
       backgroundColor={props?.backgroundColor}
       isSpace={props.isSpace}
+      isPadding={props.isPadding}
     >
       <InnerTabContainer>
         <ImageOverlayContainer screen={true}>

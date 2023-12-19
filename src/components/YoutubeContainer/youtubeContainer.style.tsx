@@ -1,13 +1,9 @@
 import styled from "styled-components";
 
-export const MainYoutubeContainer = styled.div`
+export const YoutubeContainerMain = styled.div`
   display: flex;
-  padding: 60px 0px;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  align-self: stretch;
+  justify-content: space-evenly;
+  margin-top: 30px;
 `;
 
 export const ChildYoutubeContainer = styled.div`

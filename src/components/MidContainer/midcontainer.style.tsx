@@ -6,7 +6,9 @@ interface BannerProps {
 }
 
 export const BannerContainer = styled.div`
-  position: relative;
+  /* position: relative; */
+  position: absolute;
+  width: 100%;
 `;
 
 interface BannerImageProps {
@@ -15,10 +17,15 @@ interface BannerImageProps {
 
 export const BannerImage = styled(Image)<BannerImageProps>`
   width: 100%;
-  height: 50%;
-
+  /* height: 50%; */
+  height: 800px;
+  width: 100%;
   @media (max-width: 768px) {
-    height: ${({ screen }) => (screen ? "300px" : "auto")};
+    height: 1110px;
+  }
+  @media (max-width: 480px) {
+    height: 1150px;
+    display: none;
   }
 `;
 
@@ -59,10 +66,13 @@ export const BannerButtonDiv = styled.div`
 
 export const SingleBannerButton = styled.div<BannerProps>`
   margin-right: ${(props) => (props.marginRight ? "10px" : "0")};
+  position: relative;
+  top: 70px;
 `;
 
 export const Overlay2 = styled.div`
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
