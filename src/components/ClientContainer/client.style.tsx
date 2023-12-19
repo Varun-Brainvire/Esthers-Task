@@ -83,4 +83,7 @@ export const ClientTextDiv = styled.div`
   flex-shrink: 0;
   justify-content: left;
   flex-direction: column;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
