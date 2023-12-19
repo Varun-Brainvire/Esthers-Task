@@ -75,7 +75,6 @@ interface BannerProps {
 }
 
 const MidContainer: React.FC<BannerProps> = (props) => {
-  const router = useRouter();
   return (
     <>
       <BannerContainer>

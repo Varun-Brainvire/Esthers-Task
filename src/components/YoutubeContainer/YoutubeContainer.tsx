@@ -14,8 +14,43 @@ interface Props {}
 const YoutubeContainer = (props: Props) => {
   return (
     <>
-      <YoutubeContainerMain>
-        <div>
+      <>
+        <Container>
+          <Row>
+            <Col xl={8}>
+              <iframe
+                className="youtube-vid1"
+                // width="200"
+                // height="200"
+                src="https://www.youtube.com/embed/tgbNymZ7vqY"
+              ></iframe>
+            </Col>
+            <Col xl={4}>
+              <div>
+                <iframe
+                  className="youtube-vid1"
+                  width="100"
+                  height="100"
+                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                ></iframe>
+                <iframe
+                  className="youtube-vid1"
+                  width="100"
+                  height="100"
+                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                ></iframe>
+                <iframe
+                  className="youtube-vid1"
+                  width="100"
+                  height="100"
+                  src="https://www.youtube.com/embed/tgbNymZ7vqY"
+                ></iframe>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+
+        {/* <div className="yt1">
           <iframe
             className="youtube-vid1"
             //   width="899.418"
@@ -23,7 +58,7 @@ const YoutubeContainer = (props: Props) => {
             src="https://www.youtube.com/embed/tgbNymZ7vqY"
           ></iframe>
         </div>
-        <div>
+        <div className="yt2">
           <iframe
             width="287.755"
             height="161.444"
@@ -45,8 +80,8 @@ const YoutubeContainer = (props: Props) => {
               src="https://www.youtube.com/embed/tgbNymZ7vqY"
             ></iframe>
           </div>
-        </div>
-      </YoutubeContainerMain>
+        </div> */}
+      </>
     </>
   );
 };
